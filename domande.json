@@ -1248,5 +1248,555 @@
       "They work without sensors"
     ],
     "giusta": "They allow deployment of optimized deep learning models on edge devices"
+  },
+  "126": {
+    "domanda": "What is the first step of the Machine Learning workflow according to the course?",
+    "risposte": [
+      "Train the model",
+      "Test the model",
+      "Get data",
+      "Optimize the model"
+    ],
+    "giusta": "Get data"
+  },
+  "127": {
+    "domanda": "What does data collection primarily consist of?",
+    "risposte": [
+      "Model optimization",
+      "Gathering and measuring information on targeted variables",
+      "Feature selection only",
+      "Model validation"
+    ],
+    "giusta": "Gathering and measuring information on targeted variables"
+  },
+  "128": {
+    "domanda": "Which principle is summarized by the acronym GIGO?",
+    "risposte": [
+      "Good Input Generates Output",
+      "Garbage In, Garbage Out",
+      "Generated Input, Generated Output",
+      "Global Input, Global Output"
+    ],
+    "giusta": "Garbage In, Garbage Out"
+  },
+  "129": {
+    "domanda": "Why can't even powerful neural networks compensate for poor data quality?",
+    "risposte": [
+      "Because they require symbolic rules",
+      "Because bad data leads to unreliable learning outcomes",
+      "Because neural networks are deterministic",
+      "Because data preprocessing is optional"
+    ],
+    "giusta": "Because bad data leads to unreliable learning outcomes"
+  },
+  "130": {
+    "domanda": "What is meant by data heterogeneity?",
+    "risposte": [
+      "Data coming from a single source",
+      "Uniform data format and units",
+      "Differences in formats, units, ranges, and representations",
+      "Only missing values in data"
+    ],
+    "giusta": "Differences in formats, units, ranges, and representations"
+  },
+  "131": {
+    "domanda": "Which real-world failure is used as an example of data format heterogeneity?",
+    "risposte": [
+      "Stock market crash",
+      "Mars Climate Orbiter accident",
+      "Power grid blackout",
+      "Medical diagnosis error"
+    ],
+    "giusta": "Mars Climate Orbiter accident"
+  },
+  "132": {
+    "domanda": "What caused the Mars Climate Orbiter failure?",
+    "risposte": [
+      "Sensor malfunction",
+      "Wrong machine learning model",
+      "Mismatch between metric and imperial units",
+      "Lack of cloud computing"
+    ],
+    "giusta": "Mismatch between metric and imperial units"
+  },
+  "133": {
+    "domanda": "What is the main goal of data harmonization?",
+    "risposte": [
+      "Increasing dataset size",
+      "Aligning data formats, units, and reference systems",
+      "Removing all missing values",
+      "Improving GPU efficiency"
+    ],
+    "giusta": "Aligning data formats, units, and reference systems"
+  },
+  "134": {
+    "domanda": "In the wind power prediction use case, why is data harmonization required?",
+    "risposte": [
+      "Because turbines are identical",
+      "Because data comes from different sources with different units and references",
+      "Because data is already uniform",
+      "Because models require symbolic inputs"
+    ],
+    "giusta": "Because data comes from different sources with different units and references"
+  },
+  "135": {
+    "domanda": "Which of the following is an example of data harmonization operation?",
+    "risposte": [
+      "Increasing model depth",
+      "Converting wind speed to m/s",
+      "Training a neural network",
+      "Reducing dataset size"
+    ],
+    "giusta": "Converting wind speed to m/s"
+  },
+  "136": {
+    "domanda": "What does data synchronization refer to?",
+    "risposte": [
+      "Aligning feature distributions",
+      "Aligning timestamps across devices and systems",
+      "Removing duplicated data",
+      "Balancing datasets"
+    ],
+    "giusta": "Aligning timestamps across devices and systems"
+  },
+  "137": {
+    "domanda": "Why is data synchronization critical in industrial applications?",
+    "risposte": [
+      "Because models require large datasets",
+      "Because unsynchronized data leads to incorrect interpretations",
+      "Because cloud computing is mandatory",
+      "Because data is always sparse"
+    ],
+    "giusta": "Because unsynchronized data leads to incorrect interpretations"
+  },
+  "138": {
+    "domanda": "What protocol is commonly used for network time synchronization?",
+    "risposte": [
+      "HTTP",
+      "FTP",
+      "NTP",
+      "MQTT"
+    ],
+    "giusta": "NTP"
+  },
+  "139": {
+    "domanda": "What is the typical accuracy of NTP over the public Internet?",
+    "risposte": [
+      "Seconds",
+      "Hundreds of milliseconds",
+      "Tens of milliseconds",
+      "Microseconds"
+    ],
+    "giusta": "Tens of milliseconds"
+  },
+  "140": {
+    "domanda": "What problem remains even after time synchronization is solved?",
+    "risposte": [
+      "Data redundancy",
+      "Data sparsity and missing values",
+      "Model overfitting",
+      "Feature scaling"
+    ],
+    "giusta": "Data sparsity and missing values"
+  },
+  "141": {
+    "domanda": "What is data preparation mainly aimed at?",
+    "risposte": [
+      "Training the model faster",
+      "Transforming raw, noisy data into a usable dataset",
+      "Eliminating the need for models",
+      "Replacing data gathering"
+    ],
+    "giusta": "Transforming raw, noisy data into a usable dataset"
+  },
+  "142": {
+    "domanda": "Which two main concepts does data preparation include?",
+    "risposte": [
+      "Data labeling and testing",
+      "Data cleaning and feature engineering",
+      "Model training and validation",
+      "Synchronization and deployment"
+    ],
+    "giusta": "Data cleaning and feature engineering"
+  },
+  "143": {
+    "domanda": "What is data wrangling?",
+    "risposte": [
+      "A model optimization technique",
+      "The process of cleaning, structuring and organizing raw data",
+      "A type of neural network",
+      "A cloud deployment strategy"
+    ],
+    "giusta": "The process of cleaning, structuring and organizing raw data"
+  },
+  "144": {
+    "domanda": "Why is it a myth that algorithms can work directly on raw data?",
+    "risposte": [
+      "Because raw data is always structured",
+      "Because data must be cleaned and organized first",
+      "Because algorithms are inaccurate",
+      "Because visualization is optional"
+    ],
+    "giusta": "Because data must be cleaned and organized first"
+  },
+  "145": {
+    "domanda": "Which of the following is NOT a task of data wrangling?",
+    "risposte": [
+      "Discovering",
+      "Structuring",
+      "Cleaning",
+      "Model deployment"
+    ],
+    "giusta": "Model deployment"
+  },
+  "146": {
+    "domanda": "What does the 'enrichment' step in data wrangling involve?",
+    "risposte": [
+      "Removing samples",
+      "Extracting new features from data",
+      "Reducing model size",
+      "Synchronizing clocks"
+    ],
+    "giusta": "Extracting new features from data"
+  },
+  "147": {
+    "domanda": "What is NaN commonly used to represent?",
+    "risposte": [
+      "Zero values",
+      "Categorical data",
+      "Missing or undefined numeric values",
+      "Outliers"
+    ],
+    "giusta": "Missing or undefined numeric values"
+  },
+  "148": {
+    "domanda": "Why is removing incomplete features potentially dangerous?",
+    "risposte": [
+      "Because it increases computation time",
+      "Because important predictive features may be lost",
+      "Because it increases noise",
+      "Because models cannot handle complete data"
+    ],
+    "giusta": "Because important predictive features may be lost"
+  },
+  "149": {
+    "domanda": "Which is the simplest strategy to handle missing data?",
+    "risposte": [
+      "Generating synthetic data",
+      "Ignoring missing records",
+      "Using deep learning",
+      "Feature extraction"
+    ],
+    "giusta": "Ignoring missing records"
+  },
+  "150": {
+    "domanda": "Why can filling missing values with mean or median introduce bias?",
+    "risposte": [
+      "Because it increases dataset size",
+      "Because it alters the original data distribution",
+      "Because it improves accuracy",
+      "Because it removes noise"
+    ],
+    "giusta": "Because it alters the original data distribution"
+  },
+  "151": {
+    "domanda": "Which method fills missing values using similar samples?",
+    "risposte": [
+      "Mean imputation",
+      "Median imputation",
+      "k-Nearest Neighbors",
+      "Random deletion"
+    ],
+    "giusta": "k-Nearest Neighbors"
+  },
+  "152": {
+    "domanda": "What characterizes structured data?",
+    "risposte": [
+      "Lack of predefined schema",
+      "Storage in relational databases with fixed fields",
+      "Only text-based content",
+      "Unsearchable format"
+    ],
+    "giusta": "Storage in relational databases with fixed fields"
+  },
+  "153": {
+    "domanda": "Which is an example of unstructured data?",
+    "risposte": [
+      "Relational database table",
+      "CSV file with schema",
+      "Social media posts",
+      "SQL query result"
+    ],
+    "giusta": "Social media posts"
+  },
+  "154": {
+    "domanda": "Which statement about unstructured data is correct?",
+    "risposte": [
+      "It cannot be used in machine learning",
+      "It always requires relational databases",
+      "It lacks a predefined data model or schema",
+      "It is always numeric"
+    ],
+    "giusta": "It lacks a predefined data model or schema"
+  },
+  "155": {
+    "domanda": "Why are neural networks well suited for unstructured data?",
+    "risposte": [
+      "Because they require fixed schemas",
+      "Because they can extract features automatically",
+      "Because they eliminate preprocessing",
+      "Because they work only on text"
+    ],
+    "giusta": "Because they can extract features automatically"
+  },
+  "156": {
+    "domanda": "What are the main theoretical topics of Lesson 8?",
+    "risposte": [
+      "Deep Learning optimization only",
+      "Degrees of freedom/parameters and Data Leakage",
+      "Cloud deployment strategies",
+      "Explainable AI techniques"
+    ],
+    "giusta": "Degrees of freedom/parameters and Data Leakage"
+  },
+  "157": {
+    "domanda": "Why is studying Python/Colab laboratory still important for the exam?",
+    "risposte": [
+      "Exact coding is required",
+      "To understand how theory applies to practical examples",
+      "Because Python syntax is tested",
+      "Because Colab is mandatory during the exam"
+    ],
+    "giusta": "To understand how theory applies to practical examples"
+  },
+  "158": {
+    "domanda": "What does GIGO stand for?",
+    "risposte": [
+      "Good Input Good Output",
+      "Garbage In Garbage Out",
+      "Generated Input Generated Output",
+      "Global Input Global Output"
+    ],
+    "giusta": "Garbage In Garbage Out"
+  },
+  "159": {
+    "domanda": "Why can't a neural network compensate for bad input data?",
+    "risposte": [
+      "Because neural networks are linear",
+      "Because no model can fix poor data quality",
+      "Because preprocessing is optional",
+      "Because training is deterministic"
+    ],
+    "giusta": "Because no model can fix poor data quality"
+  },
+  "160": {
+    "domanda": "What is meant by degrees of freedom (DoF) in a model?",
+    "risposte": [
+      "Number of training epochs",
+      "Number of independent parameters defining the model configuration",
+      "Number of input samples",
+      "Number of output classes"
+    ],
+    "giusta": "Number of independent parameters defining the model configuration"
+  },
+  "161": {
+    "domanda": "Why are degrees of freedom and number of parameters strongly related?",
+    "risposte": [
+      "Because both define how complex a model is",
+      "Because they are always identical",
+      "Because they reduce overfitting",
+      "Because they increase accuracy"
+    ],
+    "giusta": "Because both define how complex a model is"
+  },
+  "162": {
+    "domanda": "In a 1D linear model z = w·x + b, how many parameters must be fixed?",
+    "risposte": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "giusta": "2"
+  },
+  "163": {
+    "domanda": "In a 2D linear model z = w·x + b, how many parameters must be fixed?",
+    "risposte": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "giusta": "3"
+  },
+  "164": {
+    "domanda": "In a 3D linear model, how many data points are minimally required to configure the model?",
+    "risposte": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "giusta": "4"
+  },
+  "165": {
+    "domanda": "What happens if the number of parameters is too large compared to the dataset size?",
+    "risposte": [
+      "Better generalization",
+      "Overfitting and poor generalization",
+      "Lower training accuracy",
+      "Faster convergence"
+    ],
+    "giusta": "Overfitting and poor generalization"
+  },
+  "166": {
+    "domanda": "What is the relationship between DoF and generalization error in neural networks?",
+    "risposte": [
+      "Higher DoF always reduces error",
+      "Higher DoF tends to increase generalization error if data is insufficient",
+      "DoF has no impact on generalization",
+      "Lower DoF always causes underfitting"
+    ],
+    "giusta": "Higher DoF tends to increase generalization error if data is insufficient"
+  },
+  "167": {
+    "domanda": "Why is Occam’s Razor relevant when choosing model complexity?",
+    "risposte": [
+      "It promotes the most complex solution",
+      "It suggests using the simplest model that fits the data",
+      "It eliminates the need for validation",
+      "It guarantees perfect accuracy"
+    ],
+    "giusta": "It suggests using the simplest model that fits the data"
+  },
+  "168": {
+    "domanda": "What is Data Leakage in Machine Learning?",
+    "risposte": [
+      "Loss of training data",
+      "Use of future or external information that invalidates model evaluation",
+      "Low training accuracy",
+      "Hardware failure during training"
+    ],
+    "giusta": "Use of future or external information that invalidates model evaluation"
+  },
+  "169": {
+    "domanda": "Why is Data Leakage considered dangerous?",
+    "risposte": [
+      "Because it reduces training speed",
+      "Because it leads to overly optimistic performance estimates",
+      "Because it increases dataset size",
+      "Because it simplifies the model"
+    ],
+    "giusta": "Because it leads to overly optimistic performance estimates"
+  },
+  "170": {
+    "domanda": "Which is a typical example of missing relevant features causing Data Leakage?",
+    "risposte": [
+      "Using too many features",
+      "Training without a feature that will be present at deployment time",
+      "Balancing the dataset",
+      "Using cross-validation"
+    ],
+    "giusta": "Training without a feature that will be present at deployment time"
+  },
+  "171": {
+    "domanda": "What happens if the model learns spurious correlations (e.g., color instead of shape)?",
+    "risposte": [
+      "Better robustness",
+      "Correct generalization",
+      "Poor generalization on real data",
+      "Lower training accuracy"
+    ],
+    "giusta": "Poor generalization on real data"
+  },
+  "172": {
+    "domanda": "What is an example of 'adding something more' Data Leakage?",
+    "risposte": [
+      "Removing noisy data",
+      "Using hospital-specific artifacts to classify diseases",
+      "Using fewer parameters",
+      "Data augmentation"
+    ],
+    "giusta": "Using hospital-specific artifacts to classify diseases"
+  },
+  "173": {
+    "domanda": "Why is mixing training and test data considered severe Data Leakage?",
+    "risposte": [
+      "Because it slows down training",
+      "Because it invalidates generalization evaluation",
+      "Because it reduces dataset size",
+      "Because it improves accuracy"
+    ],
+    "giusta": "Because it invalidates generalization evaluation"
+  },
+  "174": {
+    "domanda": "What does 'Déjà vu' Data Leakage refer to?",
+    "risposte": [
+      "Training on too many epochs",
+      "Reusing the same samples or users across train and test sets",
+      "Using data augmentation",
+      "Underfitting"
+    ],
+    "giusta": "Reusing the same samples or users across train and test sets"
+  },
+  "175": {
+    "domanda": "Why are time series particularly sensitive to Data Leakage?",
+    "risposte": [
+      "Because labels are missing",
+      "Because future data can leak into past data",
+      "Because they are always unstructured",
+      "Because models cannot handle sequences"
+    ],
+    "giusta": "Because future data can leak into past data"
+  },
+  "176": {
+    "domanda": "What is Time Series Prediction?",
+    "risposte": [
+      "Assigning labels to sequences",
+      "Estimating future values based on past data",
+      "Clustering temporal data",
+      "Removing temporal correlations"
+    ],
+    "giusta": "Estimating future values based on past data"
+  },
+  "177": {
+    "domanda": "What is Time Series Classification?",
+    "risposte": [
+      "Predicting numerical values",
+      "Assigning labels based on past temporal data",
+      "Forecasting trends only",
+      "Detecting missing values"
+    ],
+    "giusta": "Assigning labels based on past temporal data"
+  },
+  "178": {
+    "domanda": "What is the 'cropping problem' in Data Leakage?",
+    "risposte": [
+      "Reducing dataset size",
+      "Learning biased patterns due to incorrect slicing of data",
+      "Removing outliers",
+      "Feature normalization"
+    ],
+    "giusta": "Learning biased patterns due to incorrect slicing of data"
+  },
+  "179": {
+    "domanda": "Which domains can be affected by the cropping Data Leakage problem?",
+    "risposte": [
+      "Images only",
+      "Audio only",
+      "Structured data only",
+      "Images, audio, structured and unstructured data"
+    ],
+    "giusta": "Images, audio, structured and unstructured data"
+  },
+  "180": {
+    "domanda": "What is the main takeaway of Lesson 8?",
+    "risposte": [
+      "Always use deep learning",
+      "Use datasets without preprocessing",
+      "Carefully manage dataset size, parameters and avoid Data Leakage",
+      "Focus only on model accuracy"
+    ],
+    "giusta": "Carefully manage dataset size, parameters and avoid Data Leakage"
   }
 }
