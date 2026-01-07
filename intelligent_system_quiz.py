@@ -26,9 +26,14 @@ def start_quiz():
     # Get settings from form
     duration = int(request.form.get('duration', 60))
     total_questions = int(request.form.get('total_questions', 40))
-    questions_per_page = int(request.form.get('questions_per_page', 10))
     mode = request.form.get('mode', 'exam')
     show_results = request.form.get('show_results', 'end')
+    
+    # Calculate dynamic questions per page based on total questions
+    if total_questions <= 10:
+        questions_per_page = total_questions  # Single page for 10 or fewer questions
+    else:
+        questions_per_page = 10  # Standard 10 questions per page for more than 10
     
     # Setup session
     chiavi = [k for k in ALL_QUESTIONS.keys() if k.isdigit()]
@@ -117,6 +122,10 @@ def quiz():
     questions = []
     for i in range(start_idx, end_idx):
         chiave = session['scelte'][i]
+        # Check if question still exists in the JSON file
+        if chiave not in ALL_QUESTIONS:
+            # Skip missing questions and continue
+            continue
         domanda_data = ALL_QUESTIONS[chiave]
         
         question = {
@@ -196,6 +205,10 @@ def results():
     
     for i, chiave in enumerate(session['scelte']):
         question_num = i + 1
+        # Check if question still exists in the JSON file
+        if chiave not in ALL_QUESTIONS:
+            # Skip missing questions and continue
+            continue
         domanda_data = ALL_QUESTIONS[chiave]
         user_answer = session['answers'].get(str(question_num))
         correct_answer = domanda_data['giusta']

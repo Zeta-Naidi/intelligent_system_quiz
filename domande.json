@@ -1549,16 +1549,6 @@
     ],
     "giusta": "Because they can extract features automatically"
   },
-  "156": {
-    "domanda": "What are the main theoretical topics of Lesson 8?",
-    "risposte": [
-      "Deep Learning optimization only",
-      "Degrees of freedom/parameters and Data Leakage",
-      "Cloud deployment strategies",
-      "Explainable AI techniques"
-    ],
-    "giusta": "Degrees of freedom/parameters and Data Leakage"
-  },
   "157": {
     "domanda": "Why is studying Python/Colab laboratory still important for the exam?",
     "risposte": [
@@ -1788,26 +1778,6 @@
       "Images, audio, structured and unstructured data"
     ],
     "giusta": "Images, audio, structured and unstructured data"
-  },
-  "180": {
-    "domanda": "What is the main takeaway of Lesson 8?",
-    "risposte": [
-      "Always use deep learning",
-      "Use datasets without preprocessing",
-      "Carefully manage dataset size, parameters and avoid Data Leakage",
-      "Focus only on model accuracy"
-    ],
-    "giusta": "Carefully manage dataset size, parameters and avoid Data Leakage"
-  },
-  "181": {
-    "domanda": "What is the main focus of Lesson 9?",
-    "risposte": [
-      "Deep learning optimization",
-      "Errors in datasets and similarity in data and images",
-      "Cloud deployment of AI models",
-      "Explainable AI techniques"
-    ],
-    "giusta": "Errors in datasets and similarity in data and images"
   },
   "182": {
     "domanda": "Why is Step 2 of the Machine Learning workflow often underestimated?",
@@ -2069,26 +2039,6 @@
     ],
     "giusta": "Image hashing (aHash, dHash, pHash)"
   },
-  "208": {
-    "domanda": "What is the main takeaway of Lesson 9?",
-    "risposte": [
-      "Focus only on model accuracy",
-      "Clean datasets by managing errors and similarity carefully",
-      "Always use deep neural networks",
-      "Avoid feature engineering"
-    ],
-    "giusta": "Clean datasets by managing errors and similarity carefully"
-  },
-  "209": {
-    "domanda": "What is the main focus of Lesson 10?",
-    "risposte": [
-      "Neural network training optimization",
-      "Similarity in Artificial Intelligence and coding with similarity",
-      "Cloud-based AI deployment",
-      "Explainable AI regulations"
-    ],
-    "giusta": "Similarity in Artificial Intelligence and coding with similarity"
-  },
   "210": {
     "domanda": "What is the goal of image hashing techniques?",
     "risposte": [
@@ -2338,26 +2288,6 @@
       "k-NN classifiers"
     ],
     "giusta": "Vision Transformers (ViTs)"
-  },
-  "235": {
-    "domanda": "What is the main takeaway of Lesson 10?",
-    "risposte": [
-      "Focus only on code syntax",
-      "Similarity is a core primitive in AI, from images to large models",
-      "Always use deep learning",
-      "Avoid visualization"
-    ],
-    "giusta": "Similarity is a core primitive in AI, from images to large models"
-  },
-  "236": {
-    "domanda": "What are the main topics of Lesson 11?",
-    "risposte": [
-      "Cloud deployment and regulations",
-      "Exploratory Data Analysis, Feature Engineering and Similarity",
-      "AutoML and Edge computing",
-      "Reinforcement Learning"
-    ],
-    "giusta": "Exploratory Data Analysis, Feature Engineering and Similarity"
   },
   "237": {
     "domanda": "Why is similarity considered a fundamental tool for deep learning?",
@@ -2639,26 +2569,6 @@
     ],
     "giusta": "Confusion matrices and error distributions"
   },
-  "265": {
-    "domanda": "What is the main takeaway of Lesson 11?",
-    "risposte": [
-      "Models work without data analysis",
-      "EDA and Feature Engineering are critical for reliable AI systems",
-      "Only deep learning matters",
-      "Visualization is optional"
-    ],
-    "giusta": "EDA and Feature Engineering are critical for reliable AI systems"
-  },
-  "266": {
-    "domanda": "What is the main focus of Lesson 12?",
-    "risposte": [
-      "Neural network optimization",
-      "Data representation and visualization for Machine Learning",
-      "Cloud AI deployment",
-      "Reinforcement learning"
-    ],
-    "giusta": "Data representation and visualization for Machine Learning"
-  },
   "267": {
     "domanda": "In which step of the ML workflow is data visualization mainly used?",
     "risposte": [
@@ -2928,216 +2838,6 @@
       "Because it reduces computation"
     ],
     "giusta": "Because misalignment leads to wrong similarity or comparison"
-  },
-  "294": {
-    "domanda": "What is the main takeaway of Lesson 12?",
-    "risposte": [
-      "Visualization is optional",
-      "Good visualization is essential to understand data, models and decisions",
-      "Only deep learning matters",
-      "Plots replace models"
-    ],
-    "giusta": "Good visualization is essential to understand data, models and decisions"
-  },
-   "295": {
-    "domanda": "What is the purpose of Lesson 13?",
-    "risposte": [
-      "Introduce new Machine Learning techniques",
-      "Explain exam structure, scoring and strategy",
-      "Teach image similarity",
-      "Cover AI regulations"
-    ],
-    "giusta": "Explain exam structure, scoring and strategy"
-  },
-  "296": {
-    "domanda": "What type of exam is described in the course?",
-    "risposte": [
-      "Oral exam",
-      "Project-based exam",
-      "Written multiple-choice exam",
-      "Mixed oral and written exam"
-    ],
-    "giusta": "Written multiple-choice exam"
-  },
-  "297": {
-    "domanda": "How many correct answers are allowed per question?",
-    "risposte": [
-      "More than one",
-      "Exactly two",
-      "Only one",
-      "Depends on the question"
-    ],
-    "giusta": "Only one"
-  },
-  "298": {
-    "domanda": "What is the score assigned to a correct answer?",
-    "risposte": [
-      "2 points",
-      "0.5 points",
-      "1 point",
-      "Variable score"
-    ],
-    "giusta": "1 point"
-  },
-  "299": {
-    "domanda": "What is the score assigned to a wrong answer?",
-    "risposte": [
-      "-1 point",
-      "0 points",
-      "0.5 points",
-      "Depends on the question"
-    ],
-    "giusta": "0 points"
-  },
-  "300": {
-    "domanda": "How is the final exam score obtained?",
-    "risposte": [
-      "By summing raw points only",
-      "By normalizing the total score to marks",
-      "By averaging with oral exam",
-      "By subjective evaluation"
-    ],
-    "giusta": "By normalizing the total score to marks"
-  },
-  "301": {
-    "domanda": "What is the typical duration of the exam?",
-    "risposte": [
-      "30 minutes",
-      "45 minutes",
-      "About 1 hour",
-      "2 hours"
-    ],
-    "giusta": "About 1 hour"
-  },
-  "302": {
-    "domanda": "Where is the exam taken?",
-    "risposte": [
-      "At home online",
-      "In the classroom on paper",
-      "In the laboratory in front of a PC",
-      "Orally in front of the professor"
-    ],
-    "giusta": "In the laboratory in front of a PC"
-  },
-  "303": {
-    "domanda": "Are books, notes or external material allowed during the exam?",
-    "risposte": [
-      "Yes, everything is allowed",
-      "Only handwritten notes",
-      "Only the slides",
-      "No, nothing is allowed"
-    ],
-    "giusta": "No, nothing is allowed"
-  },
-  "304": {
-    "domanda": "What is the main strategic rule suggested by the professor?",
-    "risposte": [
-      "Always search for the correct answer",
-      "Exclude wrong answers first",
-      "Answer as fast as possible",
-      "Skip difficult questions"
-    ],
-    "giusta": "Exclude wrong answers first"
-  },
-  "305": {
-    "domanda": "If you are unsure about the correct answer, what should you do?",
-    "risposte": [
-      "Leave the question unanswered",
-      "Choose a random answer",
-      "Choose the answer that looks less wrong",
-      "Always choose the longest answer"
-    ],
-    "giusta": "Choose the answer that looks less wrong"
-  },
-  "306": {
-    "domanda": "According to the professor, how should exam simulations be used?",
-    "risposte": [
-      "As the main study material",
-      "Only to memorize answers",
-      "To understand reasoning and exam style, not to study",
-      "They should be ignored"
-    ],
-    "giusta": "To understand reasoning and exam style, not to study"
-  },
-  "307": {
-    "domanda": "What is the recommended way to study the slides?",
-    "risposte": [
-      "Memorize definitions only",
-      "Read only summaries",
-      "Ask yourself what can be asked from each slide",
-      "Skip use cases"
-    ],
-    "giusta": "Ask yourself what can be asked from each slide"
-  },
-  "308": {
-    "domanda": "Why is being specific important when studying for the exam?",
-    "risposte": [
-      "Because questions are generic",
-      "Because answers are ambiguous",
-      "Because questions are often detailed and precise",
-      "Because slides are short"
-    ],
-    "giusta": "Because questions are often detailed and precise"
-  },
-  "309": {
-    "domanda": "What does the exam simulation sheet mainly help with?",
-    "risposte": [
-      "Learning new theory",
-      "Tracking correct and wrong answers",
-      "Replacing the final exam",
-      "Improving coding skills"
-    ],
-    "giusta": "Tracking correct and wrong answers"
-  },
-  "310": {
-    "domanda": "What does the professor suggest writing next to each question during simulations?",
-    "risposte": [
-      "The correct answer only",
-      "Nothing",
-      "Notes explaining why the answer is right or wrong",
-      "The slide number only"
-    ],
-    "giusta": "Notes explaining why the answer is right or wrong"
-  },
-  "311": {
-    "domanda": "Why is understanding why an answer is wrong important?",
-    "risposte": [
-      "To increase speed",
-      "To apply the exclusion strategy during the exam",
-      "To memorize answers",
-      "To reduce the number of questions"
-    ],
-    "giusta": "To apply the exclusion strategy during the exam"
-  },
-  "312": {
-    "domanda": "What kind of questions are used in the exam?",
-    "risposte": [
-      "Open-ended questions",
-      "Coding exercises",
-      "Multiple-choice questions based on slides",
-      "Oral discussion questions"
-    ],
-    "giusta": "Multiple-choice questions based on slides"
-  },
-  "313": {
-    "domanda": "Which of the following best summarizes the exam philosophy?",
-    "risposte": [
-      "Test memorization of formulas",
-      "Test deep understanding of slides, examples and reasoning",
-      "Test programming skills",
-      "Test speed only"
-    ],
-    "giusta": "Test deep understanding of slides, examples and reasoning"
-  },
-  "314": {
-    "domanda": "What is the main takeaway of Lesson 13?",
-    "risposte": [
-      "Study only simulations",
-      "Focus on excluding wrong answers and understanding slides deeply",
-      "Memorize all answers",
-      "Skip theory"
-    ],
-    "giusta": "Focus on excluding wrong answers and understanding slides deeply"
   },
   "315": {
     "domanda": "What are the three main components of a Machine Learning algorithm?",
@@ -3439,16 +3139,6 @@
     ],
     "giusta": "Because error must be interpreted in context"
   },
-  "345": {
-    "domanda": "What are the two main parts of Lesson 15?",
-    "risposte": [
-      "Theory and regulations",
-      "Theory and laboratory",
-      "Coding only",
-      "Visualization only"
-    ],
-    "giusta": "Theory and laboratory"
-  },
   "346": {
     "domanda": "In which ML workflow steps is accuracy assessment used?",
     "risposte": [
@@ -3719,26 +3409,6 @@
     ],
     "giusta": "To assess discriminatory power of features"
   },
-  "373": {
-    "domanda": "What is the main exam-related advice for Lesson 15?",
-    "risposte": [
-      "Memorize code syntax",
-      "Understand concepts and comment code examples",
-      "Ignore laboratory material",
-      "Focus only on accuracy formulas"
-    ],
-    "giusta": "Understand concepts and comment code examples"
-  },
-  "374": {
-    "domanda": "What are the main topics of Lesson 16?",
-    "risposte": [
-      "Reinforcement learning and agents",
-      "Linear regressors, linear classifiers, neural networks and overfitting",
-      "Cloud deployment and MLOps",
-      "Explainable AI only"
-    ],
-    "giusta": "Linear regressors, linear classifiers, neural networks and overfitting"
-  },
   "375": {
     "domanda": "What is the goal of a linear regressor?",
     "risposte": [
@@ -3889,16 +3559,6 @@
     ],
     "giusta": "By comparing training accuracy with cross-validation or test accuracy"
   },
-  "390": {
-    "domanda": "What is the purpose of cross-validation in Lesson 16?",
-    "risposte": [
-      "Increase training accuracy",
-      "Test generalization performance",
-      "Balance the dataset",
-      "Optimize visualization"
-    ],
-    "giusta": "Test generalization performance"
-  },
   "391": {
     "domanda": "What does the Bias–Variance tradeoff describe?",
     "risposte": [
@@ -3978,26 +3638,6 @@
       "Because labels are missing"
     ],
     "giusta": "Because training accuracy is optimistic and biased"
-  },
-  "399": {
-    "domanda": "What is the main lesson of the Wine dataset example?",
-    "risposte": [
-      "Decision trees always work",
-      "Increasing depth always improves generalization",
-      "Perfect training accuracy can hide poor generalization",
-      "Cross-validation is optional"
-    ],
-    "giusta": "Perfect training accuracy can hide poor generalization"
-  },
-  "400": {
-    "domanda": "What is the most important takeaway of Lesson 16?",
-    "risposte": [
-      "Always maximize training accuracy",
-      "Model complexity must be balanced to achieve good generalization",
-      "Neural networks always outperform linear models",
-      "Coding details matter more than theory"
-    ],
-    "giusta": "Model complexity must be balanced to achieve good generalization"
   },
   "401": {
     "domanda": "What is the main goal of Bayes Optimal Classification?",
@@ -4268,26 +3908,6 @@
       "It ignores probability distributions"
     ],
     "giusta": "It approximates the Bayes optimal classifier with enough data"
-  },
-  "428": {
-    "domanda": "What is the main takeaway of Lesson 17?",
-    "risposte": [
-      "Neural networks always dominate classical models",
-      "Classical models are obsolete",
-      "Understanding Bayes, dimensionality and kNN is fundamental to pattern recognition",
-      "Distance-based methods are always slow"
-    ],
-    "giusta": "Understanding Bayes, dimensionality and kNN is fundamental to pattern recognition"
-  },
-  "429": {
-    "domanda": "What is the main focus of Lesson 18?",
-    "risposte": [
-      "Model deployment",
-      "Dimensionality reduction, feature selection and feature extraction",
-      "Neural network optimization",
-      "Bayesian classifiers"
-    ],
-    "giusta": "Dimensionality reduction, feature selection and feature extraction"
   },
   "430": {
     "domanda": "What is the difference between feature selection and feature extraction?",
@@ -4609,16 +4229,6 @@
     ],
     "giusta": "Components are independent"
   },
-  "462": {
-    "domanda": "What is the main takeaway of Lesson 18?",
-    "risposte": [
-      "More features always improve models",
-      "Dimensionality reduction and feature engineering are critical to fight the curse of dimensionality",
-      "PCA always outperforms LDA",
-      "Feature selection is optional"
-    ],
-    "giusta": "Dimensionality reduction and feature engineering are critical to fight the curse of dimensionality"
-  },
   "463": {
     "domanda": "What type of learning is clustering?",
     "risposte": [
@@ -4939,16 +4549,6 @@
     ],
     "giusta": "Because brute-force search becomes infeasible with many parameters"
   },
-  "495": {
-    "domanda": "What is the main takeaway of Lesson 19?",
-    "risposte": [
-      "Clustering replaces classification",
-      "k-means works in all scenarios",
-      "Clustering and different intelligent system paradigms are fundamental AI tools",
-      "Hybrid systems are obsolete"
-    ],
-    "giusta": "Clustering and different intelligent system paradigms are fundamental AI tools"
-  },
   "496": {
     "domanda": "What is an artificial neural network inspired by?",
     "risposte": [
@@ -5218,16 +4818,6 @@
       "They do not use gradients"
     ],
     "giusta": "Signals propagate only from input to output"
-  },
-  "523": {
-    "domanda": "What is the main takeaway of Lesson 20?",
-    "risposte": [
-      "Single neurons are sufficient for all problems",
-      "Neural networks learn by adjusting weights via gradient-based methods",
-      "Backpropagation guarantees global optimality",
-      "Activation functions are irrelevant"
-    ],
-    "giusta": "Neural networks learn by adjusting weights via gradient-based methods"
   },
   "524": {
     "domanda": "How are Deep Learning, Machine Learning and Artificial Intelligence related?",
@@ -5519,16 +5109,6 @@
     ],
     "giusta": "By converting data into image-like representations"
   },
-  "553": {
-    "domanda": "What is the main takeaway of Lesson 21?",
-    "risposte": [
-      "CNNs replace all other models",
-      "CNNs exploit spatial locality and hierarchy to efficiently learn complex patterns",
-      "Deep learning does not need theory",
-      "Coding details are more important than concepts"
-    ],
-    "giusta": "CNNs exploit spatial locality and hierarchy to efficiently learn complex patterns"
-  },
   "554": {
     "domanda": "What type of learning do autoencoders use?",
     "risposte": [
@@ -5818,26 +5398,6 @@
       "Lack of GPUs"
     ],
     "giusta": "Training models repeatedly on their own generated data"
-  },
-  "583": {
-    "domanda": "According to Lesson 22, what is needed to avoid MAD?",
-    "risposte": [
-      "Smaller models",
-      "Fresh real data in each generation",
-      "More synthetic data",
-      "No fine-tuning"
-    ],
-    "giusta": "Fresh real data in each generation"
-  },
-  "584": {
-    "domanda": "What is the main takeaway of Lesson 22?",
-    "risposte": [
-      "Deep learning works without data",
-      "Autoencoders, transfer learning and GANs are key tools for modern DL systems",
-      "GANs replace supervised learning",
-      "Feature engineering is obsolete"
-    ],
-    "giusta": "Autoencoders, transfer learning and GANs are key tools for modern DL systems"
   },
   "585": {
     "domanda": "What is an Intelligent Vision System?",
@@ -6239,16 +5799,6 @@
     ],
     "giusta": "No, it is explicitly stated as not in the exam"
   },
-  "625": {
-    "domanda": "What is the main takeaway of Lesson 23?",
-    "risposte": [
-      "Vision systems only use deep learning",
-      "Intelligent vision combines tasks, models, applications and hardware choices",
-      "Hardware is irrelevant",
-      "Segmentation replaces detection"
-    ],
-    "giusta": "Intelligent vision combines tasks, models, applications and hardware choices"
-  },
   "626": {
     "domanda": "What is the main focus of Machine Learning software?",
     "risposte": [
@@ -6638,15 +6188,5 @@
       "Only cloud storage"
     ],
     "giusta": "They act as the eyes of the production process"
-  },
-  "665": {
-    "domanda": "What is the main takeaway of Lesson 24?",
-    "risposte": [
-      "ML software is only about algorithms",
-      "Cloud services, TinyML and Industry 4.0/5.0 enable scalable intelligent systems",
-      "Industry is not impacted by ML",
-      "Vision systems are obsolete"
-    ],
-    "giusta": "Cloud services, TinyML and Industry 4.0/5.0 enable scalable intelligent systems"
   }
 }

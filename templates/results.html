@@ -38,16 +38,22 @@
             
             <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
                 <h3>📊 Valutazione</h3>
-                {% if score >= 90 %}
-                <p style="color: #28a745; font-size: 1.2em;">🌟 <strong>Eccellente!</strong> Hai dimostrato una conoscenza approfondita della materia.</p>
-                {% elif score >= 80 %}
-                <p style="color: #17a2b8; font-size: 1.2em;">👍 <strong>Molto Bene!</strong> Hai una buona padronanza degli argomenti.</p>
-                {% elif score >= 70 %}
-                <p style="color: #ffc107; font-size: 1.2em;">⚠️ <strong>Discreto.</strong> Potresti rivedere alcuni concetti.</p>
-                {% elif score >= 60 %}
-                <p style="color: #fd7e14; font-size: 1.2em;">📚 <strong>Sufficiente.</strong> È consigliabile studiare di più.</p>
+                {% set converted_score = (corrette * 30 / totale) | round(2) %}
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 1.1em; margin: 0;"><strong>Punteggio:</strong> {{ corrette }}/{{ totale }} → {{ converted_score }}/30</p>
+                </div>
+                {% if converted_score >= 18 %}
+                    {% if converted_score >= 27 %}
+                    <p style="color: #28a745; font-size: 1.2em;">🌟 <strong>Eccellente!</strong> Hai dimostrato una conoscenza approfondita della materia.</p>
+                    {% elif converted_score >= 24 %}
+                    <p style="color: #17a2b8; font-size: 1.2em;">👍 <strong>Molto Bene!</strong> Hai una buona padronanza degli argomenti.</p>
+                    {% elif converted_score >= 21 %}
+                    <p style="color: #20c997; font-size: 1.2em;">✅ <strong>Buono.</strong> Hai una discreta conoscenza degli argomenti.</p>
+                    {% else %}
+                    <p style="color: #28a745; font-size: 1.2em;">✅ <strong>Sufficiente - Passato!</strong> Hai raggiunto la soglia minima per superare l'esame.</p>
+                    {% endif %}
                 {% else %}
-                <p style="color: #dc3545; font-size: 1.2em;">❌ <strong>Insufficiente.</strong> È necessario approfondire lo studio.</p>
+                <p style="color: #dc3545; font-size: 1.2em;">❌ <strong>Insufficiente - Bocciato!</strong> È necessario raggiungere almeno 18/30 per superare l'esame.</p>
                 {% endif %}
             </div>
             
