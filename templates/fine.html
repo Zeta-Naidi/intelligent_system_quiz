@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz Completato</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f2f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .result-container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+      .stat {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      .corrette {
+        color: #28a745;
+      }
+      .errate {
+        color: #dc3545;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 25px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-container">
+      <h1>Quiz Completato ✅</h1>
+      <div class="stat corrette">✔️ Risposte corrette: {{ corrette }}</div>
+      <div class="stat errate">❌ Risposte errate: {{ errate }}</div>
+      <a class="btn" href="/reset">Ricomincia il quiz</a>
+    </div>
+  </body>
+</html>
