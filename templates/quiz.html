@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Intelligent Systems - Pagina {{ current_page }}/{{ total_pages }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-container">
+            <!-- Sidebar -->
+            <div class="quiz-sidebar">
+                <!-- Quiz Info -->
+                <div class="sidebar-section">
+                    <div class="sidebar-title">📊 Statistiche</div>
+                    <div class="quiz-info">
+                        <div class="info-item">
+                            <span class="label">Pagina</span>
+                            <span class="value">{{ current_page }}/{{ total_pages }}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Risposte</span>
+                            <span class="value">{{ answered }}/{{ total_questions }}</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress bar -->
+                    <div class="progress-container" style="margin-top: 15px;">
+                        <div class="progress-bar" style="width: {{ (answered / total_questions * 100) }}%"></div>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                {% if mode == 'exam' and duration > 0 %}
+                <div class="sidebar-section">
+                    <div class="sidebar-title">⏱️ Tempo</div>
+                    <div class="timer" id="timer">
+                        <span id="time-remaining">{{ time_remaining }}</span>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Question Navigation -->
+                <div class="sidebar-section">
+                    <div class="sidebar-title">🗂️ Navigazione Domande</div>
+                    <div class="questions-nav">
+                        {% for i in range(1, total_questions + 1) %}
+                        <form method="POST" style="display: inline-block;">
+                            <input type="hidden" name="action" value="goto_question">
+                            <input type="hidden" name="question" value="{{ i }}">
+                            <button type="submit" class="question-nav-btn 
+                                {% if i in answered_questions %}answered{% elif i in current_page_questions %}current{% else %}unanswered{% endif %}">
+                                {{ i }}
+                            </button>
+                        </form>
+                        {% endfor %}
+                    </div>
+                    
+                    <div style="margin-top: 15px; font-size: 0.85em; color: #666;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                            <div class="question-nav-btn answered" style="width: 20px; height: 20px; font-size: 0.7em;">✓</div>
+                            <span>Risposta data</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                            <div class="question-nav-btn current" style="width: 20px; height: 20px; font-size: 0.7em;">•</div>
+                            <span>Pagina corrente</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div class="question-nav-btn unanswered" style="width: 20px; height: 20px; font-size: 0.7em;">?</div>
+                            <span>Senza risposta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="quiz-main">
+                <!-- Warning for unanswered questions -->
+                {% if unanswered_count > 0 %}
+                <div class="warning-message">
+                    ⚠️ <strong>Attenzione:</strong> Ci sono ancora {{ unanswered_count }} domande senza risposta.
+                </div>
+                {% endif %}
+
+                <!-- Questions -->
+                <div class="questions-grid">
+            <form method="POST">
+                {% for question in questions %}
+                <div class="question-item" id="question-{{ question.number }}">
+                    <div style="display: flex; align-items: flex-start;">
+                        <span class="question-number">{{ question.number }}</span>
+                        <div style="flex: 1;">
+                            <div class="question-text">{{ question.domanda }}</div>
+                            <ul class="answers-list">
+                                {% for risposta in question.risposte %}
+                                <li class="answer-option">
+                                    <label>
+                                        <input type="radio" 
+                                               name="q{{ question.number }}" 
+                                               value="{{ risposta }}"
+                                               {% if question.selected == risposta %}checked{% endif %}>
+                                        {{ risposta }}
+                                    </label>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            
+                            {% if show_results == 'immediate' and question.answered %}
+                            <div style="margin-top: 15px; padding: 10px; border-radius: 8px; 
+                                        background: {% if question.correct %}#d4edda{% else %}#f8d7da{% endif %};">
+                                <strong>
+                                    {% if question.correct %}
+                                        ✅ Corretto!
+                                    {% else %}
+                                        ❌ Sbagliato. La risposta corretta è: {{ question.giusta }}
+                                    {% endif %}
+                                </strong>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Navigation -->
+                <div class="navigation">
+                    <div>
+                        {% if current_page > 1 %}
+                        <button type="submit" name="action" value="prev_page" class="btn btn-secondary">
+                            ← Pagina Precedente
+                        </button>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="page-indicator">
+                        Pagina {{ current_page }} di {{ total_pages }}
+                    </div>
+                    
+                    <div>
+                        {% if current_page < total_pages %}
+                        <button type="submit" name="action" value="next_page" class="btn">
+                            Pagina Successiva →
+                        </button>
+                        {% else %}
+                        <button type="submit" name="action" value="finish" class="btn" 
+                                {% if unanswered_count > 0 %}disabled{% endif %}
+                                onclick="{% if unanswered_count > 0 %}return false;{% else %}return confirm('Sei sicuro di voler terminare il quiz?');{% endif %}">
+                            🏁 {% if unanswered_count > 0 %}Completa tutte le domande{% else %}Termina Quiz{% endif %}
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </form>
+
+            <!-- Quick navigation -->
+            {% if total_pages > 1 %}
+            <div style="margin-top: 20px; text-align: center;">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                    <strong>Vai alla pagina:</strong>
+                    {% for page_num in range(1, total_pages + 1) %}
+                    <form method="POST" style="display: inline-block; margin: 0 5px;">
+                        <input type="hidden" name="action" value="goto_page">
+                        <input type="hidden" name="page" value="{{ page_num }}">
+                        <button type="submit" class="btn {% if page_num == current_page %}btn-secondary{% endif %}" 
+                                style="padding: 8px 12px; margin: 2px;">
+                            {{ page_num }}
+                        </button>
+                    </form>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% if mode == 'exam' and duration > 0 %}
+    <script>
+        // Timer functionality
+        let timeRemaining = {{ time_remaining_seconds }};
+        
+        function updateTimer() {
+            const hours = Math.floor(timeRemaining / 3600);
+            const minutes = Math.floor((timeRemaining % 3600) / 60);
+            const seconds = timeRemaining % 60;
+            
+            const timeString = hours > 0 
+                ? `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+                : `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            document.getElementById('time-remaining').textContent = timeString;
+            
+            if (timeRemaining <= 0) {
+                alert('Tempo scaduto! Il quiz verrà terminato automaticamente.');
+                document.querySelector('form').submit();
+                return;
+            }
+            
+            // Change color when time is running out
+            const timer = document.getElementById('timer');
+            if (timeRemaining <= 300) { // 5 minutes
+                timer.style.background = '#ff4757';
+                timer.style.animation = 'pulse 1s infinite';
+            } else if (timeRemaining <= 600) { // 10 minutes
+                timer.style.background = '#ffa502';
+            }
+            
+            timeRemaining--;
+        }
+        
+        // Update timer every second
+        setInterval(updateTimer, 1000);
+        
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Function to save current answers before navigation
+        function saveCurrentAnswers() {
+            const mainForm = document.querySelector('.questions-grid form');
+            const formData = new FormData(mainForm);
+            
+            // Submit current answers via AJAX to save them
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/quiz', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+            // Convert FormData to URL-encoded string
+            const params = new URLSearchParams();
+            for (let [key, value] of formData.entries()) {
+                params.append(key, value);
+            }
+            params.append('action', 'save_only'); // Special action to just save without navigation
+            
+            xhr.send(params.toString());
+        }
+        
+        // Auto-save answers when they change
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', function() {
+                saveCurrentAnswers();
+                console.log('Answer saved:', this.name, this.value);
+            });
+        });
+        
+        // Save answers before navigation
+        const navForms = document.querySelectorAll('.questions-nav form');
+        navForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent immediate submission
+                
+                const mainForm = document.querySelector('.questions-grid form');
+                const formData = new FormData(mainForm);
+                
+                // Get the target question number for scrolling
+                const targetQuestion = this.querySelector('input[name="question"]').value;
+                
+                // Add current answers to the navigation form
+                for (let [key, value] of formData.entries()) {
+                    if (key.startsWith('q')) {
+                        // Remove existing input if present
+                        const existingInput = this.querySelector(`input[name="${key}"]`);
+                        if (existingInput) {
+                            existingInput.remove();
+                        }
+                        
+                        // Add new hidden input
+                        const hiddenInput = document.createElement('input');
+                        hiddenInput.type = 'hidden';
+                        hiddenInput.name = key;
+                        hiddenInput.value = value;
+                        this.appendChild(hiddenInput);
+                    }
+                }
+                
+                // Add target question for scrolling
+                const scrollInput = document.createElement('input');
+                scrollInput.type = 'hidden';
+                scrollInput.name = 'scroll_to';
+                scrollInput.value = targetQuestion;
+                this.appendChild(scrollInput);
+                
+                // Now submit the form with the answers included
+                this.submit();
+            });
+        });
+        
+        // Auto-scroll to target question if specified
+        const urlParams = new URLSearchParams(window.location.search);
+        const scrollTo = urlParams.get('scroll_to') || '{{ request.form.get("scroll_to", "") }}';
+        if (scrollTo) {
+            setTimeout(() => {
+                const targetElement = document.getElementById('question-' + scrollTo);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                    
+                    // Add highlight effect
+                    targetElement.style.backgroundColor = '#fff3cd';
+                    targetElement.style.border = '2px solid #ffc107';
+                    targetElement.style.borderRadius = '8px';
+                    
+                    // Remove highlight after 2 seconds
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                        targetElement.style.border = '';
+                        targetElement.style.borderRadius = '';
+                    }, 2000);
+                }
+            }, 100);
+        }
+    </script>
+    {% endif %}
+</body>
+</html>

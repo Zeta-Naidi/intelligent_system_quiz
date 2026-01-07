@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Intelligent Systems - Risultati</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="results-screen">
+            <h1>🎉 Quiz Completato!</h1>
+            
+            <div class="score-circle">
+                {{ score }}%
+            </div>
+            
+            <div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap;">
+                <div class="info-item">
+                    <span class="label">Risposte Corrette</span>
+                    <span class="value" style="color: #28a745;">{{ corrette }}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Risposte Errate</span>
+                    <span class="value" style="color: #dc3545;">{{ errate }}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Totale Domande</span>
+                    <span class="value">{{ totale }}</span>
+                </div>
+                {% if tempo_impiegato %}
+                <div class="info-item">
+                    <span class="label">Tempo Impiegato</span>
+                    <span class="value">{{ tempo_impiegato }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
+                <h3>📊 Valutazione</h3>
+                {% if score >= 90 %}
+                <p style="color: #28a745; font-size: 1.2em;">🌟 <strong>Eccellente!</strong> Hai dimostrato una conoscenza approfondita della materia.</p>
+                {% elif score >= 80 %}
+                <p style="color: #17a2b8; font-size: 1.2em;">👍 <strong>Molto Bene!</strong> Hai una buona padronanza degli argomenti.</p>
+                {% elif score >= 70 %}
+                <p style="color: #ffc107; font-size: 1.2em;">⚠️ <strong>Discreto.</strong> Potresti rivedere alcuni concetti.</p>
+                {% elif score >= 60 %}
+                <p style="color: #fd7e14; font-size: 1.2em;">📚 <strong>Sufficiente.</strong> È consigliabile studiare di più.</p>
+                {% else %}
+                <p style="color: #dc3545; font-size: 1.2em;">❌ <strong>Insufficiente.</strong> È necessario approfondire lo studio.</p>
+                {% endif %}
+            </div>
+            
+            {% if detailed_results %}
+            <div style="background: white; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin: 20px 0; text-align: left;">
+                <h3>📋 Dettaglio Risposte</h3>
+                {% for result in detailed_results %}
+                <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <span class="question-number" style="background: {% if result.correct %}#28a745{% else %}#dc3545{% endif %};">
+                            {{ result.number }}
+                        </span>
+                        <strong style="margin-left: 10px;">{{ result.domanda }}</strong>
+                    </div>
+                    
+                    <div style="margin-left: 45px;">
+                        {% if result.user_answer %}
+                        <p><strong>La tua risposta:</strong> 
+                           <span style="color: {% if result.correct %}#28a745{% else %}#dc3545{% endif %};">
+                               {{ result.user_answer }}
+                           </span>
+                        </p>
+                        {% endif %}
+                        
+                        {% if not result.correct %}
+                        <p><strong>Risposta corretta:</strong> 
+                           <span style="color: #28a745;">{{ result.correct_answer }}</span>
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <div style="margin-top: 40px;">
+                <a href="/" class="btn">🔄 Nuovo Quiz</a>
+                <a href="/reset" class="btn btn-secondary">🏠 Torna alla Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

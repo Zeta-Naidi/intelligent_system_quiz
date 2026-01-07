@@ -1798,5 +1798,4855 @@
       "Focus only on model accuracy"
     ],
     "giusta": "Carefully manage dataset size, parameters and avoid Data Leakage"
+  },
+  "181": {
+    "domanda": "What is the main focus of Lesson 9?",
+    "risposte": [
+      "Deep learning optimization",
+      "Errors in datasets and similarity in data and images",
+      "Cloud deployment of AI models",
+      "Explainable AI techniques"
+    ],
+    "giusta": "Errors in datasets and similarity in data and images"
+  },
+  "182": {
+    "domanda": "Why is Step 2 of the Machine Learning workflow often underestimated?",
+    "risposte": [
+      "Because it is fully automated",
+      "Because it generates no performance impact",
+      "Because poor execution leads to relevant performance loss",
+      "Because it is optional"
+    ],
+    "giusta": "Because poor execution leads to relevant performance loss"
+  },
+  "183": {
+    "domanda": "What is the role of labels in supervised learning?",
+    "risposte": [
+      "They replace the model",
+      "They define the ground truth to be learned",
+      "They reduce dataset size",
+      "They remove the need for evaluation"
+    ],
+    "giusta": "They define the ground truth to be learned"
+  },
+  "184": {
+    "domanda": "Why are labels essential for model evaluation?",
+    "risposte": [
+      "To reduce overfitting",
+      "To compute performance metrics such as accuracy",
+      "To simplify training",
+      "To increase dataset size"
+    ],
+    "giusta": "To compute performance metrics such as accuracy"
+  },
+  "185": {
+    "domanda": "Which of the following is an example of a labeling error?",
+    "risposte": [
+      "Correct sample with correct label",
+      "Correct sample with wrong label",
+      "Unlabeled data in unsupervised learning",
+      "Balanced dataset"
+    ],
+    "giusta": "Correct sample with wrong label"
+  },
+  "186": {
+    "domanda": "What is a typical cause of labeling errors in datasets?",
+    "risposte": [
+      "Model overfitting",
+      "Human supervisor mistakes",
+      "Hardware malfunction",
+      "Cloud latency"
+    ],
+    "giusta": "Human supervisor mistakes"
+  },
+  "187": {
+    "domanda": "Why can label errors limit early detection in medical AI systems?",
+    "risposte": [
+      "Because labels are always correct",
+      "Because diagnoses can change over time and labels may not be updated",
+      "Because images are too noisy",
+      "Because neural networks are linear"
+    ],
+    "giusta": "Because diagnoses can change over time and labels may not be updated"
+  },
+  "188": {
+    "domanda": "What problem can automatic label creation introduce?",
+    "risposte": [
+      "Perfect consistency",
+      "Data interchange and conversion errors",
+      "Higher accuracy",
+      "Better explainability"
+    ],
+    "giusta": "Data interchange and conversion errors"
+  },
+  "189": {
+    "domanda": "What is the consequence of having duplicated samples with opposite labels?",
+    "risposte": [
+      "No effect on training",
+      "Waste of storage only",
+      "Serious training problems",
+      "Faster convergence"
+    ],
+    "giusta": "Serious training problems"
+  },
+  "190": {
+    "domanda": "Why are duplicate samples with the same label still problematic?",
+    "risposte": [
+      "They change the ground truth",
+      "They waste storage, memory and computation time",
+      "They improve generalization",
+      "They increase robustness"
+    ],
+    "giusta": "They waste storage, memory and computation time"
+  },
+  "191": {
+    "domanda": "What is the computational cost of a naive duplication check in a dataset of size N?",
+    "risposte": [
+      "O(N)",
+      "O(N log N)",
+      "O(N^2)",
+      "O(log N)"
+    ],
+    "giusta": "O(N^2)"
+  },
+  "192": {
+    "domanda": "Why are hash functions useful for duplication checks?",
+    "risposte": [
+      "They measure semantic similarity",
+      "They check exact binary identity efficiently",
+      "They extract image features",
+      "They reduce model complexity"
+    ],
+    "giusta": "They check exact binary identity efficiently"
+  },
+  "193": {
+    "domanda": "Which statement about MD5 and SHA-1 hashes is correct?",
+    "risposte": [
+      "They measure visual similarity",
+      "They are suitable for detecting exact duplicates",
+      "They are invariant to metadata changes",
+      "They extract semantic features"
+    ],
+    "giusta": "They are suitable for detecting exact duplicates"
+  },
+  "194": {
+    "domanda": "Why do standard file hashes fail to detect visually similar images?",
+    "risposte": [
+      "Because they are too slow",
+      "Because small pixel or metadata changes alter the hash completely",
+      "Because they ignore image size",
+      "Because they require labels"
+    ],
+    "giusta": "Because small pixel or metadata changes alter the hash completely"
+  },
+  "195": {
+    "domanda": "What is the main goal of similarity checks beyond exact duplication?",
+    "risposte": [
+      "Detecting identical binary files",
+      "Detecting contextually similar samples",
+      "Increasing dataset size",
+      "Improving hardware usage"
+    ],
+    "giusta": "Detecting contextually similar samples"
+  },
+  "196": {
+    "domanda": "Why can too much similarity in a dataset be harmful?",
+    "risposte": [
+      "It improves generalization",
+      "It provides little new information and increases complexity",
+      "It reduces training time",
+      "It removes bias"
+    ],
+    "giusta": "It provides little new information and increases complexity"
+  },
+  "197": {
+    "domanda": "Why must similarity metrics be tuned according to the application?",
+    "risposte": [
+      "Because metrics are fixed by law",
+      "Because relevance depends on the task (e.g., identification vs detection)",
+      "Because similarity is always subjective",
+      "Because models require it"
+    ],
+    "giusta": "Because relevance depends on the task (e.g., identification vs detection)"
+  },
+  "198": {
+    "domanda": "What is the relationship between similarity and data augmentation?",
+    "risposte": [
+      "They are unrelated",
+      "Too much similarity wastes data, while augmentation can improve generalization",
+      "Similarity always improves accuracy",
+      "Data augmentation reduces dataset size"
+    ],
+    "giusta": "Too much similarity wastes data, while augmentation can improve generalization"
+  },
+  "199": {
+    "domanda": "Why is similarity the basis of pattern recognition systems?",
+    "risposte": [
+      "Because models memorize labels",
+      "Because classification relies on distance or similarity in feature space",
+      "Because neural networks are symbolic",
+      "Because datasets are always structured"
+    ],
+    "giusta": "Because classification relies on distance or similarity in feature space"
+  },
+  "200": {
+    "domanda": "What transformation allows different data types to be compared in ML?",
+    "risposte": [
+      "Input space to output space",
+      "Input space to feature space",
+      "Label space to decision space",
+      "Raw data to cloud storage"
+    ],
+    "giusta": "Input space to feature space"
+  },
+  "201": {
+    "domanda": "What is the advantage of good feature engineering?",
+    "risposte": [
+      "More dimensions and more noise",
+      "Fewer dimensions and better clusters",
+      "Higher model complexity",
+      "Lower interpretability"
+    ],
+    "giusta": "Fewer dimensions and better clusters"
+  },
+  "202": {
+    "domanda": "What does cosine similarity primarily measure?",
+    "risposte": [
+      "Absolute distance between points",
+      "Angle between feature vectors",
+      "Maximum coordinate difference",
+      "Pixel-wise difference"
+    ],
+    "giusta": "Angle between feature vectors"
+  },
+  "203": {
+    "domanda": "Which distance metric corresponds to p = 1 in Minkowski distance?",
+    "risposte": [
+      "Euclidean",
+      "Manhattan",
+      "Chebyshev",
+      "Cosine"
+    ],
+    "giusta": "Manhattan"
+  },
+  "204": {
+    "domanda": "Which distance metric corresponds to p → infinity in Minkowski distance?",
+    "risposte": [
+      "Euclidean",
+      "Manhattan",
+      "Chebyshev",
+      "Cosine"
+    ],
+    "giusta": "Chebyshev"
+  },
+  "205": {
+    "domanda": "Why is histogram-based image similarity fast but limited?",
+    "risposte": [
+      "Because it captures shape and structure",
+      "Because it ignores spatial patterns and shapes",
+      "Because it is invariant to all transformations",
+      "Because it requires labels"
+    ],
+    "giusta": "Because it ignores spatial patterns and shapes"
+  },
+  "206": {
+    "domanda": "What is a key advantage of SIFT and SURF methods?",
+    "risposte": [
+      "They are extremely simple",
+      "They are robust to scale, rotation and illumination changes",
+      "They require no computation",
+      "They work only on grayscale images"
+    ],
+    "giusta": "They are robust to scale, rotation and illumination changes"
+  },
+  "207": {
+    "domanda": "Which image similarity approach uses Hamming distance between binary hashes?",
+    "risposte": [
+      "SIFT",
+      "SURF",
+      "Histogram comparison",
+      "Image hashing (aHash, dHash, pHash)"
+    ],
+    "giusta": "Image hashing (aHash, dHash, pHash)"
+  },
+  "208": {
+    "domanda": "What is the main takeaway of Lesson 9?",
+    "risposte": [
+      "Focus only on model accuracy",
+      "Clean datasets by managing errors and similarity carefully",
+      "Always use deep neural networks",
+      "Avoid feature engineering"
+    ],
+    "giusta": "Clean datasets by managing errors and similarity carefully"
+  },
+  "209": {
+    "domanda": "What is the main focus of Lesson 10?",
+    "risposte": [
+      "Neural network training optimization",
+      "Similarity in Artificial Intelligence and coding with similarity",
+      "Cloud-based AI deployment",
+      "Explainable AI regulations"
+    ],
+    "giusta": "Similarity in Artificial Intelligence and coding with similarity"
+  },
+  "210": {
+    "domanda": "What is the goal of image hashing techniques?",
+    "risposte": [
+      "Exact pixel-by-pixel comparison",
+      "Efficient detection of visually similar images",
+      "Image segmentation",
+      "Object detection"
+    ],
+    "giusta": "Efficient detection of visually similar images"
+  },
+  "211": {
+    "domanda": "Which distance is typically used to compare image hashes?",
+    "risposte": [
+      "Euclidean distance",
+      "Cosine similarity",
+      "Hamming distance",
+      "Manhattan distance"
+    ],
+    "giusta": "Hamming distance"
+  },
+  "212": {
+    "domanda": "Which image hash method is based on average pixel intensity?",
+    "risposte": [
+      "pHash",
+      "dHash",
+      "aHash",
+      "SIFT"
+    ],
+    "giusta": "aHash"
+  },
+  "213": {
+    "domanda": "Why are perceptual hashes different from cryptographic hashes?",
+    "risposte": [
+      "They detect exact binary identity",
+      "They are invariant to all changes",
+      "They are designed to capture visual similarity",
+      "They require labels"
+    ],
+    "giusta": "They are designed to capture visual similarity"
+  },
+  "214": {
+    "domanda": "Why is visual inspection of images always recommended during coding?",
+    "risposte": [
+      "To improve GPU usage",
+      "To validate that preprocessing and similarity behave as expected",
+      "To reduce dataset size",
+      "To replace metrics"
+    ],
+    "giusta": "To validate that preprocessing and similarity behave as expected"
+  },
+  "215": {
+    "domanda": "What does cross-correlation measure in image processing?",
+    "risposte": [
+      "Pixel-wise difference",
+      "Similarity between two images as a function of displacement",
+      "Histogram similarity",
+      "Semantic similarity"
+    ],
+    "giusta": "Similarity between two images as a function of displacement"
+  },
+  "216": {
+    "domanda": "What are the outputs of an image cross-correlation operation?",
+    "risposte": [
+      "Only a similarity score",
+      "Only the aligned image",
+      "Similarity value and displacement of best alignment",
+      "A binary decision"
+    ],
+    "giusta": "Similarity value and displacement of best alignment"
+  },
+  "217": {
+    "domanda": "Why is normalization important in cross-correlation?",
+    "risposte": [
+      "To increase image size",
+      "To handle illumination and exposure changes",
+      "To remove noise completely",
+      "To convert images to RGB"
+    ],
+    "giusta": "To handle illumination and exposure changes"
+  },
+  "218": {
+    "domanda": "What operation is typically performed before normalized cross-correlation?",
+    "risposte": [
+      "Histogram equalization",
+      "Mean subtraction (and possibly variance normalization)",
+      "Edge detection",
+      "Image compression"
+    ],
+    "giusta": "Mean subtraction (and possibly variance normalization)"
+  },
+  "219": {
+    "domanda": "Why is image inversion sometimes useful before correlation?",
+    "risposte": [
+      "To reduce image size",
+      "To emphasize signal over background",
+      "To increase noise",
+      "To change color space"
+    ],
+    "giusta": "To emphasize signal over background"
+  },
+  "220": {
+    "domanda": "What is the relationship between convolution and correlation?",
+    "risposte": [
+      "They are unrelated operations",
+      "Correlation is the inverse of convolution",
+      "They are closely related and form the basis of CNNs",
+      "Only convolution is used in AI"
+    ],
+    "giusta": "They are closely related and form the basis of CNNs"
+  },
+  "221": {
+    "domanda": "Why is similarity a fundamental concept in pattern recognition?",
+    "risposte": [
+      "Because models memorize labels",
+      "Because classification relies on similarity in feature space",
+      "Because similarity replaces training",
+      "Because datasets are always small"
+    ],
+    "giusta": "Because classification relies on similarity in feature space"
+  },
+  "222": {
+    "domanda": "What problem does cross-correlation solve in the 'find the differences' puzzle?",
+    "risposte": [
+      "Noise reduction",
+      "Aligning images before subtraction",
+      "Feature extraction",
+      "Image compression"
+    ],
+    "giusta": "Aligning images before subtraction"
+  },
+  "223": {
+    "domanda": "Why can't two images of different sizes be directly subtracted?",
+    "risposte": [
+      "Because subtraction is not defined in ML",
+      "Because dimensions must match",
+      "Because images are unstructured",
+      "Because of color spaces"
+    ],
+    "giusta": "Because dimensions must match"
+  },
+  "224": {
+    "domanda": "Why must delta images be stored in floating-point format?",
+    "risposte": [
+      "To reduce memory usage",
+      "To allow representation of negative values",
+      "To increase contrast automatically",
+      "To simplify plotting"
+    ],
+    "giusta": "To allow representation of negative values"
+  },
+  "225": {
+    "domanda": "What is the purpose of histogram stretching in delta image visualization?",
+    "risposte": [
+      "To remove noise",
+      "To enhance visibility of differences",
+      "To reduce resolution",
+      "To normalize colors"
+    ],
+    "giusta": "To enhance visibility of differences"
+  },
+  "226": {
+    "domanda": "In delta images, what do positive and negative values represent?",
+    "risposte": [
+      "Noise only",
+      "Added and removed pixels",
+      "Color channels",
+      "Edge responses"
+    ],
+    "giusta": "Added and removed pixels"
+  },
+  "227": {
+    "domanda": "What is an Image Retrieval System?",
+    "risposte": [
+      "A system that compresses images",
+      "A system that retrieves images similar to a query image",
+      "A system that labels images manually",
+      "A system that removes duplicates only"
+    ],
+    "giusta": "A system that retrieves images similar to a query image"
+  },
+  "228": {
+    "domanda": "In an image retrieval system, what are 'probe' and 'gallery' images?",
+    "risposte": [
+      "Two identical datasets",
+      "Query image and database of candidate images",
+      "Training and test sets",
+      "Positive and negative samples"
+    ],
+    "giusta": "Query image and database of candidate images"
+  },
+  "229": {
+    "domanda": "Why is ranking important in image retrieval systems?",
+    "risposte": [
+      "To reduce dataset size",
+      "To select the most relevant images based on similarity",
+      "To remove preprocessing",
+      "To increase model size"
+    ],
+    "giusta": "To select the most relevant images based on similarity"
+  },
+  "230": {
+    "domanda": "Why are explainable features preferred in ranking policies?",
+    "risposte": [
+      "Because they are always more accurate",
+      "Because they keep the system manageable and understandable",
+      "Because they eliminate computation",
+      "Because they replace similarity"
+    ],
+    "giusta": "Because they keep the system manageable and understandable"
+  },
+  "231": {
+    "domanda": "What do scaling laws in neural language models describe?",
+    "risposte": [
+      "Fixed accuracy limits",
+      "How performance improves with more data, parameters and compute",
+      "Only training speed",
+      "Only dataset size"
+    ],
+    "giusta": "How performance improves with more data, parameters and compute"
+  },
+  "232": {
+    "domanda": "What is the Efficient Compute Frontier?",
+    "risposte": [
+      "The minimum dataset size",
+      "The region where additional compute yields diminishing returns",
+      "The maximum achievable accuracy",
+      "The hardware limit of GPUs"
+    ],
+    "giusta": "The region where additional compute yields diminishing returns"
+  },
+  "233": {
+    "domanda": "Why does adding more parameters not always lead to better models?",
+    "risposte": [
+      "Because training stops",
+      "Because of diminishing returns and higher computational cost",
+      "Because models become symbolic",
+      "Because data leakage is avoided"
+    ],
+    "giusta": "Because of diminishing returns and higher computational cost"
+  },
+  "234": {
+    "domanda": "Which models show scaling behavior similar to Large Language Models?",
+    "risposte": [
+      "Decision trees",
+      "Support Vector Machines",
+      "Vision Transformers (ViTs)",
+      "k-NN classifiers"
+    ],
+    "giusta": "Vision Transformers (ViTs)"
+  },
+  "235": {
+    "domanda": "What is the main takeaway of Lesson 10?",
+    "risposte": [
+      "Focus only on code syntax",
+      "Similarity is a core primitive in AI, from images to large models",
+      "Always use deep learning",
+      "Avoid visualization"
+    ],
+    "giusta": "Similarity is a core primitive in AI, from images to large models"
+  },
+  "236": {
+    "domanda": "What are the main topics of Lesson 11?",
+    "risposte": [
+      "Cloud deployment and regulations",
+      "Exploratory Data Analysis, Feature Engineering and Similarity",
+      "AutoML and Edge computing",
+      "Reinforcement Learning"
+    ],
+    "giusta": "Exploratory Data Analysis, Feature Engineering and Similarity"
+  },
+  "237": {
+    "domanda": "Why is similarity considered a fundamental tool for deep learning?",
+    "risposte": [
+      "Because it replaces training",
+      "Because it is the basis of convolution and CNNs",
+      "Because it reduces dataset size",
+      "Because it eliminates preprocessing"
+    ],
+    "giusta": "Because it is the basis of convolution and CNNs"
+  },
+  "238": {
+    "domanda": "What happens to the cross-correlation result when the same image is used as both inputs?",
+    "risposte": [
+      "Flat response",
+      "No maximum is present",
+      "Clear and narrow maximum (autocorrelation)",
+      "Random noise"
+    ],
+    "giusta": "Clear and narrow maximum (autocorrelation)"
+  },
+  "239": {
+    "domanda": "Why is normalization required when comparing CCR maximum values?",
+    "risposte": [
+      "To increase similarity",
+      "To compensate for different image sizes (number of pixels)",
+      "To remove noise completely",
+      "To improve visualization only"
+    ],
+    "giusta": "To compensate for different image sizes (number of pixels)"
+  },
+  "240": {
+    "domanda": "What is the main conceptual difference between convolution and cross-correlation?",
+    "risposte": [
+      "They are identical",
+      "Cross-correlation includes a kernel flip (minus sign difference)",
+      "Convolution includes a kernel flip (minus sign difference)",
+      "Only convolution computes similarity"
+    ],
+    "giusta": "Convolution includes a kernel flip (minus sign difference)"
+  },
+  "241": {
+    "domanda": "Why can a non-matching kernel (e.g., a panda) still produce peaks in CCR?",
+    "risposte": [
+      "Because CCR is random",
+      "Because it acts as a blob detector, producing noisy peaks",
+      "Because images are identical",
+      "Because normalization is missing"
+    ],
+    "giusta": "Because it acts as a blob detector, producing noisy peaks"
+  },
+  "242": {
+    "domanda": "What does Exploratory Data Analysis (EDA) aim to do?",
+    "risposte": [
+      "Train the model",
+      "Understand what is inside the data",
+      "Optimize hyperparameters",
+      "Deploy models"
+    ],
+    "giusta": "Understand what is inside the data"
+  },
+  "243": {
+    "domanda": "Which step of the ML workflow includes EDA?",
+    "risposte": [
+      "Step 1: Data collection",
+      "Step 2: Data preparation",
+      "Step 3: Model training",
+      "Step 4: Deployment"
+    ],
+    "giusta": "Step 2: Data preparation"
+  },
+  "244": {
+    "domanda": "Which are the three substeps of Step 2 in the ML workflow?",
+    "risposte": [
+      "Collection, Training, Testing",
+      "Wrangling, Exploratory Data Analysis, Feature Engineering",
+      "EDA, Training, Validation",
+      "Labeling, Optimization, Deployment"
+    ],
+    "giusta": "Wrangling, Exploratory Data Analysis, Feature Engineering"
+  },
+  "245": {
+    "domanda": "What is feature extraction?",
+    "risposte": [
+      "Removing samples from the dataset",
+      "Transforming raw data into usable features for ML models",
+      "Training a neural network",
+      "Evaluating performance"
+    ],
+    "giusta": "Transforming raw data into usable features for ML models"
+  },
+  "246": {
+    "domanda": "Why is understanding data context important?",
+    "risposte": [
+      "Because data is always static",
+      "Because source, temporal and spatial context affect patterns",
+      "Because models require cloud data",
+      "Because preprocessing is optional"
+    ],
+    "giusta": "Because source, temporal and spatial context affect patterns"
+  },
+  "247": {
+    "domanda": "Why are continuous signals often divided into frames for analysis?",
+    "risposte": [
+      "To reduce memory",
+      "To make feature extraction and classification easier",
+      "To remove noise completely",
+      "To eliminate temporal information"
+    ],
+    "giusta": "To make feature extraction and classification easier"
+  },
+  "248": {
+    "domanda": "What information does frequency-domain analysis provide compared to time-domain analysis?",
+    "risposte": [
+      "Temporal order only",
+      "Harmonic content and energy distribution",
+      "Exact labels",
+      "Reduced dimensionality only"
+    ],
+    "giusta": "Harmonic content and energy distribution"
+  },
+  "249": {
+    "domanda": "What does a spectrogram represent?",
+    "risposte": [
+      "Only time-domain information",
+      "Frequency content over time",
+      "Only spatial information",
+      "Only amplitude distribution"
+    ],
+    "giusta": "Frequency content over time"
+  },
+  "250": {
+    "domanda": "Which statistical tools are commonly used in EDA?",
+    "risposte": [
+      "Only deep learning models",
+      "Mean, variance, histograms and boxplots",
+      "Only PCA",
+      "Only confusion matrices"
+    ],
+    "giusta": "Mean, variance, histograms and boxplots"
+  },
+  "251": {
+    "domanda": "Why are boxplots useful in Exploratory Data Analysis?",
+    "risposte": [
+      "They train the model",
+      "They clearly show distributions and outliers",
+      "They normalize features",
+      "They reduce dimensionality"
+    ],
+    "giusta": "They clearly show distributions and outliers"
+  },
+  "252": {
+    "domanda": "Why are outliers critical to detect during EDA?",
+    "risposte": [
+      "They always improve accuracy",
+      "They can heavily affect normalization and learning",
+      "They reduce dataset size",
+      "They are harmless"
+    ],
+    "giusta": "They can heavily affect normalization and learning"
+  },
+  "253": {
+    "domanda": "What is the main goal of Feature Engineering?",
+    "risposte": [
+      "Increase model complexity",
+      "Design features that improve model performance",
+      "Eliminate data preprocessing",
+      "Replace the model"
+    ],
+    "giusta": "Design features that improve model performance"
+  },
+  "254": {
+    "domanda": "What does Y = FUNC(X) represent in machine learning?",
+    "risposte": [
+      "Data collection",
+      "The relationship between features and target output",
+      "Model deployment",
+      "Feature normalization"
+    ],
+    "giusta": "The relationship between features and target output"
+  },
+  "255": {
+    "domanda": "Which operation is typically performed when optimizing a single feature?",
+    "risposte": [
+      "Feature selection using labels",
+      "Outlier removal and normalization",
+      "Dimensionality reduction",
+      "Training a CNN"
+    ],
+    "giusta": "Outlier removal and normalization"
+  },
+  "256": {
+    "domanda": "Which technique is used to remove strongly correlated features without labels?",
+    "risposte": [
+      "Confusion matrix",
+      "Principal Component Analysis (PCA)",
+      "Backpropagation",
+      "Cross-entropy loss"
+    ],
+    "giusta": "Principal Component Analysis (PCA)"
+  },
+  "257": {
+    "domanda": "What is the main goal of normalization in feature engineering?",
+    "risposte": [
+      "Change feature shapes",
+      "Bring features to similar scales",
+      "Increase variance",
+      "Remove labels"
+    ],
+    "giusta": "Bring features to similar scales"
+  },
+  "258": {
+    "domanda": "Which feature processing technique caps extreme values to a threshold?",
+    "risposte": [
+      "Scaling",
+      "Clipping",
+      "Log scaling",
+      "Standardization"
+    ],
+    "giusta": "Clipping"
+  },
+  "259": {
+    "domanda": "Why is log scaling useful?",
+    "risposte": [
+      "For normally distributed data",
+      "For power-law distributions with extreme values",
+      "To remove noise",
+      "To increase dimensionality"
+    ],
+    "giusta": "For power-law distributions with extreme values"
+  },
+  "260": {
+    "domanda": "Which parts of a neural network can be analyzed statistically?",
+    "risposte": [
+      "Inputs only",
+      "Inputs and outputs only",
+      "Inputs, weights, activations and outputs",
+      "Only weights"
+    ],
+    "giusta": "Inputs, weights, activations and outputs"
+  },
+  "261": {
+    "domanda": "Why is scaling input features important for gradient descent?",
+    "risposte": [
+      "It removes labels",
+      "It reduces the number of training iterations",
+      "It increases noise",
+      "It eliminates overfitting"
+    ],
+    "giusta": "It reduces the number of training iterations"
+  },
+  "262": {
+    "domanda": "What problem can be detected by analyzing weight distributions?",
+    "risposte": [
+      "Data leakage",
+      "Vanishing or exploding gradients",
+      "Label noise",
+      "Class imbalance"
+    ],
+    "giusta": "Vanishing or exploding gradients"
+  },
+  "263": {
+    "domanda": "Why is analyzing neuron activations useful?",
+    "risposte": [
+      "To remove datasets",
+      "To detect dead neurons or saturation",
+      "To normalize labels",
+      "To compress images"
+    ],
+    "giusta": "To detect dead neurons or saturation"
+  },
+  "264": {
+    "domanda": "Which analysis is performed on model outputs and errors?",
+    "risposte": [
+      "PCA",
+      "Confusion matrices and error distributions",
+      "Feature extraction",
+      "Weight pruning"
+    ],
+    "giusta": "Confusion matrices and error distributions"
+  },
+  "265": {
+    "domanda": "What is the main takeaway of Lesson 11?",
+    "risposte": [
+      "Models work without data analysis",
+      "EDA and Feature Engineering are critical for reliable AI systems",
+      "Only deep learning matters",
+      "Visualization is optional"
+    ],
+    "giusta": "EDA and Feature Engineering are critical for reliable AI systems"
+  },
+  "266": {
+    "domanda": "What is the main focus of Lesson 12?",
+    "risposte": [
+      "Neural network optimization",
+      "Data representation and visualization for Machine Learning",
+      "Cloud AI deployment",
+      "Reinforcement learning"
+    ],
+    "giusta": "Data representation and visualization for Machine Learning"
+  },
+  "267": {
+    "domanda": "In which step of the ML workflow is data visualization mainly used?",
+    "risposte": [
+      "Only Step 1",
+      "Only Step 5",
+      "Mainly Step 2, but also Steps 3 and 5",
+      "Only Step 4"
+    ],
+    "giusta": "Mainly Step 2, but also Steps 3 and 5"
+  },
+  "268": {
+    "domanda": "Which substeps of Step 2 explicitly include data visualization?",
+    "risposte": [
+      "Only Feature Engineering",
+      "Wrangling and Model Training",
+      "Exploratory Data Analysis and Feature Engineering",
+      "Testing and Deployment"
+    ],
+    "giusta": "Exploratory Data Analysis and Feature Engineering"
+  },
+  "269": {
+    "domanda": "What is the primary goal of data visualization in Machine Learning?",
+    "risposte": [
+      "Improve GPU performance",
+      "Convert raw data into easily understood pictures for decision making",
+      "Replace statistical analysis",
+      "Increase dataset size"
+    ],
+    "giusta": "Convert raw data into easily understood pictures for decision making"
+  },
+  "270": {
+    "domanda": "Why are 2D (and rarely 3D) plots preferred in data visualization?",
+    "risposte": [
+      "Because higher dimensions are impossible",
+      "Because human perception is limited to 2D/3D",
+      "Because ML models only work in 2D",
+      "Because computers cannot render higher dimensions"
+    ],
+    "giusta": "Because human perception is limited to 2D/3D"
+  },
+  "271": {
+    "domanda": "What is the role of dimensionality reduction in visualization?",
+    "risposte": [
+      "Increase the number of features",
+      "Allow high-dimensional data to be visualized in 2D or 3D",
+      "Improve model accuracy directly",
+      "Replace feature engineering"
+    ],
+    "giusta": "Allow high-dimensional data to be visualized in 2D or 3D"
+  },
+  "272": {
+    "domanda": "According to Bertin, what is an 'image' in visualization theory?",
+    "risposte": [
+      "A digital photograph",
+      "The fundamental perceptual unit of a visualization",
+      "A dataset representation",
+      "A neural network output"
+    ],
+    "giusta": "The fundamental perceptual unit of a visualization"
+  },
+  "273": {
+    "domanda": "What characterizes an ideal visualization according to Bertin?",
+    "risposte": [
+      "Multiple images combined",
+      "A single clear image maximizing perceptual efficiency",
+      "Complex graphical effects",
+      "High dimensionality"
+    ],
+    "giusta": "A single clear image maximizing perceptual efficiency"
+  },
+  "274": {
+    "domanda": "Which psychologist theory influenced modern data visualization?",
+    "risposte": [
+      "Behaviorism",
+      "Gestalt psychology",
+      "Cognitive load theory",
+      "Connectionism"
+    ],
+    "giusta": "Gestalt psychology"
+  },
+  "275": {
+    "domanda": "What does Jacques Bertin state about the transformation from data to insight?",
+    "risposte": [
+      "It happens in one step",
+      "It requires two stages: data to image, image to perception",
+      "It requires deep learning",
+      "It is fully automated"
+    ],
+    "giusta": "It requires two stages: data to image, image to perception"
+  },
+  "276": {
+    "domanda": "Which are Bertin’s 7 visual variables?",
+    "risposte": [
+      "Color, shape, depth, motion, time, space, size",
+      "Position, form, orientation, color, texture, value, size",
+      "Pixel, kernel, filter, gradient, edge, color, shape",
+      "Line, bar, pie, scatter, heatmap, surface, volume"
+    ],
+    "giusta": "Position, form, orientation, color, texture, value, size"
+  },
+  "277": {
+    "domanda": "What does data visualization mainly encode?",
+    "risposte": [
+      "Algorithms",
+      "Data using visual cues",
+      "Labels only",
+      "Model parameters"
+    ],
+    "giusta": "Data using visual cues"
+  },
+  "278": {
+    "domanda": "Which steps describe human visual processing according to Image Theory?",
+    "risposte": [
+      "Detection, classification, optimization",
+      "Formation, decomposition, reassembly",
+      "Encoding, training, testing",
+      "Sampling, normalization, inference"
+    ],
+    "giusta": "Formation, decomposition, reassembly"
+  },
+  "279": {
+    "domanda": "Why is data visualization important for designers of intelligent systems?",
+    "risposte": [
+      "Only for aesthetics",
+      "To provide intuitive interfaces and better decision making",
+      "To replace machine learning models",
+      "To reduce dataset size"
+    ],
+    "giusta": "To provide intuitive interfaces and better decision making"
+  },
+  "280": {
+    "domanda": "What is an example of a data visualization tool for business intelligence?",
+    "risposte": [
+      "TensorFlow",
+      "MS Power BI",
+      "PyTorch",
+      "NumPy"
+    ],
+    "giusta": "MS Power BI"
+  },
+  "281": {
+    "domanda": "Which tools are commonly used to monitor ML training experiments?",
+    "risposte": [
+      "Excel and Word",
+      "TensorBoard and Visdom",
+      "PowerPoint and PDF",
+      "Photoshop and GIMP"
+    ],
+    "giusta": "TensorBoard and Visdom"
+  },
+  "282": {
+    "domanda": "What is the purpose of saliency maps?",
+    "risposte": [
+      "Improve training speed",
+      "Highlight which input features influenced the prediction",
+      "Reduce model size",
+      "Perform clustering"
+    ],
+    "giusta": "Highlight which input features influenced the prediction"
+  },
+  "283": {
+    "domanda": "How are saliency maps computed?",
+    "risposte": [
+      "Using clustering",
+      "Using gradients of the output with respect to the input",
+      "Using PCA",
+      "Using histogram analysis"
+    ],
+    "giusta": "Using gradients of the output with respect to the input"
+  },
+  "284": {
+    "domanda": "What problem can saliency maps reveal even when predictions are correct?",
+    "risposte": [
+      "Overfitting",
+      "The model focuses on wrong input regions",
+      "Underfitting",
+      "Low accuracy"
+    ],
+    "giusta": "The model focuses on wrong input regions"
+  },
+  "285": {
+    "domanda": "What does SmoothGrad improve in saliency maps?",
+    "risposte": [
+      "Model accuracy",
+      "Noise reduction in sensitivity maps",
+      "Dataset size",
+      "Training speed"
+    ],
+    "giusta": "Noise reduction in sensitivity maps"
+  },
+  "286": {
+    "domanda": "What does visualizing CNN kernels help understand?",
+    "risposte": [
+      "Learning rate",
+      "What patterns kernels respond to",
+      "Loss function behavior",
+      "Dataset imbalance"
+    ],
+    "giusta": "What patterns kernels respond to"
+  },
+  "287": {
+    "domanda": "Why are dashboards important in deployed ML systems?",
+    "risposte": [
+      "For decoration",
+      "To monitor performance and behavior over time",
+      "To retrain models automatically",
+      "To visualize labels only"
+    ],
+    "giusta": "To monitor performance and behavior over time"
+  },
+  "288": {
+    "domanda": "Which statement about fancy plots is correct?",
+    "risposte": [
+      "They always improve insight",
+      "They are useless if data is corrupted or not representative",
+      "They replace preprocessing",
+      "They eliminate bias"
+    ],
+    "giusta": "They are useless if data is corrupted or not representative"
+  },
+  "289": {
+    "domanda": "What is a key benefit of data visualization?",
+    "risposte": [
+      "Increasing dimensionality",
+      "Reducing time from data to decision",
+      "Replacing statistics",
+      "Increasing model parameters"
+    ],
+    "giusta": "Reducing time from data to decision"
+  },
+  "290": {
+    "domanda": "According to the conclusions, graphical displays should primarily:",
+    "risposte": [
+      "Focus on artistic design",
+      "Show the data and avoid distortion",
+      "Maximize color usage",
+      "Hide uncertainty"
+    ],
+    "giusta": "Show the data and avoid distortion"
+  },
+  "291": {
+    "domanda": "Why is homogenization and data harmonization important in visualization?",
+    "risposte": [
+      "To increase noise",
+      "To make large datasets coherent and comparable",
+      "To reduce resolution",
+      "To simplify models"
+    ],
+    "giusta": "To make large datasets coherent and comparable"
+  },
+  "292": {
+    "domanda": "What is the relationship between visualization and optimization?",
+    "risposte": [
+      "They are unrelated",
+      "Learning often corresponds to finding minima or maxima in visualized surfaces",
+      "Visualization replaces optimization",
+      "Optimization eliminates visualization"
+    ],
+    "giusta": "Learning often corresponds to finding minima or maxima in visualized surfaces"
+  },
+  "293": {
+    "domanda": "Why is alignment critical when comparing data in visualization?",
+    "risposte": [
+      "Because it increases dataset size",
+      "Because misalignment leads to wrong similarity or comparison",
+      "Because alignment improves aesthetics",
+      "Because it reduces computation"
+    ],
+    "giusta": "Because misalignment leads to wrong similarity or comparison"
+  },
+  "294": {
+    "domanda": "What is the main takeaway of Lesson 12?",
+    "risposte": [
+      "Visualization is optional",
+      "Good visualization is essential to understand data, models and decisions",
+      "Only deep learning matters",
+      "Plots replace models"
+    ],
+    "giusta": "Good visualization is essential to understand data, models and decisions"
+  },
+   "295": {
+    "domanda": "What is the purpose of Lesson 13?",
+    "risposte": [
+      "Introduce new Machine Learning techniques",
+      "Explain exam structure, scoring and strategy",
+      "Teach image similarity",
+      "Cover AI regulations"
+    ],
+    "giusta": "Explain exam structure, scoring and strategy"
+  },
+  "296": {
+    "domanda": "What type of exam is described in the course?",
+    "risposte": [
+      "Oral exam",
+      "Project-based exam",
+      "Written multiple-choice exam",
+      "Mixed oral and written exam"
+    ],
+    "giusta": "Written multiple-choice exam"
+  },
+  "297": {
+    "domanda": "How many correct answers are allowed per question?",
+    "risposte": [
+      "More than one",
+      "Exactly two",
+      "Only one",
+      "Depends on the question"
+    ],
+    "giusta": "Only one"
+  },
+  "298": {
+    "domanda": "What is the score assigned to a correct answer?",
+    "risposte": [
+      "2 points",
+      "0.5 points",
+      "1 point",
+      "Variable score"
+    ],
+    "giusta": "1 point"
+  },
+  "299": {
+    "domanda": "What is the score assigned to a wrong answer?",
+    "risposte": [
+      "-1 point",
+      "0 points",
+      "0.5 points",
+      "Depends on the question"
+    ],
+    "giusta": "0 points"
+  },
+  "300": {
+    "domanda": "How is the final exam score obtained?",
+    "risposte": [
+      "By summing raw points only",
+      "By normalizing the total score to marks",
+      "By averaging with oral exam",
+      "By subjective evaluation"
+    ],
+    "giusta": "By normalizing the total score to marks"
+  },
+  "301": {
+    "domanda": "What is the typical duration of the exam?",
+    "risposte": [
+      "30 minutes",
+      "45 minutes",
+      "About 1 hour",
+      "2 hours"
+    ],
+    "giusta": "About 1 hour"
+  },
+  "302": {
+    "domanda": "Where is the exam taken?",
+    "risposte": [
+      "At home online",
+      "In the classroom on paper",
+      "In the laboratory in front of a PC",
+      "Orally in front of the professor"
+    ],
+    "giusta": "In the laboratory in front of a PC"
+  },
+  "303": {
+    "domanda": "Are books, notes or external material allowed during the exam?",
+    "risposte": [
+      "Yes, everything is allowed",
+      "Only handwritten notes",
+      "Only the slides",
+      "No, nothing is allowed"
+    ],
+    "giusta": "No, nothing is allowed"
+  },
+  "304": {
+    "domanda": "What is the main strategic rule suggested by the professor?",
+    "risposte": [
+      "Always search for the correct answer",
+      "Exclude wrong answers first",
+      "Answer as fast as possible",
+      "Skip difficult questions"
+    ],
+    "giusta": "Exclude wrong answers first"
+  },
+  "305": {
+    "domanda": "If you are unsure about the correct answer, what should you do?",
+    "risposte": [
+      "Leave the question unanswered",
+      "Choose a random answer",
+      "Choose the answer that looks less wrong",
+      "Always choose the longest answer"
+    ],
+    "giusta": "Choose the answer that looks less wrong"
+  },
+  "306": {
+    "domanda": "According to the professor, how should exam simulations be used?",
+    "risposte": [
+      "As the main study material",
+      "Only to memorize answers",
+      "To understand reasoning and exam style, not to study",
+      "They should be ignored"
+    ],
+    "giusta": "To understand reasoning and exam style, not to study"
+  },
+  "307": {
+    "domanda": "What is the recommended way to study the slides?",
+    "risposte": [
+      "Memorize definitions only",
+      "Read only summaries",
+      "Ask yourself what can be asked from each slide",
+      "Skip use cases"
+    ],
+    "giusta": "Ask yourself what can be asked from each slide"
+  },
+  "308": {
+    "domanda": "Why is being specific important when studying for the exam?",
+    "risposte": [
+      "Because questions are generic",
+      "Because answers are ambiguous",
+      "Because questions are often detailed and precise",
+      "Because slides are short"
+    ],
+    "giusta": "Because questions are often detailed and precise"
+  },
+  "309": {
+    "domanda": "What does the exam simulation sheet mainly help with?",
+    "risposte": [
+      "Learning new theory",
+      "Tracking correct and wrong answers",
+      "Replacing the final exam",
+      "Improving coding skills"
+    ],
+    "giusta": "Tracking correct and wrong answers"
+  },
+  "310": {
+    "domanda": "What does the professor suggest writing next to each question during simulations?",
+    "risposte": [
+      "The correct answer only",
+      "Nothing",
+      "Notes explaining why the answer is right or wrong",
+      "The slide number only"
+    ],
+    "giusta": "Notes explaining why the answer is right or wrong"
+  },
+  "311": {
+    "domanda": "Why is understanding why an answer is wrong important?",
+    "risposte": [
+      "To increase speed",
+      "To apply the exclusion strategy during the exam",
+      "To memorize answers",
+      "To reduce the number of questions"
+    ],
+    "giusta": "To apply the exclusion strategy during the exam"
+  },
+  "312": {
+    "domanda": "What kind of questions are used in the exam?",
+    "risposte": [
+      "Open-ended questions",
+      "Coding exercises",
+      "Multiple-choice questions based on slides",
+      "Oral discussion questions"
+    ],
+    "giusta": "Multiple-choice questions based on slides"
+  },
+  "313": {
+    "domanda": "Which of the following best summarizes the exam philosophy?",
+    "risposte": [
+      "Test memorization of formulas",
+      "Test deep understanding of slides, examples and reasoning",
+      "Test programming skills",
+      "Test speed only"
+    ],
+    "giusta": "Test deep understanding of slides, examples and reasoning"
+  },
+  "314": {
+    "domanda": "What is the main takeaway of Lesson 13?",
+    "risposte": [
+      "Study only simulations",
+      "Focus on excluding wrong answers and understanding slides deeply",
+      "Memorize all answers",
+      "Skip theory"
+    ],
+    "giusta": "Focus on excluding wrong answers and understanding slides deeply"
+  },
+  "315": {
+    "domanda": "What are the three main components of a Machine Learning algorithm?",
+    "risposte": [
+      "Training, validation, testing",
+      "Representation, Evaluation, Optimization",
+      "Data, model, deployment",
+      "Input, output, loss"
+    ],
+    "giusta": "Representation, Evaluation, Optimization"
+  },
+  "316": {
+    "domanda": "What is the goal of the evaluation phase in Machine Learning?",
+    "risposte": [
+      "Only reduce misclassifications",
+      "Refine posterior probability estimation",
+      "Increase model complexity",
+      "Reduce dataset size"
+    ],
+    "giusta": "Refine posterior probability estimation"
+  },
+  "317": {
+    "domanda": "Which metric compares classifiers with equal accuracy but different robustness?",
+    "risposte": [
+      "Precision",
+      "Recall",
+      "Margin",
+      "Entropy"
+    ],
+    "giusta": "Margin"
+  },
+  "318": {
+    "domanda": "Why is a larger margin preferred between two classifiers with the same accuracy?",
+    "risposte": [
+      "It improves training speed",
+      "It increases robustness and generalization",
+      "It reduces dataset size",
+      "It eliminates noise"
+    ],
+    "giusta": "It increases robustness and generalization"
+  },
+  "319": {
+    "domanda": "Which optimization technique is typically used in neural networks?",
+    "risposte": [
+      "Greedy search",
+      "Linear programming",
+      "Gradient descent",
+      "Exhaustive search"
+    ],
+    "giusta": "Gradient descent"
+  },
+  "320": {
+    "domanda": "What characterizes a balanced dataset?",
+    "risposte": [
+      "More samples in rare classes",
+      "Equal number of samples per class",
+      "Random sampling",
+      "Higher accuracy"
+    ],
+    "giusta": "Equal number of samples per class"
+  },
+  "321": {
+    "domanda": "Why are real-world datasets often unbalanced?",
+    "risposte": [
+      "Because of data leakage",
+      "Because rare events naturally occur less frequently",
+      "Because of poor labeling",
+      "Because of overfitting"
+    ],
+    "giusta": "Because rare events naturally occur less frequently"
+  },
+  "322": {
+    "domanda": "Why is equal cost of misclassification often wrong in real-world datasets?",
+    "risposte": [
+      "Because all classes are equally important",
+      "Because different errors have different real-world consequences",
+      "Because models require equal weights",
+      "Because datasets are small"
+    ],
+    "giusta": "Because different errors have different real-world consequences"
+  },
+  "323": {
+    "domanda": "Which is the first and best solution to dataset imbalance?",
+    "risposte": [
+      "Oversampling",
+      "Changing loss function",
+      "Collecting more data for rare classes",
+      "Ignoring rare classes"
+    ],
+    "giusta": "Collecting more data for rare classes"
+  },
+  "324": {
+    "domanda": "What does 'change labeling' mean in dataset balancing?",
+    "risposte": [
+      "Relabel all samples randomly",
+      "Merge rare classes and use hierarchical classifiers",
+      "Remove frequent classes",
+      "Change the feature space"
+    ],
+    "giusta": "Merge rare classes and use hierarchical classifiers"
+  },
+  "325": {
+    "domanda": "Which sampling technique avoids discarding samples?",
+    "risposte": [
+      "Uniform sampling",
+      "Oversampling / undersampling",
+      "Negative mining",
+      "Random deletion"
+    ],
+    "giusta": "Negative mining"
+  },
+  "326": {
+    "domanda": "How does loss reweighting help with unbalanced datasets?",
+    "risposte": [
+      "By increasing dataset size",
+      "By penalizing errors on rare classes more",
+      "By changing labels",
+      "By reducing features"
+    ],
+    "giusta": "By penalizing errors on rare classes more"
+  },
+  "327": {
+    "domanda": "Why is dataset partitioning necessary?",
+    "risposte": [
+      "To reduce computation",
+      "To evaluate generalization on unseen data",
+      "To improve visualization",
+      "To balance classes"
+    ],
+    "giusta": "To evaluate generalization on unseen data"
+  },
+  "328": {
+    "domanda": "What happens if the same dataset is used for training and testing?",
+    "risposte": [
+      "Better generalization",
+      "Underfitting only",
+      "Overfitting risk and biased evaluation",
+      "Faster training"
+    ],
+    "giusta": "Overfitting risk and biased evaluation"
+  },
+  "329": {
+    "domanda": "What is underfitting?",
+    "risposte": [
+      "Model too complex for data",
+      "Model too simple and high error on both train and test",
+      "Perfect model",
+      "Data leakage"
+    ],
+    "giusta": "Model too simple and high error on both train and test"
+  },
+  "330": {
+    "domanda": "What is overfitting?",
+    "risposte": [
+      "High error everywhere",
+      "Good performance on unseen data",
+      "Excellent performance on training data but poor generalization",
+      "Balanced dataset"
+    ],
+    "giusta": "Excellent performance on training data but poor generalization"
+  },
+  "331": {
+    "domanda": "Which dataset must be used exclusively to estimate generalization error?",
+    "risposte": [
+      "Training set",
+      "Validation set",
+      "Test set",
+      "Balanced set"
+    ],
+    "giusta": "Test set"
+  },
+  "332": {
+    "domanda": "Which activities must NOT use test data?",
+    "risposte": [
+      "Final evaluation",
+      "Model design and tuning",
+      "Error estimation",
+      "Reporting results"
+    ],
+    "giusta": "Model design and tuning"
+  },
+  "333": {
+    "domanda": "What is k-Fold Cross Validation?",
+    "risposte": [
+      "One train-test split",
+      "Repeated random subsampling",
+      "Partitioning data into k folds and rotating validation",
+      "Using only one test sample"
+    ],
+    "giusta": "Partitioning data into k folds and rotating validation"
+  },
+  "334": {
+    "domanda": "What is a drawback of simple k-FCV?",
+    "risposte": [
+      "Too much data usage",
+      "Class imbalance in folds",
+      "High bias",
+      "Low variance"
+    ],
+    "giusta": "Class imbalance in folds"
+  },
+  "335": {
+    "domanda": "What does stratified k-FCV ensure?",
+    "risposte": [
+      "Equal feature values",
+      "Equal class distribution in each fold",
+      "Lower computation",
+      "Higher bias"
+    ],
+    "giusta": "Equal class distribution in each fold"
+  },
+  "336": {
+    "domanda": "What is the 5×2 Cross Validation method?",
+    "risposte": [
+      "Five folds with two models",
+      "Repeated 50%-50% train-test splits",
+      "Leave one out validation",
+      "Monte Carlo validation"
+    ],
+    "giusta": "Repeated 50%-50% train-test splits"
+  },
+  "337": {
+    "domanda": "Why is 5×2 CV useful?",
+    "risposte": [
+      "It reduces bias and variance in small datasets",
+      "It eliminates overfitting",
+      "It increases dataset size",
+      "It replaces k-FCV"
+    ],
+    "giusta": "It reduces bias and variance in small datasets"
+  },
+  "338": {
+    "domanda": "What is Leave-One-Out (LOO) validation?",
+    "risposte": [
+      "One fold per class",
+      "Each sample is used once as test data",
+      "Random subsampling",
+      "Time-series validation"
+    ],
+    "giusta": "Each sample is used once as test data"
+  },
+  "339": {
+    "domanda": "Why is Leave-One-Person-Out (LOPO) critical in biometrics?",
+    "risposte": [
+      "To reduce computation",
+      "To ensure subject-independent generalization",
+      "To balance classes",
+      "To increase accuracy"
+    ],
+    "giusta": "To ensure subject-independent generalization"
+  },
+  "340": {
+    "domanda": "What characterizes Monte Carlo validation?",
+    "risposte": [
+      "Fixed partitions",
+      "Repeated random train-test splits",
+      "One single split",
+      "Deterministic behavior"
+    ],
+    "giusta": "Repeated random train-test splits"
+  },
+  "341": {
+    "domanda": "Which validation strategy is best suited for time series?",
+    "risposte": [
+      "Random k-FCV",
+      "Stratified k-FCV",
+      "Rolling or expanding window validation",
+      "LOO"
+    ],
+    "giusta": "Rolling or expanding window validation"
+  },
+  "342": {
+    "domanda": "What is data leakage in time series validation?",
+    "risposte": [
+      "Missing values",
+      "Using future data to predict the past",
+      "Class imbalance",
+      "Noise in labels"
+    ],
+    "giusta": "Using future data to predict the past"
+  },
+  "343": {
+    "domanda": "What is the most important rule in dataset partitioning?",
+    "risposte": [
+      "Maximize training data",
+      "Design models using test data",
+      "Never design using test/validation data",
+      "Always balance datasets"
+    ],
+    "giusta": "Never design using test/validation data"
+  },
+  "344": {
+    "domanda": "Why can a 1% error be good or bad?",
+    "risposte": [
+      "Because accuracy is meaningless",
+      "Because error must be interpreted in context",
+      "Because datasets are small",
+      "Because of normalization"
+    ],
+    "giusta": "Because error must be interpreted in context"
+  },
+  "345": {
+    "domanda": "What are the two main parts of Lesson 15?",
+    "risposte": [
+      "Theory and regulations",
+      "Theory and laboratory",
+      "Coding only",
+      "Visualization only"
+    ],
+    "giusta": "Theory and laboratory"
+  },
+  "346": {
+    "domanda": "In which ML workflow steps is accuracy assessment used?",
+    "risposte": [
+      "Only during deployment",
+      "Only during training",
+      "During training, testing and system improvement",
+      "Only during data collection"
+    ],
+    "giusta": "During training, testing and system improvement"
+  },
+  "347": {
+    "domanda": "What type of output does a regressor produce?",
+    "risposte": [
+      "Categorical labels",
+      "Binary values",
+      "Real or integer numerical values",
+      "Probability vectors only"
+    ],
+    "giusta": "Real or integer numerical values"
+  },
+  "348": {
+    "domanda": "What does the R-squared (R²) metric measure?",
+    "risposte": [
+      "Classification accuracy",
+      "Variance explained by the model",
+      "Mean absolute error",
+      "Probability of correct classification"
+    ],
+    "giusta": "Variance explained by the model"
+  },
+  "349": {
+    "domanda": "What is the typical range of R-squared values?",
+    "risposte": [
+      "[0, +∞]",
+      "[-1, 1]",
+      "[-∞, 1]",
+      "[0, 1] only"
+    ],
+    "giusta": "[-∞, 1]"
+  },
+  "350": {
+    "domanda": "Which regression metric is sensitive to outliers?",
+    "risposte": [
+      "MAE",
+      "Accuracy",
+      "RMSE / MSE",
+      "R²"
+    ],
+    "giusta": "RMSE / MSE"
+  },
+  "351": {
+    "domanda": "Which regression metric is less sensitive to outliers?",
+    "risposte": [
+      "MSE",
+      "RMSE",
+      "MAE",
+      "R²"
+    ],
+    "giusta": "MAE"
+  },
+  "352": {
+    "domanda": "What is Accuracy in classification?",
+    "risposte": [
+      "TP / (TP + FP)",
+      "(TP + TN) / N",
+      "TP / (TP + FN)",
+      "(FP + FN) / N"
+    ],
+    "giusta": "(TP + TN) / N"
+  },
+  "353": {
+    "domanda": "Why can accuracy alone be misleading?",
+    "risposte": [
+      "Because it is hard to compute",
+      "Because it ignores class imbalance",
+      "Because it is always low",
+      "Because it is not normalized"
+    ],
+    "giusta": "Because it ignores class imbalance"
+  },
+  "354": {
+    "domanda": "What is a confusion matrix?",
+    "risposte": [
+      "A loss function",
+      "A visualization of correct and incorrect predictions",
+      "A normalization technique",
+      "A dataset partitioning method"
+    ],
+    "giusta": "A visualization of correct and incorrect predictions"
+  },
+  "355": {
+    "domanda": "In a confusion matrix, what does a False Positive represent?",
+    "risposte": [
+      "Correctly predicted negative sample",
+      "Incorrectly predicted positive sample",
+      "Correctly predicted positive sample",
+      "Incorrectly predicted negative sample"
+    ],
+    "giusta": "Incorrectly predicted positive sample"
+  },
+  "356": {
+    "domanda": "What does Recall (Sensitivity, TPR) measure?",
+    "risposte": [
+      "TP / (TP + FP)",
+      "TN / (TN + FP)",
+      "TP / (TP + FN)",
+      "(TP + TN) / N"
+    ],
+    "giusta": "TP / (TP + FN)"
+  },
+  "357": {
+    "domanda": "What does Precision measure?",
+    "risposte": [
+      "TP / (TP + FP)",
+      "TP / (TP + FN)",
+      "TN / (TN + FP)",
+      "FP / (FP + FN)"
+    ],
+    "giusta": "TP / (TP + FP)"
+  },
+  "358": {
+    "domanda": "What information does a multiclass confusion matrix provide?",
+    "risposte": [
+      "Only global accuracy",
+      "Only per-class recall",
+      "Which classes are confused with each other",
+      "Only precision values"
+    ],
+    "giusta": "Which classes are confused with each other"
+  },
+  "359": {
+    "domanda": "What is a ROC curve?",
+    "risposte": [
+      "A single accuracy value",
+      "A plot of TPR vs FPR for different thresholds",
+      "A confusion matrix variant",
+      "A regression metric"
+    ],
+    "giusta": "A plot of TPR vs FPR for different thresholds"
+  },
+  "360": {
+    "domanda": "Why is ROC analysis useful?",
+    "risposte": [
+      "It replaces accuracy",
+      "It evaluates classifier behavior across thresholds",
+      "It is only for regressors",
+      "It measures dataset balance"
+    ],
+    "giusta": "It evaluates classifier behavior across thresholds"
+  },
+  "361": {
+    "domanda": "Why can a model be accurate but still untrustworthy?",
+    "risposte": [
+      "Because it has low R²",
+      "Because it focuses on irrelevant input regions",
+      "Because it is overfitted",
+      "Because accuracy is too high"
+    ],
+    "giusta": "Because it focuses on irrelevant input regions"
+  },
+  "362": {
+    "domanda": "What is sensitivity analysis?",
+    "risposte": [
+      "Dataset partitioning",
+      "Analysis of how output changes with input or parameter variations",
+      "Feature encoding",
+      "Model optimization"
+    ],
+    "giusta": "Analysis of how output changes with input or parameter variations"
+  },
+  "363": {
+    "domanda": "Why is the IRIS dataset used as a reference dataset?",
+    "risposte": [
+      "Because it is large",
+      "Because it has missing data",
+      "Because it is well-known and well-documented",
+      "Because it is unbalanced"
+    ],
+    "giusta": "Because it is well-known and well-documented"
+  },
+  "364": {
+    "domanda": "How many samples and features does the IRIS dataset have?",
+    "risposte": [
+      "100 samples, 3 features",
+      "150 samples, 4 features",
+      "200 samples, 6 features",
+      "150 samples, 6 features"
+    ],
+    "giusta": "150 samples, 4 features"
+  },
+  "365": {
+    "domanda": "What is meant by Y = FUNC(X) in ML datasets?",
+    "risposte": [
+      "Feature normalization",
+      "Mapping from input features to target values",
+      "Dataset partitioning",
+      "Accuracy computation"
+    ],
+    "giusta": "Mapping from input features to target values"
+  },
+  "366": {
+    "domanda": "Why is data normalization important before training?",
+    "risposte": [
+      "To remove labels",
+      "To improve gradient descent convergence",
+      "To increase dimensionality",
+      "To reduce dataset size"
+    ],
+    "giusta": "To improve gradient descent convergence"
+  },
+  "367": {
+    "domanda": "What is integer (label) encoding?",
+    "risposte": [
+      "Encoding categories as binary vectors",
+      "Assigning an integer to each category",
+      "Normalizing categorical data",
+      "Removing categorical features"
+    ],
+    "giusta": "Assigning an integer to each category"
+  },
+  "368": {
+    "domanda": "Why can integer encoding be problematic?",
+    "risposte": [
+      "It is irreversible",
+      "It introduces artificial ordinal relationships",
+      "It increases dataset size",
+      "It removes class information"
+    ],
+    "giusta": "It introduces artificial ordinal relationships"
+  },
+  "369": {
+    "domanda": "What problem does one-hot encoding solve?",
+    "risposte": [
+      "Class imbalance",
+      "Artificial ordering of categorical variables",
+      "Overfitting",
+      "Missing data"
+    ],
+    "giusta": "Artificial ordering of categorical variables"
+  },
+  "370": {
+    "domanda": "What is the output of one-hot encoding for a categorical variable?",
+    "risposte": [
+      "A single integer",
+      "A probability value",
+      "A binary vector",
+      "A normalized scalar"
+    ],
+    "giusta": "A binary vector"
+  },
+  "371": {
+    "domanda": "Why must features and labels be preprocessed separately?",
+    "risposte": [
+      "To increase accuracy",
+      "To avoid data leakage",
+      "To reduce computation",
+      "To simplify plotting"
+    ],
+    "giusta": "To avoid data leakage"
+  },
+  "372": {
+    "domanda": "Why is visualization important during dataset creation?",
+    "risposte": [
+      "Only for aesthetics",
+      "To assess discriminatory power of features",
+      "To replace models",
+      "To increase dimensionality"
+    ],
+    "giusta": "To assess discriminatory power of features"
+  },
+  "373": {
+    "domanda": "What is the main exam-related advice for Lesson 15?",
+    "risposte": [
+      "Memorize code syntax",
+      "Understand concepts and comment code examples",
+      "Ignore laboratory material",
+      "Focus only on accuracy formulas"
+    ],
+    "giusta": "Understand concepts and comment code examples"
+  },
+  "374": {
+    "domanda": "What are the main topics of Lesson 16?",
+    "risposte": [
+      "Reinforcement learning and agents",
+      "Linear regressors, linear classifiers, neural networks and overfitting",
+      "Cloud deployment and MLOps",
+      "Explainable AI only"
+    ],
+    "giusta": "Linear regressors, linear classifiers, neural networks and overfitting"
+  },
+  "375": {
+    "domanda": "What is the goal of a linear regressor?",
+    "risposte": [
+      "Separate classes",
+      "Predict discrete labels",
+      "Approximate a continuous relationship y = f(x)",
+      "Minimize classification error"
+    ],
+    "giusta": "Approximate a continuous relationship y = f(x)"
+  },
+  "376": {
+    "domanda": "What type of output does a linear classifier produce?",
+    "risposte": [
+      "A continuous real value",
+      "A probability distribution",
+      "A discrete class label via a sign function",
+      "A regression curve"
+    ],
+    "giusta": "A discrete class label via a sign function"
+  },
+  "377": {
+    "domanda": "What is the mathematical difference between a linear regressor and a linear classifier?",
+    "risposte": [
+      "They use different inputs",
+      "The classifier applies a sign (or threshold) to the regressor output",
+      "The regressor has no bias term",
+      "The classifier has no weights"
+    ],
+    "giusta": "The classifier applies a sign (or threshold) to the regressor output"
+  },
+  "378": {
+    "domanda": "In the model z = w · x + b, what does b represent?",
+    "risposte": [
+      "The learning rate",
+      "The bias term (offset)",
+      "The loss function",
+      "The gradient"
+    ],
+    "giusta": "The bias term (offset)"
+  },
+  "379": {
+    "domanda": "How many parameters are needed to define a linear model with 3 input features?",
+    "risposte": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "giusta": "4"
+  },
+  "380": {
+    "domanda": "What is the Residual Sum of Squares (RSS) used for?",
+    "risposte": [
+      "Evaluating classification accuracy",
+      "Measuring dataset imbalance",
+      "Optimizing regression model parameters",
+      "Normalizing features"
+    ],
+    "giusta": "Optimizing regression model parameters"
+  },
+  "381": {
+    "domanda": "What is the main idea behind gradient-based optimization?",
+    "risposte": [
+      "Trying all possible parameters",
+      "Updating parameters in the direction that reduces error",
+      "Randomly changing weights",
+      "Maximizing variance"
+    ],
+    "giusta": "Updating parameters in the direction that reduces error"
+  },
+  "382": {
+    "domanda": "Why is the gradient a central concept in Machine Learning?",
+    "risposte": [
+      "Because it defines the dataset",
+      "Because it guides parameter updates during optimization",
+      "Because it replaces evaluation",
+      "Because it avoids overfitting"
+    ],
+    "giusta": "Because it guides parameter updates during optimization"
+  },
+  "383": {
+    "domanda": "What does R-squared (R²) measure in regression?",
+    "risposte": [
+      "Classification accuracy",
+      "Fraction of variance explained by the model",
+      "Gradient magnitude",
+      "Generalization error"
+    ],
+    "giusta": "Fraction of variance explained by the model"
+  },
+  "384": {
+    "domanda": "Why is R² particularly important when dimensionality is greater than 2?",
+    "risposte": [
+      "Because visualization is easy",
+      "Because visual inspection is difficult or impossible",
+      "Because accuracy cannot be computed",
+      "Because labels are missing"
+    ],
+    "giusta": "Because visual inspection is difficult or impossible"
+  },
+  "385": {
+    "domanda": "What does a training accuracy of 100% usually indicate?",
+    "risposte": [
+      "Perfect generalization",
+      "A well-balanced dataset",
+      "Possible overfitting",
+      "Correct model complexity"
+    ],
+    "giusta": "Possible overfitting"
+  },
+  "386": {
+    "domanda": "Why is a 'perfect learner' often a bad idea?",
+    "risposte": [
+      "Because it is too slow",
+      "Because zero training error does not guarantee generalization",
+      "Because it cannot be trained",
+      "Because it has low bias"
+    ],
+    "giusta": "Because zero training error does not guarantee generalization"
+  },
+  "387": {
+    "domanda": "What is overfitting?",
+    "risposte": [
+      "High error on training and test data",
+      "Model too simple to capture patterns",
+      "Model memorizes training data and noise",
+      "Balanced bias and variance"
+    ],
+    "giusta": "Model memorizes training data and noise"
+  },
+  "388": {
+    "domanda": "What practical risk is associated with overfitting?",
+    "risposte": [
+      "Lower training accuracy",
+      "Unstable predictions when data distribution changes",
+      "Reduced model size",
+      "Lower computational cost"
+    ],
+    "giusta": "Unstable predictions when data distribution changes"
+  },
+  "389": {
+    "domanda": "How can overfitting be detected?",
+    "risposte": [
+      "By training accuracy only",
+      "By comparing training accuracy with cross-validation or test accuracy",
+      "By increasing model depth",
+      "By adding more neurons"
+    ],
+    "giusta": "By comparing training accuracy with cross-validation or test accuracy"
+  },
+  "390": {
+    "domanda": "What is the purpose of cross-validation in Lesson 16?",
+    "risposte": [
+      "Increase training accuracy",
+      "Test generalization performance",
+      "Balance the dataset",
+      "Optimize visualization"
+    ],
+    "giusta": "Test generalization performance"
+  },
+  "391": {
+    "domanda": "What does the Bias–Variance tradeoff describe?",
+    "risposte": [
+      "A tradeoff between speed and accuracy",
+      "A balance between model simplicity and complexity",
+      "A tradeoff between training and testing time",
+      "A balance between memory and computation"
+    ],
+    "giusta": "A balance between model simplicity and complexity"
+  },
+  "392": {
+    "domanda": "High bias typically leads to which problem?",
+    "risposte": [
+      "Overfitting",
+      "Underfitting",
+      "High variance",
+      "Perfect generalization"
+    ],
+    "giusta": "Underfitting"
+  },
+  "393": {
+    "domanda": "High variance typically leads to which problem?",
+    "risposte": [
+      "Underfitting",
+      "Overfitting",
+      "Low training accuracy",
+      "Low model capacity"
+    ],
+    "giusta": "Overfitting"
+  },
+  "394": {
+    "domanda": "In the bias–variance plot, what variable is on the x-axis?",
+    "risposte": [
+      "Training time",
+      "Number of epochs",
+      "Model complexity",
+      "Dataset size"
+    ],
+    "giusta": "Model complexity"
+  },
+  "395": {
+    "domanda": "Why does validation accuracy often show a U-shaped curve?",
+    "risposte": [
+      "Because of random noise only",
+      "Because increasing complexity first reduces bias then increases variance",
+      "Because training stops early",
+      "Because data is unbalanced"
+    ],
+    "giusta": "Because increasing complexity first reduces bias then increases variance"
+  },
+  "396": {
+    "domanda": "Why is the number of parameters (DoF) critical in model design?",
+    "risposte": [
+      "Because it determines plotting style",
+      "Because too many parameters relative to samples cause overfitting",
+      "Because it improves explainability",
+      "Because it removes noise"
+    ],
+    "giusta": "Because too many parameters relative to samples cause overfitting"
+  },
+  "397": {
+    "domanda": "What happens if a feedforward neural network has far more neurons than data samples?",
+    "risposte": [
+      "Better generalization",
+      "Faster convergence",
+      "Severe overfitting",
+      "Lower training accuracy"
+    ],
+    "giusta": "Severe overfitting"
+  },
+  "398": {
+    "domanda": "Why must accuracy always be evaluated on a test set?",
+    "risposte": [
+      "Because training data is smaller",
+      "Because training accuracy is optimistic and biased",
+      "Because gradients cannot be computed",
+      "Because labels are missing"
+    ],
+    "giusta": "Because training accuracy is optimistic and biased"
+  },
+  "399": {
+    "domanda": "What is the main lesson of the Wine dataset example?",
+    "risposte": [
+      "Decision trees always work",
+      "Increasing depth always improves generalization",
+      "Perfect training accuracy can hide poor generalization",
+      "Cross-validation is optional"
+    ],
+    "giusta": "Perfect training accuracy can hide poor generalization"
+  },
+  "400": {
+    "domanda": "What is the most important takeaway of Lesson 16?",
+    "risposte": [
+      "Always maximize training accuracy",
+      "Model complexity must be balanced to achieve good generalization",
+      "Neural networks always outperform linear models",
+      "Coding details matter more than theory"
+    ],
+    "giusta": "Model complexity must be balanced to achieve good generalization"
+  },
+  "401": {
+    "domanda": "What is the main goal of Bayes Optimal Classification?",
+    "risposte": [
+      "Achieve zero error in all cases",
+      "Minimize the expected classification error",
+      "Maximize training accuracy",
+      "Reduce computational complexity"
+    ],
+    "giusta": "Minimize the expected classification error"
+  },
+  "402": {
+    "domanda": "Why can the Bayes optimal error be greater than zero?",
+    "risposte": [
+      "Because classifiers are imperfect",
+      "Because class distributions may overlap",
+      "Because features are always noisy",
+      "Because models are underfitted"
+    ],
+    "giusta": "Because class distributions may overlap"
+  },
+  "403": {
+    "domanda": "What does the Bayes Optimal Classifier choose as output?",
+    "risposte": [
+      "The class with maximum likelihood",
+      "The class with maximum posterior probability",
+      "The class with minimum distance",
+      "The most frequent class"
+    ],
+    "giusta": "The class with maximum posterior probability"
+  },
+  "404": {
+    "domanda": "Which probability is typically harder to estimate directly in real problems?",
+    "risposte": [
+      "Prior probability P(C)",
+      "Likelihood P(x|C)",
+      "Posterior probability P(C|x)",
+      "Marginal probability P(x)"
+    ],
+    "giusta": "Posterior probability P(C|x)"
+  },
+  "405": {
+    "domanda": "Why is Bayes rule useful in classification?",
+    "risposte": [
+      "It eliminates the need for data",
+      "It allows computing posterior probabilities from easier terms",
+      "It guarantees zero error",
+      "It avoids dimensionality issues"
+    ],
+    "giusta": "It allows computing posterior probabilities from easier terms"
+  },
+  "406": {
+    "domanda": "What key assumption does the Naive Bayes classifier make?",
+    "risposte": [
+      "Features are strongly correlated",
+      "Features are independent given the class",
+      "Data is linearly separable",
+      "Classes are balanced"
+    ],
+    "giusta": "Features are independent given the class"
+  },
+  "407": {
+    "domanda": "Why is the Naive Bayes classifier called 'naive'?",
+    "risposte": [
+      "Because it ignores priors",
+      "Because the independence assumption is rarely true",
+      "Because it is inaccurate",
+      "Because it requires few samples"
+    ],
+    "giusta": "Because the independence assumption is rarely true"
+  },
+  "408": {
+    "domanda": "Why is Naive Bayes suitable for high-dimensional input spaces?",
+    "risposte": [
+      "Because it ignores features",
+      "Because it requires a number of parameters linear in the number of features",
+      "Because it reduces dimensionality",
+      "Because it uses neural networks"
+    ],
+    "giusta": "Because it requires a number of parameters linear in the number of features"
+  },
+  "409": {
+    "domanda": "What is the theoretical importance of the Bayes Optimal Classifier?",
+    "risposte": [
+      "It can always be implemented",
+      "No classifier can outperform it on average given the same information",
+      "It requires infinite data",
+      "It replaces all other classifiers"
+    ],
+    "giusta": "No classifier can outperform it on average given the same information"
+  },
+  "410": {
+    "domanda": "What distinguishes eager learning from lazy learning?",
+    "risposte": [
+      "Memory usage only",
+      "When generalization is performed",
+      "Whether labels are used",
+      "The type of loss function"
+    ],
+    "giusta": "When generalization is performed"
+  },
+  "411": {
+    "domanda": "Which statement best describes eager learning?",
+    "risposte": [
+      "Generalization is delayed until query time",
+      "The model stores all training samples",
+      "A general target function is learned during training",
+      "It has no training phase"
+    ],
+    "giusta": "A general target function is learned during training"
+  },
+  "412": {
+    "domanda": "Which statement best describes lazy (instance-based) learning?",
+    "risposte": [
+      "It builds an explicit model during training",
+      "It stores all training instances and generalizes at query time",
+      "It has low memory usage",
+      "It ignores the training data"
+    ],
+    "giusta": "It stores all training instances and generalizes at query time"
+  },
+  "413": {
+    "domanda": "Which classifier is a典ical example of lazy learning?",
+    "risposte": [
+      "Decision Tree",
+      "Support Vector Machine",
+      "k-Nearest Neighbors (kNN)",
+      "Linear Regression"
+    ],
+    "giusta": "k-Nearest Neighbors (kNN)"
+  },
+  "414": {
+    "domanda": "What is the 'curse of dimensionality'?",
+    "risposte": [
+      "The difficulty of visualizing 3D data",
+      "Phenomena arising when data dimensionality increases",
+      "The inability to train neural networks",
+      "The need for normalization"
+    ],
+    "giusta": "Phenomena arising when data dimensionality increases"
+  },
+  "415": {
+    "domanda": "How does the amount of required data scale with dimensionality?",
+    "risposte": [
+      "Linearly",
+      "Logarithmically",
+      "Exponentially",
+      "It does not scale"
+    ],
+    "giusta": "Exponentially"
+  },
+  "416": {
+    "domanda": "Why can adding irrelevant features be harmful?",
+    "risposte": [
+      "They reduce model size",
+      "They increase dimensionality without adding useful information",
+      "They simplify decision boundaries",
+      "They reduce noise"
+    ],
+    "giusta": "They increase dimensionality without adding useful information"
+  },
+  "417": {
+    "domanda": "Why does distance become less meaningful in high-dimensional spaces?",
+    "risposte": [
+      "Because all distances tend to become similar",
+      "Because features are normalized",
+      "Because labels dominate",
+      "Because models overfit"
+    ],
+    "giusta": "Because all distances tend to become similar"
+  },
+  "418": {
+    "domanda": "Which strategies help mitigate the curse of dimensionality?",
+    "risposte": [
+      "Adding random features",
+      "Feature selection and dimensionality reduction",
+      "Increasing k in kNN indefinitely",
+      "Ignoring normalization"
+    ],
+    "giusta": "Feature selection and dimensionality reduction"
+  },
+  "419": {
+    "domanda": "What is the basic idea behind the kNN classifier?",
+    "risposte": [
+      "Fit a parametric model",
+      "Classify based on the majority class of nearest neighbors",
+      "Maximize posterior probability explicitly",
+      "Minimize training loss"
+    ],
+    "giusta": "Classify based on the majority class of nearest neighbors"
+  },
+  "420": {
+    "domanda": "What are the three required components of the kNN algorithm?",
+    "risposte": [
+      "Loss, optimizer, model",
+      "Stored data, distance metric, value of k",
+      "Prior, likelihood, posterior",
+      "Features, labels, epochs"
+    ],
+    "giusta": "Stored data, distance metric, value of k"
+  },
+  "421": {
+    "domanda": "What happens when k = 1 in kNN?",
+    "risposte": [
+      "The classifier is very smooth",
+      "The classifier is highly sensitive to noise",
+      "The classifier ignores outliers",
+      "The classifier underfits"
+    ],
+    "giusta": "The classifier is highly sensitive to noise"
+  },
+  "422": {
+    "domanda": "What is the effect of choosing a very large k?",
+    "risposte": [
+      "High variance",
+      "Sensitivity to noise",
+      "Smoother decision boundaries and regularization",
+      "Lower computational cost"
+    ],
+    "giusta": "Smoother decision boundaries and regularization"
+  },
+  "423": {
+    "domanda": "Why is feature scaling important in kNN?",
+    "risposte": [
+      "To reduce dimensionality",
+      "To prevent some features from dominating distance computation",
+      "To increase accuracy automatically",
+      "To remove noise"
+    ],
+    "giusta": "To prevent some features from dominating distance computation"
+  },
+  "424": {
+    "domanda": "Which geometric structure represents the decision regions of 1-NN?",
+    "risposte": [
+      "Convex hull",
+      "Decision tree",
+      "Voronoi diagram",
+      "Confusion matrix"
+    ],
+    "giusta": "Voronoi diagram"
+  },
+  "425": {
+    "domanda": "Why is kNN considered a useful 'debug tool'?",
+    "risposte": [
+      "Because it is always the most accurate",
+      "Because it helps understand data structure and benchmark other models",
+      "Because it requires no memory",
+      "Because it avoids cross-validation"
+    ],
+    "giusta": "Because it helps understand data structure and benchmark other models"
+  },
+  "426": {
+    "domanda": "What is a major drawback of kNN in large datasets?",
+    "risposte": [
+      "Low accuracy",
+      "High memory and computational cost at prediction time",
+      "Poor explainability",
+      "Need for priors"
+    ],
+    "giusta": "High memory and computational cost at prediction time"
+  },
+  "427": {
+    "domanda": "How does kNN relate to the Bayes Optimal Classifier?",
+    "risposte": [
+      "It is unrelated",
+      "It approximates the Bayes optimal classifier with enough data",
+      "It always outperforms Bayes optimal",
+      "It ignores probability distributions"
+    ],
+    "giusta": "It approximates the Bayes optimal classifier with enough data"
+  },
+  "428": {
+    "domanda": "What is the main takeaway of Lesson 17?",
+    "risposte": [
+      "Neural networks always dominate classical models",
+      "Classical models are obsolete",
+      "Understanding Bayes, dimensionality and kNN is fundamental to pattern recognition",
+      "Distance-based methods are always slow"
+    ],
+    "giusta": "Understanding Bayes, dimensionality and kNN is fundamental to pattern recognition"
+  },
+  "429": {
+    "domanda": "What is the main focus of Lesson 18?",
+    "risposte": [
+      "Model deployment",
+      "Dimensionality reduction, feature selection and feature extraction",
+      "Neural network optimization",
+      "Bayesian classifiers"
+    ],
+    "giusta": "Dimensionality reduction, feature selection and feature extraction"
+  },
+  "430": {
+    "domanda": "What is the difference between feature selection and feature extraction?",
+    "risposte": [
+      "Selection creates new features, extraction removes features",
+      "Selection chooses a subset of original features, extraction creates new features",
+      "They are the same process",
+      "Extraction is supervised, selection is unsupervised"
+    ],
+    "giusta": "Selection chooses a subset of original features, extraction creates new features"
+  },
+  "431": {
+    "domanda": "Why is feature selection useful?",
+    "risposte": [
+      "It increases dimensionality",
+      "It reduces overfitting and training time",
+      "It always improves accuracy",
+      "It replaces classifiers"
+    ],
+    "giusta": "It reduces overfitting and training time"
+  },
+  "432": {
+    "domanda": "Which type of feature selection method does NOT use a learning algorithm?",
+    "risposte": [
+      "Wrapper",
+      "Embedded",
+      "Filter",
+      "Sequential selection"
+    ],
+    "giusta": "Filter"
+  },
+  "433": {
+    "domanda": "How do filter methods evaluate features?",
+    "risposte": [
+      "Using cross-validation and a classifier",
+      "Using statistical criteria independent of the model",
+      "Using neural networks",
+      "Using backpropagation"
+    ],
+    "giusta": "Using statistical criteria independent of the model"
+  },
+  "434": {
+    "domanda": "Which is a typical criterion used in filter methods?",
+    "risposte": [
+      "Training accuracy",
+      "High variance and low correlation",
+      "Gradient magnitude",
+      "Loss minimization"
+    ],
+    "giusta": "High variance and low correlation"
+  },
+  "435": {
+    "domanda": "What is a key advantage of filter methods?",
+    "risposte": [
+      "They always find the optimal subset",
+      "They are computationally cheap and robust to overfitting",
+      "They require many parameters",
+      "They depend on the classifier"
+    ],
+    "giusta": "They are computationally cheap and robust to overfitting"
+  },
+  "436": {
+    "domanda": "What is the main drawback of filter methods?",
+    "risposte": [
+      "High computational cost",
+      "They may fail to select the most useful features for a specific model",
+      "They require labels",
+      "They increase dimensionality"
+    ],
+    "giusta": "They may fail to select the most useful features for a specific model"
+  },
+  "437": {
+    "domanda": "What characterizes wrapper methods for feature selection?",
+    "risposte": [
+      "They are model-independent",
+      "They evaluate feature subsets using a learning algorithm",
+      "They use only statistical tests",
+      "They never overfit"
+    ],
+    "giusta": "They evaluate feature subsets using a learning algorithm"
+  },
+  "438": {
+    "domanda": "Why are wrapper methods prone to overfitting?",
+    "risposte": [
+      "Because they ignore labels",
+      "Because they optimize feature subsets using the model itself",
+      "Because they reduce dimensionality",
+      "Because they use filters first"
+    ],
+    "giusta": "Because they optimize feature subsets using the model itself"
+  },
+  "439": {
+    "domanda": "What are typical models used in wrapper methods?",
+    "risposte": [
+      "PCA and ICA",
+      "kNN and Neural Networks",
+      "Linear regression only",
+      "Decision rules only"
+    ],
+    "giusta": "kNN and Neural Networks"
+  },
+  "440": {
+    "domanda": "What distinguishes embedded methods from wrappers?",
+    "risposte": [
+      "They do not use labels",
+      "Feature selection is performed during model training",
+      "They do not use models",
+      "They are purely statistical"
+    ],
+    "giusta": "Feature selection is performed during model training"
+  },
+  "441": {
+    "domanda": "Why are embedded methods less prone to overfitting than wrappers?",
+    "risposte": [
+      "They use no validation",
+      "They combine selection with learning and are less computationally expensive",
+      "They always select fewer features",
+      "They ignore noisy features"
+    ],
+    "giusta": "They combine selection with learning and are less computationally expensive"
+  },
+  "442": {
+    "domanda": "In neural networks, how can embedded feature selection be observed?",
+    "risposte": [
+      "By loss value",
+      "By input weights close to zero",
+      "By number of layers",
+      "By activation functions"
+    ],
+    "giusta": "By input weights close to zero"
+  },
+  "443": {
+    "domanda": "What is Sequential Forward Selection (SFS)?",
+    "risposte": [
+      "Removing features one by one",
+      "Adding features incrementally starting from an empty set",
+      "Random feature selection",
+      "Dimensionality reduction via PCA"
+    ],
+    "giusta": "Adding features incrementally starting from an empty set"
+  },
+  "444": {
+    "domanda": "What is Sequential Backward Selection (SBS)?",
+    "risposte": [
+      "Adding features incrementally",
+      "Removing features starting from the full set",
+      "Feature extraction",
+      "Filter-based selection"
+    ],
+    "giusta": "Removing features starting from the full set"
+  },
+  "445": {
+    "domanda": "What is the most important unsupervised dimensionality reduction technique?",
+    "risposte": [
+      "LDA",
+      "PCA",
+      "kNN",
+      "t-SNE"
+    ],
+    "giusta": "PCA"
+  },
+  "446": {
+    "domanda": "Why is PCA considered unsupervised?",
+    "risposte": [
+      "Because it uses labels implicitly",
+      "Because it ignores class labels",
+      "Because it requires a classifier",
+      "Because it maximizes class separation"
+    ],
+    "giusta": "Because it ignores class labels"
+  },
+  "447": {
+    "domanda": "What is the main objective of PCA?",
+    "risposte": [
+      "Maximize class separation",
+      "Preserve as much variance as possible in a lower-dimensional space",
+      "Minimize classification error",
+      "Remove noise only"
+    ],
+    "giusta": "Preserve as much variance as possible in a lower-dimensional space"
+  },
+  "448": {
+    "domanda": "What geometric operation best describes PCA?",
+    "risposte": [
+      "Non-linear warping",
+      "Rotation and projection of the data",
+      "Random sampling",
+      "Feature elimination"
+    ],
+    "giusta": "Rotation and projection of the data"
+  },
+  "449": {
+    "domanda": "From where do PCA vectors originate?",
+    "risposte": [
+      "From the origin",
+      "From random points",
+      "From the center of mass of the data",
+      "From class centroids"
+    ],
+    "giusta": "From the center of mass of the data"
+  },
+  "450": {
+    "domanda": "What does the first principal component (PC1) represent?",
+    "risposte": [
+      "Direction of minimum variance",
+      "Direction of maximum variance",
+      "Direction of class separation",
+      "Direction of minimum error"
+    ],
+    "giusta": "Direction of maximum variance"
+  },
+  "451": {
+    "domanda": "How are subsequent principal components constrained?",
+    "risposte": [
+      "They are parallel to PC1",
+      "They are orthogonal to previous components",
+      "They maximize class separation",
+      "They minimize correlation with labels"
+    ],
+    "giusta": "They are orthogonal to previous components"
+  },
+  "452": {
+    "domanda": "Which mathematical objects define PCA components?",
+    "risposte": [
+      "Gradients",
+      "Eigenvectors of the covariance matrix",
+      "Loss functions",
+      "Activation functions"
+    ],
+    "giusta": "Eigenvectors of the covariance matrix"
+  },
+  "453": {
+    "domanda": "What do larger eigenvalues in PCA indicate?",
+    "risposte": [
+      "More noise",
+      "More important principal components",
+      "Less variance",
+      "Worse reconstruction"
+    ],
+    "giusta": "More important principal components"
+  },
+  "454": {
+    "domanda": "Which of the following is NOT a typical application of PCA?",
+    "risposte": [
+      "Data visualization",
+      "Noise reduction",
+      "Automatic feature creation",
+      "Supervised classification"
+    ],
+    "giusta": "Supervised classification"
+  },
+  "455": {
+    "domanda": "What is the main difference between PCA and LDA?",
+    "risposte": [
+      "PCA is supervised, LDA is unsupervised",
+      "PCA maximizes variance, LDA maximizes class separation",
+      "PCA reduces dimensionality, LDA does not",
+      "They are equivalent"
+    ],
+    "giusta": "PCA maximizes variance, LDA maximizes class separation"
+  },
+  "456": {
+    "domanda": "Which dimensionality reduction technique is explicitly supervised?",
+    "risposte": [
+      "PCA",
+      "t-SNE",
+      "ICA",
+      "LDA"
+    ],
+    "giusta": "LDA"
+  },
+  "457": {
+    "domanda": "For what purpose is t-SNE particularly suited?",
+    "risposte": [
+      "Model training",
+      "High-dimensional data visualization",
+      "Feature selection",
+      "Noise filtering"
+    ],
+    "giusta": "High-dimensional data visualization"
+  },
+  "458": {
+    "domanda": "Why is t-SNE considered a non-linear technique?",
+    "risposte": [
+      "Because it uses eigenvectors",
+      "Because it preserves local neighborhoods in a non-linear way",
+      "Because it maximizes variance",
+      "Because it removes features"
+    ],
+    "giusta": "Because it preserves local neighborhoods in a non-linear way"
+  },
+  "459": {
+    "domanda": "What is a typical dimensionality used with t-SNE?",
+    "risposte": [
+      "1",
+      "2 or 3",
+      "10",
+      "Same as original space"
+    ],
+    "giusta": "2 or 3"
+  },
+  "460": {
+    "domanda": "In which field is Independent Component Analysis (ICA) often used?",
+    "risposte": [
+      "Image compression",
+      "Signal processing",
+      "Text mining",
+      "Reinforcement learning"
+    ],
+    "giusta": "Signal processing"
+  },
+  "461": {
+    "domanda": "What is the key assumption behind ICA?",
+    "risposte": [
+      "Components are uncorrelated",
+      "Components are independent",
+      "Components maximize variance",
+      "Components are orthogonal"
+    ],
+    "giusta": "Components are independent"
+  },
+  "462": {
+    "domanda": "What is the main takeaway of Lesson 18?",
+    "risposte": [
+      "More features always improve models",
+      "Dimensionality reduction and feature engineering are critical to fight the curse of dimensionality",
+      "PCA always outperforms LDA",
+      "Feature selection is optional"
+    ],
+    "giusta": "Dimensionality reduction and feature engineering are critical to fight the curse of dimensionality"
+  },
+  "463": {
+    "domanda": "What type of learning is clustering?",
+    "risposte": [
+      "Supervised learning",
+      "Reinforcement learning",
+      "Unsupervised learning",
+      "Semi-supervised learning"
+    ],
+    "giusta": "Unsupervised learning"
+  },
+  "464": {
+    "domanda": "What is the goal of clustering?",
+    "risposte": [
+      "Predict labels",
+      "Group objects so that intra-cluster similarity is high and inter-cluster similarity is low",
+      "Maximize classification accuracy",
+      "Learn decision boundaries"
+    ],
+    "giusta": "Group objects so that intra-cluster similarity is high and inter-cluster similarity is low"
+  },
+  "465": {
+    "domanda": "Why is clustering useful in real-world applications?",
+    "risposte": [
+      "Because data is always low-dimensional",
+      "Because hard-coding clusters is usually impossible",
+      "Because labels are always available",
+      "Because experts always know the structure"
+    ],
+    "giusta": "Because hard-coding clusters is usually impossible"
+  },
+  "466": {
+    "domanda": "Which of the following is a typical application of clustering?",
+    "risposte": [
+      "Label prediction",
+      "Customer segmentation",
+      "Regression",
+      "Supervised classification"
+    ],
+    "giusta": "Customer segmentation"
+  },
+  "467": {
+    "domanda": "What is the main objective function minimized by k-means?",
+    "risposte": [
+      "Between-cluster distance",
+      "Within-cluster sum of squares",
+      "Classification error",
+      "Margin"
+    ],
+    "giusta": "Within-cluster sum of squares"
+  },
+  "468": {
+    "domanda": "Which distance metric is most commonly used in k-means?",
+    "risposte": [
+      "Manhattan distance",
+      "Cosine distance",
+      "Euclidean distance",
+      "Hamming distance"
+    ],
+    "giusta": "Euclidean distance"
+  },
+  "469": {
+    "domanda": "What is the first step of the k-means algorithm?",
+    "risposte": [
+      "Assign points to clusters",
+      "Choose k and initialize centroids",
+      "Recompute centroids",
+      "Check convergence"
+    ],
+    "giusta": "Choose k and initialize centroids"
+  },
+  "470": {
+    "domanda": "What is the stopping condition of k-means?",
+    "risposte": [
+      "After a fixed number of iterations",
+      "When centroids stop moving or assignments do not change",
+      "When accuracy is maximized",
+      "When loss becomes zero"
+    ],
+    "giusta": "When centroids stop moving or assignments do not change"
+  },
+  "471": {
+    "domanda": "To what type of solution does k-means converge?",
+    "risposte": [
+      "Global maximum",
+      "Global minimum",
+      "Local minimum",
+      "Exact optimum"
+    ],
+    "giusta": "Local minimum"
+  },
+  "472": {
+    "domanda": "Why is random initialization critical in k-means?",
+    "risposte": [
+      "It speeds up convergence",
+      "It affects which local minimum is reached",
+      "It guarantees optimal clustering",
+      "It removes outliers"
+    ],
+    "giusta": "It affects which local minimum is reached"
+  },
+  "473": {
+    "domanda": "Which problem does k-means have with outliers?",
+    "risposte": [
+      "Outliers are ignored",
+      "Outliers strongly affect centroid positions",
+      "Outliers are removed automatically",
+      "Outliers improve clustering"
+    ],
+    "giusta": "Outliers strongly affect centroid positions"
+  },
+  "474": {
+    "domanda": "Which type of cluster shapes is k-means best suited for?",
+    "risposte": [
+      "Non-convex clusters",
+      "Arbitrary shapes",
+      "Convex, roughly spherical clusters",
+      "Hierarchical clusters"
+    ],
+    "giusta": "Convex, roughly spherical clusters"
+  },
+  "475": {
+    "domanda": "Which of the following is a strength of k-means?",
+    "risposte": [
+      "Handles categorical data naturally",
+      "Works well with non-convex clusters",
+      "Is computationally efficient for large datasets",
+      "Does not require k"
+    ],
+    "giusta": "Is computationally efficient for large datasets"
+  },
+  "476": {
+    "domanda": "Which of the following is a weakness of k-means?",
+    "risposte": [
+      "High computational cost",
+      "Need to specify the number of clusters k in advance",
+      "No convergence guarantee",
+      "Requires labels"
+    ],
+    "giusta": "Need to specify the number of clusters k in advance"
+  },
+  "477": {
+    "domanda": "What does the elbow method analyze to choose k?",
+    "risposte": [
+      "Classification accuracy",
+      "Within-cluster sum of squares vs k",
+      "Between-cluster distance",
+      "Silhouette only"
+    ],
+    "giusta": "Within-cluster sum of squares vs k"
+  },
+  "478": {
+    "domanda": "What does the 'elbow point' represent?",
+    "risposte": [
+      "Maximum variance",
+      "Minimum error",
+      "Diminishing returns when increasing k",
+      "Perfect clustering"
+    ],
+    "giusta": "Diminishing returns when increasing k"
+  },
+  "479": {
+    "domanda": "Which metric measures how well a point fits within its cluster compared to others?",
+    "risposte": [
+      "Accuracy",
+      "Silhouette score",
+      "ROC AUC",
+      "Margin"
+    ],
+    "giusta": "Silhouette score"
+  },
+  "480": {
+    "domanda": "Which criterion explicitly balances model fit and model complexity?",
+    "risposte": [
+      "WCSS",
+      "Silhouette score",
+      "BIC / AIC",
+      "Elbow method"
+    ],
+    "giusta": "BIC / AIC"
+  },
+  "481": {
+    "domanda": "Which of the following is NOT a main type of computational intelligence system?",
+    "risposte": [
+      "Neural systems",
+      "Fuzzy systems",
+      "Evolutionary systems",
+      "Relational databases"
+    ],
+    "giusta": "Relational databases"
+  },
+  "482": {
+    "domanda": "What is the main inspiration behind neural networks?",
+    "risposte": [
+      "Genetic evolution",
+      "Human reasoning rules",
+      "The human brain",
+      "Statistical physics"
+    ],
+    "giusta": "The human brain"
+  },
+  "483": {
+    "domanda": "What characterizes feed-forward neural networks?",
+    "risposte": [
+      "Recurrent connections",
+      "Layered structure with local nonlinear processing units",
+      "Rule-based reasoning",
+      "Evolutionary operators"
+    ],
+    "giusta": "Layered structure with local nonlinear processing units"
+  },
+  "484": {
+    "domanda": "What principle are evolutionary algorithms based on?",
+    "risposte": [
+      "Bayes theorem",
+      "Gradient descent",
+      "Survival of the fittest",
+      "Fuzzy inference"
+    ],
+    "giusta": "Survival of the fittest"
+  },
+  "485": {
+    "domanda": "What do genetic algorithms require to work?",
+    "risposte": [
+      "Exact gradients",
+      "Knowledge of how to solve the problem",
+      "A way to evaluate solution quality (fitness)",
+      "Large labeled datasets"
+    ],
+    "giusta": "A way to evaluate solution quality (fitness)"
+  },
+  "486": {
+    "domanda": "What is the key idea of fuzzy logic?",
+    "risposte": [
+      "Binary true/false reasoning",
+      "Exact mathematical inference",
+      "Approximate reasoning with degrees of truth",
+      "Random decision making"
+    ],
+    "giusta": "Approximate reasoning with degrees of truth"
+  },
+  "487": {
+    "domanda": "In fuzzy systems, what is approximate?",
+    "risposte": [
+      "Inputs and outputs",
+      "Only outputs",
+      "Only inputs",
+      "The reasoning process"
+    ],
+    "giusta": "The reasoning process"
+  },
+  "488": {
+    "domanda": "What is a software agent?",
+    "risposte": [
+      "A static classification model",
+      "A program that autonomously acts and pursues goals in an environment",
+      "A clustering algorithm",
+      "A neural network layer"
+    ],
+    "giusta": "A program that autonomously acts and pursues goals in an environment"
+  },
+  "489": {
+    "domanda": "Which components are fundamental for a software agent?",
+    "risposte": [
+      "Loss and optimizer",
+      "Sensors, actuators, memory and decision capability",
+      "Training and test sets",
+      "Centroids and distances"
+    ],
+    "giusta": "Sensors, actuators, memory and decision capability"
+  },
+  "490": {
+    "domanda": "What characterizes swarm intelligence systems?",
+    "risposte": [
+      "Centralized control",
+      "Rule-based inference",
+      "Decentralized, self-organized behavior",
+      "Supervised learning"
+    ],
+    "giusta": "Decentralized, self-organized behavior"
+  },
+  "491": {
+    "domanda": "What is a hybrid intelligent system?",
+    "risposte": [
+      "A purely neural system",
+      "A system combining multiple AI techniques",
+      "A rule-based expert system",
+      "A clustering-only system"
+    ],
+    "giusta": "A system combining multiple AI techniques"
+  },
+  "492": {
+    "domanda": "Why are hybrid systems used?",
+    "risposte": [
+      "To increase complexity",
+      "To combine strengths and mitigate weaknesses of different techniques",
+      "To remove the need for data",
+      "To avoid optimization"
+    ],
+    "giusta": "To combine strengths and mitigate weaknesses of different techniques"
+  },
+  "493": {
+    "domanda": "Which of the following is an example of a hybrid system?",
+    "risposte": [
+      "Linear regression",
+      "Neuro-fuzzy system",
+      "k-means clustering",
+      "Naive Bayes"
+    ],
+    "giusta": "Neuro-fuzzy system"
+  },
+  "494": {
+    "domanda": "Why are genetic algorithms useful for parameter optimization?",
+    "risposte": [
+      "Because gradients are always available",
+      "Because brute-force search becomes infeasible with many parameters",
+      "Because they guarantee the global optimum",
+      "Because they require little computation"
+    ],
+    "giusta": "Because brute-force search becomes infeasible with many parameters"
+  },
+  "495": {
+    "domanda": "What is the main takeaway of Lesson 19?",
+    "risposte": [
+      "Clustering replaces classification",
+      "k-means works in all scenarios",
+      "Clustering and different intelligent system paradigms are fundamental AI tools",
+      "Hybrid systems are obsolete"
+    ],
+    "giusta": "Clustering and different intelligent system paradigms are fundamental AI tools"
+  },
+  "496": {
+    "domanda": "What is an artificial neural network inspired by?",
+    "risposte": [
+      "Statistical physics",
+      "The human brain",
+      "Genetic evolution",
+      "Decision trees"
+    ],
+    "giusta": "The human brain"
+  },
+  "497": {
+    "domanda": "What are the basic information-processing units of the human brain?",
+    "risposte": [
+      "Synapses",
+      "Neurons",
+      "Axons",
+      "Dendrites"
+    ],
+    "giusta": "Neurons"
+  },
+  "498": {
+    "domanda": "Which biological component corresponds to a weight in artificial neural networks?",
+    "risposte": [
+      "Axon",
+      "Dendrite",
+      "Synapse",
+      "Soma"
+    ],
+    "giusta": "Synapse"
+  },
+  "499": {
+    "domanda": "What operation does an artificial neuron perform?",
+    "risposte": [
+      "Clustering",
+      "Weighted sum followed by an activation function",
+      "Distance computation",
+      "Probability estimation"
+    ],
+    "giusta": "Weighted sum followed by an activation function"
+  },
+  "500": {
+    "domanda": "What is the role of the bias term in a neuron?",
+    "risposte": [
+      "Scale the inputs",
+      "Shift the activation threshold",
+      "Normalize the output",
+      "Reduce dimensionality"
+    ],
+    "giusta": "Shift the activation threshold"
+  },
+  "501": {
+    "domanda": "Which activation function outputs only -1 or +1?",
+    "risposte": [
+      "Sigmoid",
+      "Hyperbolic tangent",
+      "Sign function",
+      "Linear"
+    ],
+    "giusta": "Sign function"
+  },
+  "502": {
+    "domanda": "Why are non-linear activation functions important?",
+    "risposte": [
+      "They reduce computation",
+      "They allow neural networks to model complex non-linear relationships",
+      "They guarantee convergence",
+      "They remove noise"
+    ],
+    "giusta": "They allow neural networks to model complex non-linear relationships"
+  },
+  "503": {
+    "domanda": "What is a perceptron?",
+    "risposte": [
+      "A multilayer neural network",
+      "A single neuron with adjustable weights and hard limiter",
+      "A clustering algorithm",
+      "A regression model"
+    ],
+    "giusta": "A single neuron with adjustable weights and hard limiter"
+  },
+  "504": {
+    "domanda": "What type of problem can a single perceptron solve?",
+    "risposte": [
+      "Any classification problem",
+      "Only linearly separable binary classification problems",
+      "Regression problems",
+      "Multiclass problems"
+    ],
+    "giusta": "Only linearly separable binary classification problems"
+  },
+  "505": {
+    "domanda": "What geometric object represents the decision boundary of a perceptron?",
+    "risposte": [
+      "A curve",
+      "A sphere",
+      "A hyperplane",
+      "A cluster"
+    ],
+    "giusta": "A hyperplane"
+  },
+  "506": {
+    "domanda": "Which logical operation CANNOT be learned by a single perceptron?",
+    "risposte": [
+      "AND",
+      "OR",
+      "XOR",
+      "NAND"
+    ],
+    "giusta": "XOR"
+  },
+  "507": {
+    "domanda": "Why can a perceptron not learn XOR?",
+    "risposte": [
+      "Because of insufficient data",
+      "Because XOR is not linearly separable",
+      "Because learning rate is too small",
+      "Because of noise"
+    ],
+    "giusta": "Because XOR is not linearly separable"
+  },
+  "508": {
+    "domanda": "What does one epoch mean in neural network training?",
+    "risposte": [
+      "One weight update",
+      "One forward pass",
+      "One complete pass of the entire dataset",
+      "One gradient computation"
+    ],
+    "giusta": "One complete pass of the entire dataset"
+  },
+  "509": {
+    "domanda": "What is the perceptron learning rule?",
+    "risposte": [
+      "Random weight update",
+      "Δwi = α · xi · e",
+      "Δwi = α · wi · e",
+      "Δwi = e / α"
+    ],
+    "giusta": "Δwi = α · xi · e"
+  },
+  "510": {
+    "domanda": "What does the learning rate α control?",
+    "risposte": [
+      "Model complexity",
+      "Magnitude of weight updates",
+      "Number of neurons",
+      "Activation threshold"
+    ],
+    "giusta": "Magnitude of weight updates"
+  },
+  "511": {
+    "domanda": "What is a multilayer perceptron (MLP)?",
+    "risposte": [
+      "A perceptron with no bias",
+      "A feedforward neural network with one or more hidden layers",
+      "A recurrent neural network",
+      "A clustering model"
+    ],
+    "giusta": "A feedforward neural network with one or more hidden layers"
+  },
+  "512": {
+    "domanda": "Why are hidden layers called 'hidden'?",
+    "risposte": [
+      "They have no weights",
+      "Their desired outputs are not directly observable",
+      "They are not trained",
+      "They do not affect output"
+    ],
+    "giusta": "Their desired outputs are not directly observable"
+  },
+  "513": {
+    "domanda": "How does learning in a multilayer network proceed?",
+    "risposte": [
+      "Only forward propagation",
+      "Like a perceptron, but with error propagated backward",
+      "Random search",
+      "Only clustering"
+    ],
+    "giusta": "Like a perceptron, but with error propagated backward"
+  },
+  "514": {
+    "domanda": "What is backpropagation?",
+    "risposte": [
+      "A forward-only learning algorithm",
+      "An algorithm that propagates errors backward to update weights",
+      "A clustering technique",
+      "A dimensionality reduction method"
+    ],
+    "giusta": "An algorithm that propagates errors backward to update weights"
+  },
+  "515": {
+    "domanda": "What are the two main phases of backpropagation?",
+    "risposte": [
+      "Training and testing",
+      "Forward propagation and backward error propagation",
+      "Clustering and classification",
+      "Sampling and normalization"
+    ],
+    "giusta": "Forward propagation and backward error propagation"
+  },
+  "516": {
+    "domanda": "Which activation function is commonly used in backpropagation?",
+    "risposte": [
+      "Sign",
+      "Step",
+      "Sigmoid",
+      "Heaviside"
+    ],
+    "giusta": "Sigmoid"
+  },
+  "517": {
+    "domanda": "Why can backpropagation suffer from vanishing gradients?",
+    "risposte": [
+      "Because weights are zero",
+      "Because gradients become very small in deep networks",
+      "Because learning rate is too high",
+      "Because of linear activations"
+    ],
+    "giusta": "Because gradients become very small in deep networks"
+  },
+  "518": {
+    "domanda": "What is the exploding gradient problem?",
+    "risposte": [
+      "Gradients become zero",
+      "Gradients grow excessively large and destabilize learning",
+      "Weights vanish",
+      "Loss becomes zero"
+    ],
+    "giusta": "Gradients grow excessively large and destabilize learning"
+  },
+  "519": {
+    "domanda": "Why is the choice of activation function critical?",
+    "risposte": [
+      "It determines dataset size",
+      "It strongly affects gradient behavior during learning",
+      "It removes the need for backpropagation",
+      "It guarantees optimal solutions"
+    ],
+    "giusta": "It strongly affects gradient behavior during learning"
+  },
+  "520": {
+    "domanda": "What is the main advantage of multilayer neural networks over single perceptrons?",
+    "risposte": [
+      "Lower computational cost",
+      "Ability to solve non-linearly separable problems like XOR",
+      "Guaranteed convergence",
+      "Simpler training"
+    ],
+    "giusta": "Ability to solve non-linearly separable problems like XOR"
+  },
+  "521": {
+    "domanda": "What is the role of thresholds in neural networks?",
+    "risposte": [
+      "They normalize data",
+      "They act as bias terms shifting activation",
+      "They define loss functions",
+      "They reduce variance"
+    ],
+    "giusta": "They act as bias terms shifting activation"
+  },
+  "522": {
+    "domanda": "Which statement about feedforward neural networks is correct?",
+    "risposte": [
+      "They have feedback loops",
+      "Signals propagate only from input to output",
+      "They are unsupervised",
+      "They do not use gradients"
+    ],
+    "giusta": "Signals propagate only from input to output"
+  },
+  "523": {
+    "domanda": "What is the main takeaway of Lesson 20?",
+    "risposte": [
+      "Single neurons are sufficient for all problems",
+      "Neural networks learn by adjusting weights via gradient-based methods",
+      "Backpropagation guarantees global optimality",
+      "Activation functions are irrelevant"
+    ],
+    "giusta": "Neural networks learn by adjusting weights via gradient-based methods"
+  },
+  "524": {
+    "domanda": "How are Deep Learning, Machine Learning and Artificial Intelligence related?",
+    "risposte": [
+      "AI ⊂ DL ⊂ ML",
+      "ML ⊂ AI ⊂ DL",
+      "DL ⊂ ML ⊂ AI",
+      "They are unrelated"
+    ],
+    "giusta": "DL ⊂ ML ⊂ AI"
+  },
+  "525": {
+    "domanda": "What characterizes Deep Learning compared to classical Machine Learning?",
+    "risposte": [
+      "Manual feature extraction",
+      "Automatic learning of hierarchical features",
+      "Shallow models",
+      "Rule-based reasoning"
+    ],
+    "giusta": "Automatic learning of hierarchical features"
+  },
+  "526": {
+    "domanda": "Why did Deep Learning become effective after 2010?",
+    "risposte": [
+      "Because of new loss functions",
+      "Because of GPUs, large datasets and deeper architectures",
+      "Because of better labels",
+      "Because of rule-based systems"
+    ],
+    "giusta": "Because of GPUs, large datasets and deeper architectures"
+  },
+  "527": {
+    "domanda": "What is a key difference between ML and Deep Learning pipelines?",
+    "risposte": [
+      "DL does not use classifiers",
+      "DL integrates feature extraction and classification",
+      "ML uses neural networks",
+      "DL does not need data"
+    ],
+    "giusta": "DL integrates feature extraction and classification"
+  },
+  "528": {
+    "domanda": "What is the main idea behind Convolutional Neural Networks?",
+    "risposte": [
+      "Use fully connected layers only",
+      "Learn local patterns with shared parameters",
+      "Use distance-based learning",
+      "Reduce dimensionality via PCA"
+    ],
+    "giusta": "Learn local patterns with shared parameters"
+  },
+  "529": {
+    "domanda": "Why are CNNs particularly suited for images?",
+    "risposte": [
+      "Images are one-dimensional",
+      "Local patterns repeat across spatial locations",
+      "Images are linearly separable",
+      "Images require clustering"
+    ],
+    "giusta": "Local patterns repeat across spatial locations"
+  },
+  "530": {
+    "domanda": "What is a convolutional filter (kernel)?",
+    "risposte": [
+      "A fully connected layer",
+      "A small matrix of learnable parameters",
+      "A pooling operation",
+      "A loss function"
+    ],
+    "giusta": "A small matrix of learnable parameters"
+  },
+  "531": {
+    "domanda": "What does a convolution operation compute?",
+    "risposte": [
+      "Distance between pixels",
+      "Dot product between filter and local input region",
+      "Global average",
+      "Histogram of features"
+    ],
+    "giusta": "Dot product between filter and local input region"
+  },
+  "532": {
+    "domanda": "What is a feature map?",
+    "risposte": [
+      "A single neuron output",
+      "The output of applying one filter over the entire input",
+      "A flattened vector",
+      "A loss surface"
+    ],
+    "giusta": "The output of applying one filter over the entire input"
+  },
+  "533": {
+    "domanda": "What does stride control in a convolution?",
+    "risposte": [
+      "Number of filters",
+      "Step size of the filter movement",
+      "Activation function",
+      "Pooling type"
+    ],
+    "giusta": "Step size of the filter movement"
+  },
+  "534": {
+    "domanda": "Why does weight sharing reduce the number of parameters?",
+    "risposte": [
+      "Because filters are smaller",
+      "Because the same filter is applied across all spatial locations",
+      "Because pooling removes weights",
+      "Because of normalization"
+    ],
+    "giusta": "Because the same filter is applied across all spatial locations"
+  },
+  "535": {
+    "domanda": "Compared to fully connected networks, CNNs have:",
+    "risposte": [
+      "More parameters",
+      "Fewer parameters and shared computations",
+      "No backpropagation",
+      "No non-linearity"
+    ],
+    "giusta": "Fewer parameters and shared computations"
+  },
+  "536": {
+    "domanda": "What is the purpose of pooling layers?",
+    "risposte": [
+      "Increase spatial resolution",
+      "Reduce spatial size and add translation invariance",
+      "Learn new filters",
+      "Flatten the data"
+    ],
+    "giusta": "Reduce spatial size and add translation invariance"
+  },
+  "537": {
+    "domanda": "Which pooling operation selects the maximum value?",
+    "risposte": [
+      "Average pooling",
+      "Sum pooling",
+      "Max pooling",
+      "Global pooling"
+    ],
+    "giusta": "Max pooling"
+  },
+  "538": {
+    "domanda": "What is the effect of pooling on feature localization?",
+    "risposte": [
+      "Exact position is preserved",
+      "Exact position becomes less important",
+      "Features disappear",
+      "Noise increases"
+    ],
+    "giusta": "Exact position becomes less important"
+  },
+  "539": {
+    "domanda": "What does the flattening operation do in a CNN?",
+    "risposte": [
+      "Applies convolution",
+      "Converts feature maps into a 1D vector",
+      "Performs pooling",
+      "Normalizes data"
+    ],
+    "giusta": "Converts feature maps into a 1D vector"
+  },
+  "540": {
+    "domanda": "What is typically the last layer of a CNN for classification?",
+    "risposte": [
+      "ReLU",
+      "Softmax",
+      "Pooling",
+      "Convolution"
+    ],
+    "giusta": "Softmax"
+  },
+  "541": {
+    "domanda": "What does the Softmax layer output?",
+    "risposte": [
+      "Raw scores",
+      "Binary decisions",
+      "A probability distribution over classes",
+      "Feature maps"
+    ],
+    "giusta": "A probability distribution over classes"
+  },
+  "542": {
+    "domanda": "Why are CNNs more efficient than fully connected networks for images?",
+    "risposte": [
+      "They ignore spatial structure",
+      "They exploit locality and parameter sharing",
+      "They use fewer layers",
+      "They avoid backpropagation"
+    ],
+    "giusta": "They exploit locality and parameter sharing"
+  },
+  "543": {
+    "domanda": "Which activation function is commonly used in modern CNNs?",
+    "risposte": [
+      "Sigmoid",
+      "Tanh",
+      "ReLU",
+      "Sign"
+    ],
+    "giusta": "ReLU"
+  },
+  "544": {
+    "domanda": "What problem does ReLU help mitigate?",
+    "risposte": [
+      "Overfitting",
+      "Vanishing gradients",
+      "Class imbalance",
+      "Curse of dimensionality"
+    ],
+    "giusta": "Vanishing gradients"
+  },
+  "545": {
+    "domanda": "What is Keras?",
+    "risposte": [
+      "A programming language",
+      "A hardware accelerator",
+      "An open-source deep learning library",
+      "A dataset"
+    ],
+    "giusta": "An open-source deep learning library"
+  },
+  "546": {
+    "domanda": "On top of which backend can Keras run?",
+    "risposte": [
+      "Only TensorFlow",
+      "Only PyTorch",
+      "TensorFlow and others",
+      "Only Matlab"
+    ],
+    "giusta": "TensorFlow and others"
+  },
+  "547": {
+    "domanda": "Which CNN architecture was pivotal in the 2012 ImageNet competition?",
+    "risposte": [
+      "LeNet",
+      "AlexNet",
+      "VGG16",
+      "GoogLeNet"
+    ],
+    "giusta": "AlexNet"
+  },
+  "548": {
+    "domanda": "What characterizes LeNet-5?",
+    "risposte": [
+      "Very deep network",
+      "Designed for large-scale images",
+      "Early CNN with few layers",
+      "Only fully connected layers"
+    ],
+    "giusta": "Early CNN with few layers"
+  },
+  "549": {
+    "domanda": "What is a key characteristic of VGG networks?",
+    "risposte": [
+      "Use of very large filters",
+      "Very deep architecture with small filters",
+      "No pooling layers",
+      "Unsupervised learning"
+    ],
+    "giusta": "Very deep architecture with small filters"
+  },
+  "550": {
+    "domanda": "What distinguishes GoogLeNet (Inception)?",
+    "risposte": [
+      "Use of a single filter size",
+      "Parallel convolution paths with different filter sizes",
+      "No convolution layers",
+      "Only shallow layers"
+    ],
+    "giusta": "Parallel convolution paths with different filter sizes"
+  },
+  "551": {
+    "domanda": "Why are pretrained CNNs useful?",
+    "risposte": [
+      "They remove the need for data",
+      "They allow feature extraction and transfer learning",
+      "They are always optimal",
+      "They do not require tuning"
+    ],
+    "giusta": "They allow feature extraction and transfer learning"
+  },
+  "552": {
+    "domanda": "How can CNNs be applied to signals and text?",
+    "risposte": [
+      "They cannot be applied",
+      "By converting data into image-like representations",
+      "Only via clustering",
+      "Only via regression"
+    ],
+    "giusta": "By converting data into image-like representations"
+  },
+  "553": {
+    "domanda": "What is the main takeaway of Lesson 21?",
+    "risposte": [
+      "CNNs replace all other models",
+      "CNNs exploit spatial locality and hierarchy to efficiently learn complex patterns",
+      "Deep learning does not need theory",
+      "Coding details are more important than concepts"
+    ],
+    "giusta": "CNNs exploit spatial locality and hierarchy to efficiently learn complex patterns"
+  },
+  "554": {
+    "domanda": "What type of learning do autoencoders use?",
+    "risposte": [
+      "Supervised learning",
+      "Reinforcement learning",
+      "Unsupervised learning",
+      "Semi-supervised learning only"
+    ],
+    "giusta": "Unsupervised learning"
+  },
+  "555": {
+    "domanda": "What is the main objective of an autoencoder?",
+    "risposte": [
+      "Predict labels",
+      "Cluster data",
+      "Reconstruct the input at the output",
+      "Maximize classification accuracy"
+    ],
+    "giusta": "Reconstruct the input at the output"
+  },
+  "556": {
+    "domanda": "Why are autoencoders useful when labels are scarce?",
+    "risposte": [
+      "They remove the need for training",
+      "They can learn representations without labels",
+      "They are faster than supervised models",
+      "They avoid overfitting automatically"
+    ],
+    "giusta": "They can learn representations without labels"
+  },
+  "557": {
+    "domanda": "What is the bottleneck in an autoencoder?",
+    "risposte": [
+      "The output layer",
+      "The input layer",
+      "The compressed latent representation",
+      "The loss function"
+    ],
+    "giusta": "The compressed latent representation"
+  },
+  "558": {
+    "domanda": "Which property must an autoencoder learn?",
+    "risposte": [
+      "A clustering function",
+      "An identity function with constraints",
+      "A decision boundary",
+      "A probability distribution explicitly"
+    ],
+    "giusta": "An identity function with constraints"
+  },
+  "559": {
+    "domanda": "What is the purpose of stacked autoencoders?",
+    "risposte": [
+      "Increase model depth without training",
+      "Learn hierarchical feature representations",
+      "Replace classifiers",
+      "Avoid backpropagation"
+    ],
+    "giusta": "Learn hierarchical feature representations"
+  },
+  "560": {
+    "domanda": "What does 'greedy layer-wise training' mean?",
+    "risposte": [
+      "Training all layers at once",
+      "Training layers one at a time in an unsupervised way",
+      "Training only the output layer",
+      "Random training of layers"
+    ],
+    "giusta": "Training layers one at a time in an unsupervised way"
+  },
+  "561": {
+    "domanda": "Why is greedy layer-wise training effective?",
+    "risposte": [
+      "It guarantees global optimum",
+      "It helps early layers learn meaningful features",
+      "It removes the need for labels",
+      "It avoids dimensionality reduction"
+    ],
+    "giusta": "It helps early layers learn meaningful features"
+  },
+  "562": {
+    "domanda": "After greedy layer-wise pretraining, what is typically done?",
+    "risposte": [
+      "Training stops",
+      "Supervised fine-tuning of the whole network",
+      "Remove hidden layers",
+      "Freeze all weights permanently"
+    ],
+    "giusta": "Supervised fine-tuning of the whole network"
+  },
+  "563": {
+    "domanda": "Which is a typical application of autoencoders?",
+    "risposte": [
+      "Supervised classification",
+      "Dimensionality reduction",
+      "Decision tree learning",
+      "Rule extraction"
+    ],
+    "giusta": "Dimensionality reduction"
+  },
+  "564": {
+    "domanda": "Why can autoencoders be compared to PCA?",
+    "risposte": [
+      "They are supervised",
+      "They perform unsupervised dimensionality reduction",
+      "They always use linear transformations",
+      "They require labeled data"
+    ],
+    "giusta": "They perform unsupervised dimensionality reduction"
+  },
+  "565": {
+    "domanda": "What is transfer learning?",
+    "risposte": [
+      "Training a model from scratch",
+      "Reusing knowledge learned in one task for another related task",
+      "Sharing datasets",
+      "Clustering multiple domains"
+    ],
+    "giusta": "Reusing knowledge learned in one task for another related task"
+  },
+  "566": {
+    "domanda": "Why is transfer learning useful in deep learning?",
+    "risposte": [
+      "Because deep models do not overfit",
+      "Because training deep models from scratch is expensive",
+      "Because it avoids validation",
+      "Because it eliminates hyperparameters"
+    ],
+    "giusta": "Because training deep models from scratch is expensive"
+  },
+  "567": {
+    "domanda": "Which layers of a CNN usually learn the most generic features?",
+    "risposte": [
+      "The last layers",
+      "The classifier layer",
+      "The first convolutional layers",
+      "The softmax layer"
+    ],
+    "giusta": "The first convolutional layers"
+  },
+  "568": {
+    "domanda": "What is fine-tuning?",
+    "risposte": [
+      "Training only unsupervised models",
+      "Adapting a pretrained network to a new task",
+      "Freezing all weights permanently",
+      "Removing convolutional layers"
+    ],
+    "giusta": "Adapting a pretrained network to a new task"
+  },
+  "569": {
+    "domanda": "Which fine-tuning strategy helps reduce overfitting?",
+    "risposte": [
+      "Training all layers from scratch",
+      "Freezing early layers and training only higher layers",
+      "Removing pooling layers",
+      "Using random weights"
+    ],
+    "giusta": "Freezing early layers and training only higher layers"
+  },
+  "570": {
+    "domanda": "What is catastrophic forgetting?",
+    "risposte": [
+      "A model learning too slowly",
+      "Forgetting previously learned tasks when learning new ones",
+      "Gradient explosion",
+      "Overfitting on training data"
+    ],
+    "giusta": "Forgetting previously learned tasks when learning new ones"
+  },
+  "571": {
+    "domanda": "In which scenario is catastrophic forgetting most critical?",
+    "risposte": [
+      "Batch learning",
+      "Static datasets",
+      "Sequential or continual learning",
+      "Unsupervised clustering"
+    ],
+    "giusta": "Sequential or continual learning"
+  },
+  "572": {
+    "domanda": "Which technique mitigates catastrophic forgetting by replaying old data?",
+    "risposte": [
+      "Dropout",
+      "Rehearsal",
+      "Batch normalization",
+      "Pooling"
+    ],
+    "giusta": "Rehearsal"
+  },
+  "573": {
+    "domanda": "What does Elastic Weight Consolidation (EWC) do?",
+    "risposte": [
+      "Removes old weights",
+      "Penalizes changes to important weights for previous tasks",
+      "Freezes the network",
+      "Adds noise to gradients"
+    ],
+    "giusta": "Penalizes changes to important weights for previous tasks"
+  },
+  "574": {
+    "domanda": "What is data augmentation?",
+    "risposte": [
+      "Collecting new labeled data",
+      "Artificially increasing training data by transformations",
+      "Reducing dataset size",
+      "Feature selection"
+    ],
+    "giusta": "Artificially increasing training data by transformations"
+  },
+  "575": {
+    "domanda": "Why is data augmentation important for deep learning?",
+    "risposte": [
+      "Because DL models have few parameters",
+      "Because DL models require large datasets",
+      "Because it replaces real data",
+      "Because it guarantees perfect accuracy"
+    ],
+    "giusta": "Because DL models require large datasets"
+  },
+  "576": {
+    "domanda": "Which of the following is NOT a common data augmentation technique?",
+    "risposte": [
+      "Rotation",
+      "Translation",
+      "Adding noise",
+      "Label shuffling"
+    ],
+    "giusta": "Label shuffling"
+  },
+  "577": {
+    "domanda": "How can CNNs be used as feature extractors?",
+    "risposte": [
+      "By removing convolutional layers",
+      "By using outputs of hidden layers as feature vectors",
+      "By replacing softmax with PCA",
+      "By clustering filters"
+    ],
+    "giusta": "By using outputs of hidden layers as feature vectors"
+  },
+  "578": {
+    "domanda": "What is the main idea behind GANs?",
+    "risposte": [
+      "Single network minimizing reconstruction error",
+      "Two networks competing in a minimax game",
+      "Supervised classification only",
+      "Dimensionality reduction"
+    ],
+    "giusta": "Two networks competing in a minimax game"
+  },
+  "579": {
+    "domanda": "What are the two components of a GAN?",
+    "risposte": [
+      "Encoder and decoder",
+      "Generator and discriminator",
+      "Classifier and regressor",
+      "Teacher and student"
+    ],
+    "giusta": "Generator and discriminator"
+  },
+  "580": {
+    "domanda": "What is a typical application of GANs?",
+    "risposte": [
+      "Feature selection",
+      "Synthetic data generation",
+      "Clustering",
+      "Regression"
+    ],
+    "giusta": "Synthetic data generation"
+  },
+  "581": {
+    "domanda": "What is the Model Autophagy Disorder (MAD)?",
+    "risposte": [
+      "A training speed issue",
+      "A degradation of generative models trained on synthetic data",
+      "An overfitting problem",
+      "A vanishing gradient problem"
+    ],
+    "giusta": "A degradation of generative models trained on synthetic data"
+  },
+  "582": {
+    "domanda": "What causes the Model Autophagy Disorder?",
+    "risposte": [
+      "Too much real data",
+      "Training models repeatedly on their own generated data",
+      "Using too many parameters",
+      "Lack of GPUs"
+    ],
+    "giusta": "Training models repeatedly on their own generated data"
+  },
+  "583": {
+    "domanda": "According to Lesson 22, what is needed to avoid MAD?",
+    "risposte": [
+      "Smaller models",
+      "Fresh real data in each generation",
+      "More synthetic data",
+      "No fine-tuning"
+    ],
+    "giusta": "Fresh real data in each generation"
+  },
+  "584": {
+    "domanda": "What is the main takeaway of Lesson 22?",
+    "risposte": [
+      "Deep learning works without data",
+      "Autoencoders, transfer learning and GANs are key tools for modern DL systems",
+      "GANs replace supervised learning",
+      "Feature engineering is obsolete"
+    ],
+    "giusta": "Autoencoders, transfer learning and GANs are key tools for modern DL systems"
+  },
+  "585": {
+    "domanda": "What is an Intelligent Vision System?",
+    "risposte": [
+      "A camera with high resolution",
+      "A system that acquires images and performs automatic interpretation",
+      "A database of images",
+      "A visualization tool"
+    ],
+    "giusta": "A system that acquires images and performs automatic interpretation"
+  },
+  "586": {
+    "domanda": "What is the output of an image classification task?",
+    "risposte": [
+      "A bounding box",
+      "A segmentation mask",
+      "A single class label",
+      "Pixel-wise labels"
+    ],
+    "giusta": "A single class label"
+  },
+  "587": {
+    "domanda": "What additional information does object detection provide compared to image classification?",
+    "risposte": [
+      "Class probabilities only",
+      "Bounding box localization",
+      "Pixel-wise masks",
+      "Object texture"
+    ],
+    "giusta": "Bounding box localization"
+  },
+  "588": {
+    "domanda": "What is the main output of object detection?",
+    "risposte": [
+      "A class label only",
+      "A segmentation mask",
+      "Bounding boxes with class labels",
+      "A probability density map"
+    ],
+    "giusta": "Bounding boxes with class labels"
+  },
+  "589": {
+    "domanda": "Why are bounding boxes insufficient for precise object measurements?",
+    "risposte": [
+      "They are too complex",
+      "They do not follow object shape",
+      "They require deep learning",
+      "They are computationally expensive"
+    ],
+    "giusta": "They do not follow object shape"
+  },
+  "590": {
+    "domanda": "What is the main goal of object segmentation?",
+    "risposte": [
+      "Classify images",
+      "Detect bounding boxes",
+      "Separate objects at pixel level",
+      "Extract features only"
+    ],
+    "giusta": "Separate objects at pixel level"
+  },
+  "591": {
+    "domanda": "What is semantic segmentation?",
+    "risposte": [
+      "Assigning one label to the entire image",
+      "Detecting multiple bounding boxes",
+      "Assigning a class label to each pixel",
+      "Separating individual object instances"
+    ],
+    "giusta": "Assigning a class label to each pixel"
+  },
+  "592": {
+    "domanda": "What is instance segmentation?",
+    "risposte": [
+      "Pixel labeling without object distinction",
+      "Separating each object instance individually",
+      "Only detecting objects",
+      "Only classifying images"
+    ],
+    "giusta": "Separating each object instance individually"
+  },
+  "593": {
+    "domanda": "Which task provides the most detailed object information?",
+    "risposte": [
+      "Image classification",
+      "Object detection",
+      "Semantic segmentation",
+      "Instance segmentation"
+    ],
+    "giusta": "Instance segmentation"
+  },
+  "594": {
+    "domanda": "Why is segmentation considered an ill-defined problem?",
+    "risposte": [
+      "Because algorithms are slow",
+      "Because region definition depends on context",
+      "Because data is always noisy",
+      "Because labels are missing"
+    ],
+    "giusta": "Because region definition depends on context"
+  },
+  "595": {
+    "domanda": "What is the main purpose of segmentation in vision systems?",
+    "risposte": [
+      "Reduce dataset size",
+      "Facilitate recognition and ROI processing",
+      "Improve camera resolution",
+      "Replace classification"
+    ],
+    "giusta": "Facilitate recognition and ROI processing"
+  },
+  "596": {
+    "domanda": "Which of the following is a classical segmentation method?",
+    "risposte": [
+      "CNN",
+      "Transformers",
+      "Thresholding",
+      "GAN"
+    ],
+    "giusta": "Thresholding"
+  },
+  "597": {
+    "domanda": "Which classical method segments images based on pixel similarity?",
+    "risposte": [
+      "Edge detection",
+      "Region growing",
+      "Watershed",
+      "CNN"
+    ],
+    "giusta": "Region growing"
+  },
+  "598": {
+    "domanda": "What is a typical drawback of k-means image segmentation?",
+    "risposte": [
+      "High computational cost",
+      "Oversegmentation or undersegmentation",
+      "Need for labels",
+      "Poor convergence"
+    ],
+    "giusta": "Oversegmentation or undersegmentation"
+  },
+  "599": {
+    "domanda": "What characterizes hybrid vision solutions?",
+    "risposte": [
+      "Only deep learning models",
+      "Only classical algorithms",
+      "Combination of classical vision and deep learning",
+      "No learning phase"
+    ],
+    "giusta": "Combination of classical vision and deep learning"
+  },
+  "600": {
+    "domanda": "Why are hybrid solutions used in industrial applications?",
+    "risposte": [
+      "To avoid segmentation",
+      "To leverage robustness of classical methods and learning ability of DL",
+      "To reduce dataset size",
+      "To eliminate training"
+    ],
+    "giusta": "To leverage robustness of classical methods and learning ability of DL"
+  },
+  "601": {
+    "domanda": "What is required to perform object measurements?",
+    "risposte": [
+      "Only classification",
+      "Detection only",
+      "Segmentation followed by measurement",
+      "Only clustering"
+    ],
+    "giusta": "Segmentation followed by measurement"
+  },
+  "602": {
+    "domanda": "Why is 2D segmentation difficult in bin-picking scenarios?",
+    "risposte": [
+      "Low image resolution",
+      "Complex backgrounds and object overlap",
+      "Lack of labels",
+      "Insufficient hardware"
+    ],
+    "giusta": "Complex backgrounds and object overlap"
+  },
+  "603": {
+    "domanda": "Why are 2D + 3D systems often used in industrial vision?",
+    "risposte": [
+      "To reduce computation",
+      "To improve object detection and measurement accuracy",
+      "To simplify models",
+      "To avoid segmentation"
+    ],
+    "giusta": "To improve object detection and measurement accuracy"
+  },
+  "604": {
+    "domanda": "What is a typical application of semantic segmentation in autonomous vehicles?",
+    "risposte": [
+      "Object counting",
+      "Pedestrian distance estimation",
+      "Scene understanding (road, cars, pedestrians)",
+      "License plate recognition"
+    ],
+    "giusta": "Scene understanding (road, cars, pedestrians)"
+  },
+  "605": {
+    "domanda": "Which application commonly uses image segmentation in medicine?",
+    "risposte": [
+      "Traffic control",
+      "Tumor and organ delineation",
+      "Face recognition",
+      "Retail analysis"
+    ],
+    "giusta": "Tumor and organ delineation"
+  },
+  "606": {
+    "domanda": "Why is segmentation useful in video surveillance?",
+    "risposte": [
+      "To classify cameras",
+      "To track objects over time",
+      "To improve resolution",
+      "To compress data"
+    ],
+    "giusta": "To track objects over time"
+  },
+  "607": {
+    "domanda": "What is the Segment Anything Model (SAM)?",
+    "risposte": [
+      "A classical segmentation algorithm",
+      "A promptable deep learning segmentation model",
+      "A clustering technique",
+      "A detection-only network"
+    ],
+    "giusta": "A promptable deep learning segmentation model"
+  },
+  "608": {
+    "domanda": "What is a key feature of SAM?",
+    "risposte": [
+      "Needs fine-tuning for every task",
+      "Zero-shot generalization to unseen objects",
+      "Only works on medical images",
+      "Requires bounding boxes only"
+    ],
+    "giusta": "Zero-shot generalization to unseen objects"
+  },
+  "609": {
+    "domanda": "What improvement does SAM2 introduce?",
+    "risposte": [
+      "Lower accuracy",
+      "Video segmentation and higher speed",
+      "Removal of prompts",
+      "Only CPU execution"
+    ],
+    "giusta": "Video segmentation and higher speed"
+  },
+  "610": {
+    "domanda": "Why is pixel-wise classification with softmax not directly feasible?",
+    "risposte": [
+      "Too few classes",
+      "Excessive computational cost",
+      "Lack of data",
+      "Poor accuracy"
+    ],
+    "giusta": "Excessive computational cost"
+  },
+  "611": {
+    "domanda": "What is a Fully Convolutional Network (FCN)?",
+    "risposte": [
+      "A network without convolutions",
+      "A CNN adapted for pixel-wise prediction",
+      "A clustering network",
+      "A classifier only"
+    ],
+    "giusta": "A CNN adapted for pixel-wise prediction"
+  },
+  "612": {
+    "domanda": "What is the role of deconvolution (ConvTranspose) layers?",
+    "risposte": [
+      "Reduce feature maps",
+      "Perform upscaling in decoder networks",
+      "Compute gradients",
+      "Apply pooling"
+    ],
+    "giusta": "Perform upscaling in decoder networks"
+  },
+  "613": {
+    "domanda": "Why can ResNet-50 be used as a feature extractor?",
+    "risposte": [
+      "Because it has no convolution layers",
+      "Because intermediate layers encode rich features",
+      "Because it outputs segmentation masks",
+      "Because it is unsupervised"
+    ],
+    "giusta": "Because intermediate layers encode rich features"
+  },
+  "614": {
+    "domanda": "Why is ResNet-50 with upscaling not suitable for classification?",
+    "risposte": [
+      "It is too shallow",
+      "Its output is an image, not a class label",
+      "It has too few parameters",
+      "It uses pooling"
+    ],
+    "giusta": "Its output is an image, not a class label"
+  },
+  "615": {
+    "domanda": "Why has Machine Learning become feasible in recent years?",
+    "risposte": [
+      "Better rules",
+      "More data storage and computational power",
+      "Simpler models",
+      "Less data"
+    ],
+    "giusta": "More data storage and computational power"
+  },
+  "616": {
+    "domanda": "Why are GPUs preferred for large ML projects?",
+    "risposte": [
+      "They have higher clock speed",
+      "They enable massive parallel computation",
+      "They require less memory",
+      "They replace CPUs"
+    ],
+    "giusta": "They enable massive parallel computation"
+  },
+  "617": {
+    "domanda": "Compared to CPUs, GPUs are generally:",
+    "risposte": [
+      "Slower and less efficient",
+      "5–30x faster and more energy efficient",
+      "Only useful for graphics",
+      "Not suitable for deep learning"
+    ],
+    "giusta": "5–30x faster and more energy efficient"
+  },
+  "618": {
+    "domanda": "What is a TPU?",
+    "risposte": [
+      "A general-purpose CPU",
+      "A GPU for graphics",
+      "An ASIC specialized for neural network computation",
+      "A clustering device"
+    ],
+    "giusta": "An ASIC specialized for neural network computation"
+  },
+  "619": {
+    "domanda": "What is the main advantage of TPUs?",
+    "risposte": [
+      "Flexibility",
+      "High efficiency for tensor operations",
+      "Ease of programming",
+      "Low cost"
+    ],
+    "giusta": "High efficiency for tensor operations"
+  },
+  "620": {
+    "domanda": "Why is ML increasingly moved to the edge?",
+    "risposte": [
+      "To increase latency",
+      "To reduce bandwidth usage and latency",
+      "To avoid GPUs",
+      "To simplify models"
+    ],
+    "giusta": "To reduce bandwidth usage and latency"
+  },
+  "621": {
+    "domanda": "Which hardware is commonly used for edge ML?",
+    "risposte": [
+      "Mainframe computers",
+      "ARM processors and VPUs",
+      "Only cloud GPUs",
+      "Quantum computers"
+    ],
+    "giusta": "ARM processors and VPUs"
+  },
+  "622": {
+    "domanda": "What is OpenVINO?",
+    "risposte": [
+      "A dataset",
+      "A deep learning framework",
+      "An optimization toolkit for deploying DL models",
+      "A segmentation algorithm"
+    ],
+    "giusta": "An optimization toolkit for deploying DL models"
+  },
+  "623": {
+    "domanda": "What does OpenVINO optimize?",
+    "risposte": [
+      "Dataset labeling",
+      "Training accuracy",
+      "Inference performance across hardware",
+      "Network depth"
+    ],
+    "giusta": "Inference performance across hardware"
+  },
+  "624": {
+    "domanda": "Is Edge Impulse part of the exam?",
+    "risposte": [
+      "Yes, all details are required",
+      "Only coding examples",
+      "No, it is explicitly stated as not in the exam",
+      "Only hardware aspects"
+    ],
+    "giusta": "No, it is explicitly stated as not in the exam"
+  },
+  "625": {
+    "domanda": "What is the main takeaway of Lesson 23?",
+    "risposte": [
+      "Vision systems only use deep learning",
+      "Intelligent vision combines tasks, models, applications and hardware choices",
+      "Hardware is irrelevant",
+      "Segmentation replaces detection"
+    ],
+    "giusta": "Intelligent vision combines tasks, models, applications and hardware choices"
+  },
+  "626": {
+    "domanda": "What is the main focus of Machine Learning software?",
+    "risposte": [
+      "Only data storage",
+      "Supporting all steps of the ML pipeline",
+      "Only model training",
+      "Only visualization"
+    ],
+    "giusta": "Supporting all steps of the ML pipeline"
+  },
+  "627": {
+    "domanda": "In which phases of the ML workflow is software needed?",
+    "risposte": [
+      "Only during training",
+      "Only during deployment",
+      "In all phases of the workflow",
+      "Only during data collection"
+    ],
+    "giusta": "In all phases of the workflow"
+  },
+  "628": {
+    "domanda": "What does MLaaS stand for?",
+    "risposte": [
+      "Machine Learning and Security",
+      "Machine Learning as a Service",
+      "Model Learning as a Software",
+      "Managed Learning and Storage"
+    ],
+    "giusta": "Machine Learning as a Service"
+  },
+  "629": {
+    "domanda": "What is MLaaS?",
+    "risposte": [
+      "A local ML framework",
+      "A cloud platform offering ML functionalities",
+      "A hardware accelerator",
+      "A dataset"
+    ],
+    "giusta": "A cloud platform offering ML functionalities"
+  },
+  "630": {
+    "domanda": "Which tasks are typically covered by MLaaS platforms?",
+    "risposte": [
+      "Only inference",
+      "Only training",
+      "Data preprocessing, training, evaluation and deployment",
+      "Only visualization"
+    ],
+    "giusta": "Data preprocessing, training, evaluation and deployment"
+  },
+  "631": {
+    "domanda": "How are MLaaS prediction results typically integrated into applications?",
+    "risposte": [
+      "Via file transfer",
+      "Via REST APIs",
+      "Via USB devices",
+      "Via email"
+    ],
+    "giusta": "Via REST APIs"
+  },
+  "632": {
+    "domanda": "What is a REST API?",
+    "risposte": [
+      "A database system",
+      "A set of rules for web-based communication using HTTP",
+      "A neural network architecture",
+      "A cloud storage service"
+    ],
+    "giusta": "A set of rules for web-based communication using HTTP"
+  },
+  "633": {
+    "domanda": "Which cloud service model provides raw computing resources?",
+    "risposte": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "MLaaS"
+    ],
+    "giusta": "IaaS"
+  },
+  "634": {
+    "domanda": "What does IaaS typically provide?",
+    "risposte": [
+      "Applications ready to use",
+      "Only ML models",
+      "Servers, storage and networking",
+      "Only datasets"
+    ],
+    "giusta": "Servers, storage and networking"
+  },
+  "635": {
+    "domanda": "What does PaaS offer to users?",
+    "risposte": [
+      "Only hardware",
+      "A platform to build and deploy applications",
+      "Only software subscriptions",
+      "Only ML inference"
+    ],
+    "giusta": "A platform to build and deploy applications"
+  },
+  "636": {
+    "domanda": "What characterizes SaaS?",
+    "risposte": [
+      "Users manage infrastructure",
+      "Software delivered via the internet",
+      "Only local execution",
+      "Requires deep ML expertise"
+    ],
+    "giusta": "Software delivered via the internet"
+  },
+  "637": {
+    "domanda": "Which is an example of SaaS?",
+    "risposte": [
+      "Amazon EC2",
+      "Google Workspace",
+      "Docker",
+      "TensorFlow"
+    ],
+    "giusta": "Google Workspace"
+  },
+  "638": {
+    "domanda": "Which are the three leading MLaaS providers mentioned?",
+    "risposte": [
+      "IBM, Oracle, SAP",
+      "Azure, AWS, Google Cloud",
+      "Meta, OpenAI, NVIDIA",
+      "Intel, AMD, ARM"
+    ],
+    "giusta": "Azure, AWS, Google Cloud"
+  },
+  "639": {
+    "domanda": "What is a key advantage of high-level ML cloud APIs?",
+    "risposte": [
+      "They require deep ML knowledge",
+      "They allow easy usage without ML expertise",
+      "They are only for research",
+      "They work only offline"
+    ],
+    "giusta": "They allow easy usage without ML expertise"
+  },
+  "640": {
+    "domanda": "Which tasks are commonly offered by high-level ML APIs?",
+    "risposte": [
+      "Only clustering",
+      "Text, image and video analysis",
+      "Only regression",
+      "Only optimization"
+    ],
+    "giusta": "Text, image and video analysis"
+  },
+  "641": {
+    "domanda": "What is Microsoft Azure Machine Learning Studio?",
+    "risposte": [
+      "A dataset repository",
+      "A graphical workflow-based ML environment",
+      "A hardware accelerator",
+      "A programming language"
+    ],
+    "giusta": "A graphical workflow-based ML environment"
+  },
+  "642": {
+    "domanda": "Which learning curve is associated with Azure ML Studio?",
+    "risposte": [
+      "Very easy",
+      "No learning curve",
+      "Steep learning curve",
+      "Impossible to learn"
+    ],
+    "giusta": "Steep learning curve"
+  },
+  "643": {
+    "domanda": "Which ML tasks are supported by Azure ML Studio?",
+    "risposte": [
+      "Only classification",
+      "Only clustering",
+      "Classification, regression, anomaly detection, clustering",
+      "Only deep learning"
+    ],
+    "giusta": "Classification, regression, anomaly detection, clustering"
+  },
+  "644": {
+    "domanda": "What is Amazon SageMaker?",
+    "risposte": [
+      "A dataset",
+      "A machine learning environment for data scientists",
+      "A GPU",
+      "A SaaS application only"
+    ],
+    "giusta": "A machine learning environment for data scientists"
+  },
+  "645": {
+    "domanda": "Why is Amazon Machine Learning suitable for deadline-sensitive operations?",
+    "risposte": [
+      "Because it is manual",
+      "Because it is highly automated",
+      "Because it avoids preprocessing",
+      "Because it requires no data"
+    ],
+    "giusta": "Because it is highly automated"
+  },
+  "646": {
+    "domanda": "What is a drawback of fully automatic data preprocessing?",
+    "risposte": [
+      "It improves accuracy",
+      "It can be error-prone",
+      "It requires more data",
+      "It is always optimal"
+    ],
+    "giusta": "It can be error-prone"
+  },
+  "647": {
+    "domanda": "Which algorithm is mentioned as a boosted trees method in SageMaker?",
+    "risposte": [
+      "K-means",
+      "PCA",
+      "XGBoost",
+      "Naive Bayes"
+    ],
+    "giusta": "XGBoost"
+  },
+  "648": {
+    "domanda": "Which SageMaker algorithm is used for clustering?",
+    "risposte": [
+      "XGBoost",
+      "Linear learner",
+      "K-means",
+      "ResNet"
+    ],
+    "giusta": "K-means"
+  },
+  "649": {
+    "domanda": "Which SageMaker method is used for dimensionality reduction?",
+    "risposte": [
+      "LDA",
+      "PCA",
+      "CNN",
+      "SVM"
+    ],
+    "giusta": "PCA"
+  },
+  "650": {
+    "domanda": "What characterizes Google Cloud Machine Learning Engine?",
+    "risposte": [
+      "High-level visual interface",
+      "Tight integration with TensorFlow",
+      "Only SaaS usage",
+      "Low flexibility"
+    ],
+    "giusta": "Tight integration with TensorFlow"
+  },
+  "651": {
+    "domanda": "Who is Google Cloud ML Engine mainly targeted at?",
+    "risposte": [
+      "Non-experts",
+      "Only managers",
+      "Experienced data scientists",
+      "Children"
+    ],
+    "giusta": "Experienced data scientists"
+  },
+  "652": {
+    "domanda": "What is TinyML?",
+    "risposte": [
+      "ML for large data centers",
+      "ML for very small, low-power devices",
+      "Only cloud ML",
+      "A type of GAN"
+    ],
+    "giusta": "ML for very small, low-power devices"
+  },
+  "653": {
+    "domanda": "Where are TinyML models typically trained?",
+    "risposte": [
+      "On microcontrollers",
+      "On cloud servers",
+      "On sensors",
+      "On cameras only"
+    ],
+    "giusta": "On cloud servers"
+  },
+  "654": {
+    "domanda": "What is a key advantage of TinyML?",
+    "risposte": [
+      "High power consumption",
+      "Low latency and low power inference",
+      "Large memory usage",
+      "High cost"
+    ],
+    "giusta": "Low latency and low power inference"
+  },
+  "655": {
+    "domanda": "Which is a typical TinyML application?",
+    "risposte": [
+      "Supercomputer simulation",
+      "Smart thermostat",
+      "Big data analytics",
+      "Cloud orchestration"
+    ],
+    "giusta": "Smart thermostat"
+  },
+  "656": {
+    "domanda": "Compared to traditional systems, TinyML devices have:",
+    "risposte": [
+      "More memory and power",
+      "Much lower computing and memory resources",
+      "Unlimited storage",
+      "Higher clock frequencies"
+    ],
+    "giusta": "Much lower computing and memory resources"
+  },
+  "657": {
+    "domanda": "What is TensorFlow Lite?",
+    "risposte": [
+      "A cloud-only ML service",
+      "A lightweight version of TensorFlow for embedded devices",
+      "A dataset",
+      "A GPU driver"
+    ],
+    "giusta": "A lightweight version of TensorFlow for embedded devices"
+  },
+  "658": {
+    "domanda": "What is the main purpose of TensorFlow Lite?",
+    "risposte": [
+      "Training large models",
+      "On-device ML inference with low latency",
+      "Data labeling",
+      "Cloud orchestration"
+    ],
+    "giusta": "On-device ML inference with low latency"
+  },
+  "659": {
+    "domanda": "What does Industry 4.0 mainly focus on?",
+    "risposte": [
+      "Manual production",
+      "Highly connected intelligent production systems",
+      "Only robotics",
+      "Only cloud computing"
+    ],
+    "giusta": "Highly connected intelligent production systems"
+  },
+  "660": {
+    "domanda": "Which is a design principle of Industry 4.0?",
+    "risposte": [
+      "Isolation",
+      "Interoperability",
+      "Manual control",
+      "Centralized decisions only"
+    ],
+    "giusta": "Interoperability"
+  },
+  "661": {
+    "domanda": "What is information transparency in Industry 4.0?",
+    "risposte": [
+      "Open-source software",
+      "Virtual representation of the physical world using sensor data",
+      "Public datasets",
+      "Cloud-only systems"
+    ],
+    "giusta": "Virtual representation of the physical world using sensor data"
+  },
+  "662": {
+    "domanda": "What does Industry 5.0 emphasize compared to Industry 4.0?",
+    "risposte": [
+      "Full automation only",
+      "Human-centric and sustainable approach",
+      "Removal of humans",
+      "Only robotics"
+    ],
+    "giusta": "Human-centric and sustainable approach"
+  },
+  "663": {
+    "domanda": "Which is NOT a key focus of Industry 5.0?",
+    "risposte": [
+      "Human-centric design",
+      "Sustainability",
+      "Upskilling workers",
+      "Pure automation without humans"
+    ],
+    "giusta": "Pure automation without humans"
+  },
+  "664": {
+    "domanda": "What role do intelligent vision systems play in Industry 4.0?",
+    "risposte": [
+      "Only image storage",
+      "They act as the eyes of the production process",
+      "Only data compression",
+      "Only cloud storage"
+    ],
+    "giusta": "They act as the eyes of the production process"
+  },
+  "665": {
+    "domanda": "What is the main takeaway of Lesson 24?",
+    "risposte": [
+      "ML software is only about algorithms",
+      "Cloud services, TinyML and Industry 4.0/5.0 enable scalable intelligent systems",
+      "Industry is not impacted by ML",
+      "Vision systems are obsolete"
+    ],
+    "giusta": "Cloud services, TinyML and Industry 4.0/5.0 enable scalable intelligent systems"
   }
 }

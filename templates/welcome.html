@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Intelligent Systems - Benvenuto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-screen">
+            <h1>🎓 Quiz Intelligent Systems</h1>
+            <p>Benvenuto nel sistema di quiz per l'esame di Intelligent Systems.<br>
+               Configura le impostazioni dell'esame o usa quelle predefinite.</p>
+            
+            <div class="settings-panel">
+                <h3>⚙️ Impostazioni Esame</h3>
+                <form method="POST" action="/start_quiz">
+                    <div class="setting-group">
+                        <label for="duration">Durata esame (minuti):</label>
+                        <input type="number" id="duration" name="duration" value="60" min="1" max="180">
+                    </div>
+                    
+                    <div class="setting-group">
+                        <label for="total_questions">Numero totale domande:</label>
+                        <input type="number" id="total_questions" name="total_questions" value="40" min="10" max="208">
+                    </div>
+                    
+                    <div class="setting-group">
+                        <label for="questions_per_page">Domande per pagina:</label>
+                        <select id="questions_per_page" name="questions_per_page">
+                            <option value="1">1 domanda per pagina</option>
+                            <option value="5">5 domande per pagina</option>
+                            <option value="10" selected>10 domande per pagina</option>
+                            <option value="20">20 domande per pagina</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <label for="mode">Modalità quiz:</label>
+                        <select id="mode" name="mode">
+                            <option value="exam" selected>Modalità Esame (timer attivo)</option>
+                            <option value="practice">Modalità Pratica (senza timer)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <label for="show_results">Mostra risultati:</label>
+                        <select id="show_results" name="show_results">
+                            <option value="immediate">Subito dopo ogni risposta</option>
+                            <option value="end" selected>Solo alla fine del quiz</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn">🚀 Inizia Quiz</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetDefaults()">🔄 Ripristina Default</button>
+                </form>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 10px;">
+                <h4>📋 Impostazioni Predefinite Esame:</h4>
+                <ul style="text-align: left; margin-top: 15px;">
+                    <li>⏱️ Durata: 60 minuti</li>
+                    <li>📝 Domande: 40 (selezionate casualmente)</li>
+                    <li>📄 Layout: 10 domande per pagina (4 pagine totali)</li>
+                    <li>🎯 Modalità: Esame con timer</li>
+                    <li>📊 Risultati: Mostrati solo alla fine</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function resetDefaults() {
+            document.getElementById('duration').value = 60;
+            document.getElementById('total_questions').value = 40;
+            document.getElementById('questions_per_page').value = 10;
+            document.getElementById('mode').value = 'exam';
+            document.getElementById('show_results').value = 'end';
+        }
+        
+        // Update total questions based on available questions
+        document.getElementById('total_questions').max = {{ total_available }};
+        
+        // Update questions per page options based on total questions
+        document.getElementById('total_questions').addEventListener('change', function() {
+            const total = parseInt(this.value);
+            const perPageSelect = document.getElementById('questions_per_page');
+            const currentValue = perPageSelect.value;
+            
+            // Clear options
+            perPageSelect.innerHTML = '';
+            
+            // Add appropriate options
+            const options = [1, 5, 10, 20];
+            options.forEach(opt => {
+                if (opt <= total) {
+                    const option = document.createElement('option');
+                    option.value = opt;
+                    option.textContent = opt + ' domande per pagina';
+                    if (opt == currentValue || (opt == 10 && !options.includes(parseInt(currentValue)))) {
+                        option.selected = true;
+                    }
+                    perPageSelect.appendChild(option);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
