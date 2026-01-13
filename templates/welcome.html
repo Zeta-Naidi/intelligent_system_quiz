@@ -52,19 +52,28 @@
                         </select>
                     </div>
                     
+                    <div class="setting-group">
+                        <label for="show_correct_answers">Mostra risposte corrette:</label>
+                        <select id="show_correct_answers" name="show_correct_answers">
+                            <option value="no" selected>Non mostrare</option>
+                            <option value="yes">Mostra sempre</option>
+                        </select>
+                    </div>
+                    
                     <button type="submit" class="btn">🚀 Inizia Quiz</button>
                     <button type="button" class="btn btn-secondary" onclick="resetDefaults()">🔄 Ripristina Default</button>
+                    <a href="/stats" class="btn" style="background: #28a745; margin-left: 10px;">📊 Statistiche</a>
                 </form>
             </div>
             
             <div style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 10px;">
-                <h4>📋 Impostazioni Predefinite Esame:</h4>
+                <h4>📋 Sistema di Apprendimento Adattivo:</h4>
                 <ul style="text-align: left; margin-top: 15px;">
-                    <li>⏱️ Durata: 60 minuti</li>
-                    <li>📝 Domande: 40 (selezionate casualmente)</li>
-                    <li>📄 Layout: 10 domande per pagina (4 pagine totali)</li>
-                    <li>🎯 Modalità: Esame con timer</li>
-                    <li>📊 Risultati: Mostrati solo alla fine</li>
+                    <li>🧠 <strong>Selezione Intelligente:</strong> Le domande sono scelte in base alle tue performance</li>
+                    <li>🎯 <strong>Focus sui Punti Deboli:</strong> 60% domande difficili, 35% normali, 5% padroneggiate</li>
+                    <li>📈 <strong>Tracciamento Progressi:</strong> Il sistema ricorda le tue risposte e si adatta</li>
+                    <li>🚀 <strong>Miglioramento Continuo:</strong> Meno tempo su domande già padroneggiate</li>
+                    <li>📊 <strong>Statistiche Dettagliate:</strong> Visualizza le tue performance nel tempo</li>
                 </ul>
             </div>
         </div>
@@ -77,6 +86,7 @@
             document.getElementById('questions_per_page').value = 10;
             document.getElementById('mode').value = 'exam';
             document.getElementById('show_results').value = 'end';
+            document.getElementById('show_correct_answers').value = 'no';
         }
         
         // Update total questions based on available questions

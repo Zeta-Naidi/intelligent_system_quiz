@@ -118,6 +118,12 @@
                                 </strong>
                             </div>
                             {% endif %}
+                            
+                            {% if show_correct_answers == 'yes' %}
+                            <div style="margin-top: 15px; padding: 10px; border-radius: 8px; background: #e3f2fd; border-left: 4px solid #2196f3;">
+                                <strong>💡 Risposta corretta: {{ question.giusta }}</strong>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

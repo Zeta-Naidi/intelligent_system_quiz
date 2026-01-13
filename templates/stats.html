@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Intelligent Systems - Statistiche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .stats-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .stats-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            border-left: 4px solid #007bff;
+        }
+        .stat-card.difficult {
+            border-left-color: #dc3545;
+        }
+        .stat-card.normal {
+            border-left-color: #ffc107;
+        }
+        .stat-card.mastered {
+            border-left-color: #28a745;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .questions-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .table-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+        .question-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 100px 100px 100px 120px 150px;
+            gap: 15px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+        .question-row:hover {
+            background: #f8f9fa;
+        }
+        .category-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .category-difficile {
+            background: #dc3545;
+            color: white;
+        }
+        .category-normale {
+            background: #ffc107;
+            color: #333;
+        }
+        .category-padroneggiata {
+            background: #28a745;
+            color: white;
+        }
+        .success-rate {
+            font-weight: bold;
+        }
+        .success-rate.low {
+            color: #dc3545;
+        }
+        .success-rate.medium {
+            color: #ffc107;
+        }
+        .success-rate.high {
+            color: #28a745;
+        }
+        .last-attempts {
+            display: flex;
+            gap: 2px;
+        }
+        .attempt-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+        }
+        .attempt-correct {
+            background: #28a745;
+        }
+        .attempt-incorrect {
+            background: #dc3545;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stats-header">
+            <h1>📊 Statistiche Performance Quiz</h1>
+            <p>Analisi delle tue performance e sistema di apprendimento adattivo</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="/" class="btn">🏠 Torna al Menu</a>
+            <a href="/start_quiz" class="btn btn-secondary">🎯 Nuovo Quiz</a>
+        </div>
+
+        <div class="stats-overview">
+            <div class="stat-card difficult">
+                <div class="stat-number">{{ difficult_count }}</div>
+                <div class="stat-label">Domande Difficili</div>
+            </div>
+            <div class="stat-card normal">
+                <div class="stat-number">{{ normal_count }}</div>
+                <div class="stat-label">Domande Normali</div>
+            </div>
+            <div class="stat-card mastered">
+                <div class="stat-number">{{ mastered_count }}</div>
+                <div class="stat-label">Domande Padroneggiate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ tracked_questions }}</div>
+                <div class="stat-label">Domande Monitorate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ total_questions }}</div>
+                <div class="stat-label">Domande Totali</div>
+            </div>
+        </div>
+
+        {% if question_stats %}
+        <div class="questions-table">
+            <div class="table-header">
+                Dettaglio Performance per Domanda (ordinate per difficoltà)
+            </div>
+            <div class="question-row" style="background: #e9ecef; font-weight: bold;">
+                <div>ID</div>
+                <div>Domanda</div>
+                <div>Tentativi</div>
+                <div>Corrette</div>
+                <div>Sbagliate</div>
+                <div>% Successo</div>
+                <div>Categoria</div>
+            </div>
+            {% for stat in question_stats %}
+            <div class="question-row">
+                <div>{{ stat.id }}</div>
+                <div>{{ stat.domanda }}</div>
+                <div>{{ stat.total_attempts }}</div>
+                <div style="color: #28a745;">{{ stat.correct_attempts }}</div>
+                <div style="color: #dc3545;">{{ stat.incorrect_attempts }}</div>
+                <div class="success-rate {% if stat.success_rate < 50 %}low{% elif stat.success_rate < 80 %}medium{% else %}high{% endif %}">
+                    {{ stat.success_rate }}%
+                </div>
+                <div>
+                    <span class="category-badge category-{{ stat.category.lower() }}">
+                        {{ stat.category }}
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 40px; background: #f8f9fa; border-radius: 8px;">
+            <h3>📈 Nessuna statistica disponibile</h3>
+            <p>Completa alcuni quiz per vedere le tue statistiche di performance!</p>
+            <a href="/" class="btn">Inizia il tuo primo quiz</a>
+        </div>
+        {% endif %}
+
+        <div style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 8px;">
+            <h3>🤖 Come funziona il sistema adattivo</h3>
+            <ul>
+                <li><strong>Domande Difficili (Rosse):</strong> Bassa percentuale di successo (&lt;50%) o errori recenti. Appaiono nel 60% dei quiz.</li>
+                <li><strong>Domande Normali (Gialle):</strong> Performance mista o domande nuove. Appaiono nel 35% dei quiz.</li>
+                <li><strong>Domande Padroneggiate (Verdi):</strong> Alta percentuale di successo (&gt;80%) con consistenza recente. Appaiono solo nel 5% dei quiz.</li>
+            </ul>
+            <p><em>Il sistema si adatta automaticamente alle tue performance, concentrandosi sulle aree che necessitano più pratica!</em></p>
+        </div>
+    </div>
+</body>
+</html>

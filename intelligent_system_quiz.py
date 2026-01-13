@@ -2,14 +2,135 @@ from flask import Flask, render_template, request, session, redirect
 import random
 import json
 import time
+import os
 from datetime import datetime, timedelta
+from collections import defaultdict
 
 app = Flask(__name__)
 app.secret_key = 'supersegretissima'
 
 # Load questions once at startup
-with open('domande.json', 'r', encoding='utf-8') as file:
+with open('quiz_completo_fixed_clean.json', 'r', encoding='utf-8') as file:
     ALL_QUESTIONS = json.load(file)
+
+# Statistics file path
+STATS_FILE = 'question_stats.json'
+
+# Load or initialize question statistics
+def load_question_stats():
+    """Load question statistics from file"""
+    if os.path.exists(STATS_FILE):
+        try:
+            with open(STATS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+def save_question_stats(stats):
+    """Save question statistics to file"""
+    with open(STATS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(stats, f, indent=2, ensure_ascii=False)
+
+def update_question_stats(question_id, is_correct):
+    """Update statistics for a specific question"""
+    stats = load_question_stats()
+    
+    if question_id not in stats:
+        stats[question_id] = {
+            'total_attempts': 0,
+            'correct_attempts': 0,
+            'incorrect_attempts': 0,
+            'success_rate': 0.0,
+            'last_attempts': []  # Track last 5 attempts
+        }
+    
+    question_stats = stats[question_id]
+    question_stats['total_attempts'] += 1
+    
+    if is_correct:
+        question_stats['correct_attempts'] += 1
+    else:
+        question_stats['incorrect_attempts'] += 1
+    
+    # Update success rate
+    question_stats['success_rate'] = question_stats['correct_attempts'] / question_stats['total_attempts']
+    
+    # Track last 5 attempts (True for correct, False for incorrect)
+    question_stats['last_attempts'].append(is_correct)
+    if len(question_stats['last_attempts']) > 5:
+        question_stats['last_attempts'] = question_stats['last_attempts'][-5:]
+    
+    save_question_stats(stats)
+    return stats
+
+def get_adaptive_question_pool():
+    """Get questions prioritized by difficulty and performance"""
+    stats = load_question_stats()
+    all_question_ids = [k for k in ALL_QUESTIONS.keys() if k.isdigit()]
+    
+    # Categorize questions based on performance
+    difficult_questions = []  # Low success rate or recent failures
+    normal_questions = []     # Mixed performance or new questions
+    mastered_questions = []   # High success rate with recent consistency
+    
+    for question_id in all_question_ids:
+        if question_id not in stats:
+            # New question - add to normal pool
+            normal_questions.append(question_id)
+            continue
+        
+        question_stats = stats[question_id]
+        success_rate = question_stats['success_rate']
+        total_attempts = question_stats['total_attempts']
+        last_attempts = question_stats['last_attempts']
+        
+        # Check if question is mastered (high success rate + recent consistency)
+        if (total_attempts >= 3 and success_rate >= 0.8 and 
+            len(last_attempts) >= 3 and all(last_attempts[-3:])):
+            mastered_questions.append(question_id)
+        # Check if question is difficult (low success rate or recent failures)
+        elif (success_rate < 0.5 or 
+              (len(last_attempts) >= 2 and not any(last_attempts[-2:]))):
+            difficult_questions.append(question_id)
+        else:
+            normal_questions.append(question_id)
+    
+    return difficult_questions, normal_questions, mastered_questions
+
+def select_adaptive_questions(total_questions):
+    """Select questions adaptively based on performance"""
+    difficult, normal, mastered = get_adaptive_question_pool()
+    
+    selected_questions = []
+    
+    # Prioritize difficult questions (60% of quiz)
+    difficult_count = min(len(difficult), int(total_questions * 0.6))
+    selected_questions.extend(random.sample(difficult, difficult_count))
+    
+    # Add normal questions (35% of quiz)
+    remaining_slots = total_questions - len(selected_questions)
+    normal_count = min(len(normal), int(total_questions * 0.35))
+    normal_count = min(normal_count, remaining_slots)
+    if normal_count > 0:
+        selected_questions.extend(random.sample(normal, normal_count))
+    
+    # Fill remaining slots with mastered questions if needed (5% of quiz)
+    remaining_slots = total_questions - len(selected_questions)
+    if remaining_slots > 0 and mastered:
+        mastered_count = min(len(mastered), remaining_slots)
+        selected_questions.extend(random.sample(mastered, mastered_count))
+    
+    # If we still don't have enough questions, fill from any available
+    remaining_slots = total_questions - len(selected_questions)
+    if remaining_slots > 0:
+        all_available = difficult + normal + mastered
+        remaining_questions = [q for q in all_available if q not in selected_questions]
+        if remaining_questions:
+            additional_count = min(len(remaining_questions), remaining_slots)
+            selected_questions.extend(random.sample(remaining_questions, additional_count))
+    
+    return selected_questions
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
@@ -28,6 +149,7 @@ def start_quiz():
     total_questions = int(request.form.get('total_questions', 40))
     mode = request.form.get('mode', 'exam')
     show_results = request.form.get('show_results', 'end')
+    show_correct_answers = request.form.get('show_correct_answers', 'no')
     
     # Calculate dynamic questions per page based on total questions
     if total_questions <= 10:
@@ -44,10 +166,12 @@ def start_quiz():
         'total_questions': available_questions,
         'questions_per_page': questions_per_page,
         'mode': mode,
-        'show_results': show_results
+        'show_results': show_results,
+        'show_correct_answers': show_correct_answers
     }
     
-    session['scelte'] = random.sample(chiavi, available_questions)
+    # Use adaptive question selection instead of random
+    session['scelte'] = select_adaptive_questions(available_questions)
     session['current_page'] = 1
     session['answers'] = {}  # Store all answers
     session['corrette'] = 0
@@ -187,6 +311,7 @@ def quiz():
                          mode=settings['mode'],
                          duration=settings['duration'],
                          show_results=settings['show_results'],
+                         show_correct_answers=settings['show_correct_answers'],
                          time_remaining=time_remaining,
                          time_remaining_seconds=time_remaining_seconds)
 
@@ -220,6 +345,10 @@ def results():
             else:
                 errate += 1
         
+        # Update question statistics for answered questions
+        if user_answer:
+            update_question_stats(chiave, is_correct)
+        
         detailed_results.append({
             'number': question_num,
             'domanda': domanda_data['domanda'],
@@ -249,7 +378,44 @@ def results():
                          totale=len(session['scelte']),
                          score=score,
                          tempo_impiegato=tempo_impiegato,
-                         detailed_results=detailed_results if settings['show_results'] == 'end' else None)
+                         detailed_results=detailed_results if settings['show_results'] == 'end' or settings['show_correct_answers'] == 'yes' else None,
+                         show_correct_answers=settings['show_correct_answers'])
+
+@app.route('/stats')
+def stats():
+    """View question statistics and performance analytics"""
+    stats = load_question_stats()
+    difficult, normal, mastered = get_adaptive_question_pool()
+    
+    # Prepare statistics for display
+    question_stats = []
+    for question_id, stat_data in stats.items():
+        if question_id in ALL_QUESTIONS:
+            question_stats.append({
+                'id': question_id,
+                'domanda': ALL_QUESTIONS[question_id]['domanda'][:100] + '...' if len(ALL_QUESTIONS[question_id]['domanda']) > 100 else ALL_QUESTIONS[question_id]['domanda'],
+                'total_attempts': stat_data['total_attempts'],
+                'correct_attempts': stat_data['correct_attempts'],
+                'incorrect_attempts': stat_data['incorrect_attempts'],
+                'success_rate': round(stat_data['success_rate'] * 100, 1),
+                'last_attempts': stat_data['last_attempts'],
+                'category': 'Difficile' if question_id in difficult else 'Padroneggiata' if question_id in mastered else 'Normale'
+            })
+    
+    # Sort by success rate (ascending - worst first)
+    question_stats.sort(key=lambda x: x['success_rate'])
+    
+    # Calculate overall statistics
+    total_questions = len([k for k in ALL_QUESTIONS.keys() if k.isdigit()])
+    tracked_questions = len(stats)
+    
+    return render_template('stats.html',
+                         question_stats=question_stats,
+                         difficult_count=len(difficult),
+                         normal_count=len(normal),
+                         mastered_count=len(mastered),
+                         total_questions=total_questions,
+                         tracked_questions=tracked_questions)
 
 @app.route('/reset')
 def reset():
